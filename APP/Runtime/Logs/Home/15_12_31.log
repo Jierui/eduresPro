@@ -1,0 +1,6 @@
+[ 2015-12-31T15:27:27+08:00 ] ::1 /edures/index.php/Home/User/index
+ERR: 不存在的图像文件
+
+[ 2015-12-31T20:43:41+08:00 ] ::1 /edures/index.php/Home/Test/index
+ERR: Think\Controller:dispaly方法不存在！
+

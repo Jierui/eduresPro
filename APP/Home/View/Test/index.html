@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Jierui</title>
+</head>
+<body>
+<!--
+{$Think.server.script_name}<br/>
+hello<br/>
+{$Think.session.user_id}<br/>
+{$Think.get.pageNumber}<br/>
+{$Think.cookie.name}<br/>
+{$Think.config.db_charset}<br/>
+{$Think.lang.var_error}
+-->
+<!--
+{$create_time|date='Y-m-d',###}<br/>
+{$data.name}<br/>
+{$data.name|md5}<br/>
+{$data.name|substr=0,3}<br/>
+<pre>
+	{$data['name']}
+	{$data['name']|md5|strtoupper|substr=0,3}
+	{:substr(strtoupper(md5($data['name'])),0,3)}
+</pre>
+-->
+{$user.name|default='这家伙很懒'}<br/>
+{$Think.get.name|default='hello'}<br/>
+
+
+</body>
+</html>

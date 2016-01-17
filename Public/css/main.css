@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*设置默认样式*/
+html,body,div,span,p,h1,h2,h3,h4,h5,h6,img,a,ul,li,ol,dl,dt,dd,i {margin:0;padding:0;list-style-type:none;}
+form,input,button{border:0;background:none;padding:0px;}
+body, th, td, textarea, select
+{color:#686868;
+ font-family: "黑体"；
+}
+a,img {outline:none;border:none;}
+img {vertical-align:middle}
+a:link {color:#666;text-decoration:none;}
+a:visited {color:#999;text-decoration:none;}
+
+
+/* 复用属性 */
+.left{float:left;_display:inline;}
+.right{float:right;_display:inline;}
+.auto{margin-left:auto;margin-right:auto;}
+.hidden {overflow:hidden}
+
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix { display: inline-table; }
+* html .clearfix { height: 1%; }
+.clearfix {display:block;}
+
+
+/*顶部导航区*/
+#header{min-width:1350px; width:100%;text-align:center;height:90px;background:#008fe1;}
+#header .layout {width:100%;position:relative;}
+#header .layout .right {position:relative;padding-right:90px;}
+#header .layout .right,.layout .right span a {font-family:"黑体";font-size:14px;color:#FFF;}
+#header .layout .right span {display:block;float:left;line-height:90px;}
+#header .layout .right .welcome {padding-left:30px;}
+#header .layout .right .exit {padding-left:50px;}
+#header .layout .right a:hover{color:#666;}
+
+
+
+/*左部固定区*/
+.list {width:220px;background:#ededed;position:fixed;margin-top:-90px;}
+.list .list_name {border-right:1px solid #e6e6e6;}
+.list ul {margin-bottom:10px;}
+.list ul li a{display:block;width:100%;height:45px;line-height:45px;background:#fcfcfc;text-align:center;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;font-family:"黑体";font-size:18px;} 
+.list ul li a:hover{display:block;background:#008fe1;border-top:1px solid #008fe1;border-bottom:1px solid #008fe1;color:#FFF;} 
+.list ul li .current {display:block;width:100%;height:45px;line-height:45px;background:#008fe1;border-top:1px solid #008fe1;color:#FFF;border-right:1px solid #008fe1;border-bottom:1px solid #008fe1;}
+
+.list .logo a {border:none;line-height:20px;display:block;width:100%;height:90px;background:#00a8ff;font-family:"黑体";font-size:30px;color:#FFF;}
+.list .logo a img {padding:12px 10px 0px 20px;}
+.list .logo a span {display:block;margin-top:35px;}
+
+/*菜单滚动到顶部停留效果*/
+.scroll-menu ul li{float:left;width:140px;height:74px;line-height:74px;background:#b7f2fd; text-align:center;border:none;margin:0px;font-size:16px;}
+.scroll-menu ul .bg1 {background:#d1f7fe;}
+.fix{position:fixed; top:0; z-index:10000}
+
+
+/*返回顶部效果*/
+.to_top{width:20px; height:50px;position:fixed; cursor:pointer;top:600px;right:10px;background:url(../images/toTop-icon.png) no-repeat;}
+.to_top2{background-position:20px 0px;}
+.to_top span {display:block;padding-top:50px;font-size:20px;}
+
+/*-----------时租预约页---------------*/
+.center {margin-left:260px;width:1000px;}
+.center .rent_1 {padding:30px 0px 25px 35px;color:#008fe1;font-size:20px;font-family:"黑体";}
+.center .rent_1 a {color:#008fe1;font-size:20px;font-family:"黑体";}
+.center .rent_1 a:hover {color:red;}
+
+.center .rent {font-size:20px;font-family:"黑体";width:980px;height:130px;background:#f5f5f5;padding-bottom:10px;margin-left:20px;margin-bottom:10px;}
+.rent .total {font-size:26px;padding:30px 0px 30px;}
+.rent .total span {display:block;float:left;padding-left:30px;line-height:25px;margin-right:55px;}
+.rent .total .sum {background:url(../images/sum.png) no-repeat;}
+.rent .total .rental {background:url(../images/rental.png) no-repeat;}
+.rent .total .space {background:url(../images/space.png) no-repeat;}
+
+.rent .fee {font-size:26px;margin-left:30px;margin-top:30px;}
+.rent .fee  span{display:block;float:left;margin-right:55px;}
+.rent .fee a {font-family:"黑体";font-size:22px;}
+.detail a {display:block;width:91px;height:36px;background:url(../images/bg.png) no-repeat;color:#FFF;line-height:36px;text-align:center;}
+.detail a:hover {display:block;width:91px;height:36px;background:url(../images/bg2.png) no-repeat;}
+
+
+.content,.scroll {font-family:"黑体";clear:both;padding-left:20px;}
+.content {margin-top:10px;}
+
+.content ul {margin-top:2px;}
+.content  ul li{float:left;width:140px;height:70px;background:#e6e6e6;text-align:center;}
+.content  ul li span {display:block;}
+.content  ul li .number {padding-top:16px;padding-bottom:5px;font-size:20px;color:#015a8d;}
+.content  ul li  a {display:block;text-decoration:underline;}
+.content   ul li a {display:block;color:#2296e1;font-size:14px;}
+.content   ul li a:hover {display:block;text-decoration:underline;color:red;}
+.content   ul .bg2{background:#f5f5f5;color:#5a5a5a;float:left;width:140px;height:70px;}
+.content   ul .line_height {line-height:70px;}
+
+.content   ul li .present {color:#4db003;font-size:18px;line-height:70px;}
+.content   ul li .absent {color:#fd2222;font-size:18px;line-height:70px;}
+.content   ul li .overtime {color:#7350f4;font-size:18px;line-height:70px;}
+
+.content   ul li .comfire {font-size:12px;padding-top:8px;padding-bottom:1px;}
+.content   ul li .comfire b {font-size:18px;}
+.content   ul li .detail {padding-left:22px;}
+.content   ul li .detail a{color:#FFF;line-height:35px;text-decoration:none;}
+
+
+/*-----------时租预约--车主页---------------*/
+.center .car_owner {width:750px;height:276px;margin:0 auto;text-align:center;}
+.center .owner {width:750px;height:276px;background:url(../images/bg3.png) no-repeat;}
+.center .car_owner .comeback{display:block;width:200px;height:60px;background:url(../images/bg5.png) no-repeat;margin-left:275px;margin-top:40px;line-height:60px;font-size:26px;color:#FFF;}
+.center .car_owner .comeback:hover {display:block;width:200px;height:60px;background:url(../images/bg4.png) no-repeat;}
+.car_owner h3 {font-size:30px;padding-bottom:50px;}
+.center .owner  p {font-size:35px;line-height:120px;}
+
+/*-----------时租预约--进场确认页---------------*/
+.center .owner .car_number,.center .owner .time  {font-size:32px;}
+.center .owner .car_number {padding-top:25px;}
+.center .owner .car_number span,.center .owner .time .detail_hours{color:#008fe1;}
+.center .owner .time .detail_time,.center .owner .time .detail_hours {width:208px;height:42px;border:1px solid #666666;text-align:center;line-height:42px;}
+.center .owner .time .detail_hours {width:115px;}
+.center .owner .time input {font-size:32px;margin-left:15px;}
+.center .car_owner .comfire_cancel {padding-left:107px;margin-top:-35px;}
+.center .car_owner .comfire_cancel a{display:block;float:left;margin:0px;}
+.center .car_owner .comfire_cancel .cancel {margin-left:135px;}
+
+
+/*-----------时租预约--停车位信息页---------------*/
+.car_align .car_owner {width:800px;height:390px;margin:0 auto;text-align:center;} 
+.car_align .owner {width:800px;height:390px;background:url(../images/bg6.png) no-repeat;}
+.center  .information  p{font-size:20px;line-height:60px;text-align:left;padding-left:60px;}
+.center .information  .information_1 {padding-top:10px;}
+.center .information  .information_1 span {padding-right:40px;}
+
+/*-----------时租预约--收费明细页---------------*/
+.fee_detail .total .time,.fee_detail .fee {font-size:18px;padding-left:20px;}
+.fee_detail .total .time .detail_time,.fee_detail  .fee .detail_time{width:174px;height:30px;border:1px solid #666666;}
+.fee_detail .total .time .detail_hours {width:115px;height:30px;border:1px solid #666666;}
+.fee_detail  .fee {margin-top:-5px;}
+.fee_detail .total .time input,.fee_detail  .fee input {margin-right:15px;font-size:18px;text-align:center;line-height:30px;}
+.fee_detail  .fee span {font-size:20px;line-height:35px;padding-left:160px;}
+
+.fee_content ul .special_1{width:60px;}
+.fee_scroll .special_1 {width:60px;}
+
+.fee_content ul .special_2,.fee_scroll .special_2{width:195px;}
+.fee_content ul .special_2.bg2 {width:195px;}
+
+.fee_content ul .special_3{width:110px;}
+.fee_scroll .special_3 {width:110px;}
+
+
+.fee_content ul li {line-height:70px;}
+.fee_content ul .special_1 span {padding-top:0px;padding-bottom:0px;}
+.fee_content ul .special_3 {color:#ff8400;}
+.fee_content ul li p  {padding:0px;line-height:2;text-align:center;}
+.fee_content ul li p .comfire{padding-left:20px;}
+.fee_content ul li p .line {line-height:70px;}
+.fee_content ul li b{display:block;}
+
+/*-----------用户管理页---------------*/
+.usr_management .current_user {font-size:18px;}
+.usr_management .current_user .logged {margin-left:20px;margin-top:25px;}
+.usr_management .current_user .logged .no_logged {color:#b3b3b3;}
+.usr_management .current_user .log_exit {margin-left:40px;margin-top:18px;}
+.usr_management .current_user .log_exit span {float:left;display:block;margin-left:20px;}
+
+.usr_management .fee span{font-size:18px;padding-top:8px;}
+
+.usr_management .fee .comeback {display:block;float:left;width:130px;height:35px;background:url(../images/bg7.png) no-repeat;text-align:center;line-height:35px;font-size:18px;color:#FFF;}
+.usr_management .fee .comeback:hover {background:url(../images/bg8.png) no-repeat;}
+.usr_management .fee .comeback2 {margin-left:40px;}
+.usr_management .fee p.right{margin-right:100px;}
+
+.usr_management .scroll  ul .special_1,.usr_management .user_content .special_1{width:70px;}
+.usr_management .scroll  ul .special_2,.usr_management .user_content .special_2{width:170px;}
+.usr_management .user_content .bg2.special_2 {width:170px;}
+.usr_management .scroll  ul .special_3,.usr_management .user_content .special_3{width:290px;}
+.usr_management .user_content .special_3  p{padding-left:25px;padding-top:20px;}
+.usr_management .user_content .special_3 span {display:block;float:left;}
+

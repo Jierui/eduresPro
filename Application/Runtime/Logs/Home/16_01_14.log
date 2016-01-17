@@ -1,0 +1,90 @@
+[ 2016-01-14T13:11:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T13:13:44+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T13:14:16+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T13:15:26+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T13:17:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T13:19:52+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T14:39:02+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T14:41:37+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T14:54:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:01:16+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:18:54+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:20:52+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:21:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:23:26+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:24:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:28:47+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:30:28+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:33:36+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:35:02+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:35:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:37:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T15:57:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T16:18:21+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T16:19:33+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T22:56:07+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T22:56:07+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-14T22:58:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/php/index.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+ERR: 非法操作:php
+
+[ 2016-01-14T22:58:49+08:00 ] ::1 /eduresPro/index.php/Home/Index/php/index.php
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+ERR: 非法操作:php
+

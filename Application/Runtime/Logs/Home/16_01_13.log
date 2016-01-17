@@ -1,0 +1,16 @@
+[ 2016-01-13T00:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/register
+ERR: 1406:Data too long for column 'Password' at row 1
+ [ SQL语句 ] : INSERT INTO `t_userinfo` (`userName`,`Password`,`Level`,`Major`,`Phone`,`Email`,`userType`) VALUES ('jierui','81dc9bdb52d04dc20036dbd8313ed055','讲师','物联网','15367985073','123@qq.com','auditor')
+
+[ 2016-01-13T14:22:54+08:00 ] ::1 /eduresPro/index.php/Home/Index/__URL__/welcome
+ERR: 非法操作:__URL__
+
+[ 2016-01-13T14:23:53+08:00 ] ::1 /eduresPro/index.php/Home/Index/__URL__/welcome
+ERR: 非法操作:__URL__
+
+[ 2016-01-13T20:58:46+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+
+[ 2016-01-13T20:59:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/_PUBLIC__/Jquery/js/jquery.fileupload.js
+ERR: 非法操作:_PUBLIC__
+

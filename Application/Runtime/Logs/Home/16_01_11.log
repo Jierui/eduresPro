@@ -1,0 +1,23 @@
+[ 2016-01-11T22:12:51+08:00 ] ::1 /eduresPro/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.030894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019474s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014034s ]
+
+[ 2016-01-11T22:21:11+08:00 ] ::1 /eduresPro/
+ERR: 模板不存在:./Application/Home/View/Index/login.html
+
