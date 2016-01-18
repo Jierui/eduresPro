@@ -4,13 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="中南大学远程教育资源管理系统" />
 <title>中南大学远程教育资源管理系统</title>
-<link href="/eduresPro/Public/otherfiles/styles/glDatePicker.darkneon.css" rel="stylesheet" type="text/css">
-<link href="/eduresPro/Public/otherfiles/styles/glDatePicker.default.css" rel="stylesheet" type="text/css">
 <link href="/eduresPro/Public/otherfiles/styles/glDatePicker.flatwhite.css" rel="stylesheet" type="text/css">
-<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/css.css" />
 <link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/style.css" />
 <script src="/eduresPro/Public/js/ChangeContent.js" type="text/javascript"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="/eduresPro/Public/Jquery/js/jquery-1.12.0.min.js"></script>
 <script src="/eduresPro/Public/Jquery/js/vendor/jquery.ui.widget.js"></script>
 <script src="/eduresPro/Public/Jquery/js/jquery.iframe-transport.js"></script>
 <script src="/eduresPro/Public/Jquery/js/jquery.fileupload.js"></script>
@@ -40,7 +38,7 @@
 		<div class="lm01 clearfix"> 
 			<img class="peptx" src="/eduresPro/<?php echo ((isset($imgpath) && ($imgpath !== ""))?($imgpath):'Public/images/tximg.jpg'); ?>" /><a  href="javascript:select_img_file();" class="changeImg">更换头像</a>
 			<input type="file" name="files[]" id="img_upload" style="display:none"/>
-	   		 <div class="pepdet">
+	   		 <div class="pepdet" style="clear:both;">
 				<p>姓名：<?php echo ($userinfo["username"]); ?></p>
 				<p>层次：<?php echo ($userinfo["level"]); ?></p>
 				<p>专业：<?php echo ($userinfo["major"]); ?></p>
@@ -68,7 +66,8 @@
 			<h2>天气</h2>
 	  </div>
 	  <div class="detail"> 
-	  	   <img class="" src="/eduresPro/Public/images/kj_02.jpg" /> 
+	  	   <!--<img class="" src="/eduresPro/Public/images/kj_02.jpg" /> -->
+	  	  <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U578735513&cid=CHHN000000&l=zh-CHS&p=SMART&a=0&u=C&s=11&m=2&x=1&d=3&fc=B00C22&bgc=C6C6C6&bc=&ti=1&in=1&li=&ct=iframe" frameborder="0" scrolling="no" width="214" height="300" allowTransparency="true"></iframe>
 	  </div>
     </div>
 </div>   <!--leftbar结束-->
