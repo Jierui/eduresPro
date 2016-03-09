@@ -25,7 +25,7 @@
 		<img class="logo" src="/eduresPro/Public/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
 		   <li class="seleli" onMouseOver="change(this)"><a href="#">消息提醒</a></li>
-		   <li onMouseOver="change(this)"><a href="#">个人中心</a></li>
+		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >留言板</a></li>

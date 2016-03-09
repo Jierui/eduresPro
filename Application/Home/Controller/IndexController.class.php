@@ -285,25 +285,64 @@ class IndexController extends Controller {
     		echo json_encode($result);
     	}
     }
+    //个人中心
+    public function personal_center(){
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major,Sex,Phone,Email')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    	$this->display('user:personal_center');
+    }
+    //修改资料
+    public function updateUserInfo(){
+    	$data = $_POST;
+    	$condition['userID'] = session('userID');
+    	$user = M('userinfo');
+    	$result = $user->where($condition)->save($data);
+    	if($result == 1){
+    		$this->success("修改成功",'personal_center');
+    	}else{
+    		$this->error("信息修改失败");
+    	}
+    }
     //实验代码
     public function demo(){
-        $message = M('messageinfo');
-    	//$info = $message->create('GET');
-    	$info = $_REQUEST;
-    	unset($condition);
-    	if(info){
-    		$condition['SourceID'] = $info['TargetID'];
-    		$condition['TargetID'] = $info['SourceID'];
-    		$condition['mstatus'] = 0;
-    		$condition['_logic'] = 'and';
-    		$messageinfo = $message->where($condition)->field('message,Time,SourceID')->select();
-    		dump($messageinfo);
-    		//$result = array('status'=>1,'msg'=>$info);
-    		//echo json_encode($result);
-    	}else{
-    		//$result = array('status'=>0,'msg'=>'服务器未能接收正确数据');
-    		//echo json_encode($result);
-    	}
+//         $message = M('messageinfo');
+//     	//$info = $message->create('GET');
+//     	$info = $_REQUEST;
+//     	unset($condition);
+//     	if(info){
+//     		$condition['SourceID'] = $info['TargetID'];
+//     		$condition['TargetID'] = $info['SourceID'];
+//     		$condition['mstatus'] = 0;
+//     		$condition['_logic'] = 'and';
+//     		$messageinfo = $message->where($condition)->field('message,Time,SourceID')->select();
+//     		dump($messageinfo);
+//     		//$result = array('status'=>1,'msg'=>$info);
+//     		//echo json_encode($result);
+//     	}else{
+//     		//$result = array('status'=>0,'msg'=>'服务器未能接收正确数据');
+//     		//echo json_encode($result);
+//     	}
+
     }
     
     

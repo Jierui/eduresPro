@@ -24,6 +24,7 @@ a:hover {text-decoration: underline;color:#696969;}
 .show {display:block;}
 .hidden {display:none;}
 
+
 .cur1{  color:#0081d4;}
 .cur2{ display:block; float:left;}
 
@@ -88,9 +89,9 @@ a:hover {text-decoration: underline;color:#696969;}
 .rig_nav li a {font-size: 14px;height: 35px;line-height: 35px;padding: 0 25px;}
 .rig_seleli span {background: none repeat scroll 0 0 #C8C7C7;color: #FFFFFF;margin-right: 8px;padding: 0 5px 1px 2px;cursor:pointer;}
 .rig_seleli a {color: #638EC7;font-weight: bold;}
-.adtip {background: none repeat scroll 0 0 #FFFFFF;border-bottom: 1px solid #C8C7C7;height: 82px;}
+.adtip {background: none repeat scroll 0 0 #FFFFFF;height: 82px;}
 .goom {font-size: 14px !important;padding-bottom: 5px;}
-.tip {padding: 15px;}
+.tip {padding: 15px; border-bottom: 1px solid #C8C7C7;}
 .tip p {font-size: 16px;line-height: 22px;}
 .tip p span {color: #638EC7;font-size: 16px;font-weight: bold;padding: 0 5px;}
 .adv {background: none repeat scroll 0 0 #FFEDBB;border: 1px solid #DCC074;float: right;height: 40px;line-height: 40px;margin-right: 20px;margin-top: 20px;padding: 0 16px;width: 450px}
@@ -128,6 +129,8 @@ a:hover {text-decoration: underline;color:#696969;}
 .tabindex  tr th {background-color:#f8f8f8;}
 .tabindex .b_white td {background-color:#FFFFFF;}
 
+.tabindex  tr td img {width:20px;height:20px;}
+
 /*--------切换tabmenu-------------*/
 .tabContainer {border: 1px solid #DDDDDD;height: 45px;line-height: 45px;margin-bottom: 2px;}
 .tabContainer .tabHead {float:left;}
@@ -156,7 +159,7 @@ a:hover {text-decoration: underline;color:#696969;}
 .shent span {float:left;}
 .shent input {float: left;margin-left: 5px;margin-right: 20px;margin-top: 13px;}
 .shent img {float:left;padding-top: 16px !important;}
-.tabCot {_width:99.7%;}
+.tabCot {_width:99.7%;margin-top:10px;}
 .tabindex  tr th ,
 .tabindex  tr td{text-align:center;vertical-align:middle;}
 .tabindex  tr th a:hover ,
@@ -189,8 +192,28 @@ a:hover {text-decoration: underline;color:#696969;}
 #face1 img{border: 1px solid #ccc;margin-left: 5px;cursor: pointer;margin-top: 5px;}    
 
 
+/*****************************个人中心页***************************************/
 
+/*----非管理员用户-----*/
+.per_infor  .form{background:none;margin-top:0px;margin-left: 80px;color:#666666;}
+.per_infor  .form label {font-size:16px;}
+.per_infor  .changeInfo a{display:block;margin-right:40px;font-size:14px;padding:10px;}
+.per_infor  .changeInfo a:hover {color:#2595b7;}
+.per_infor .InfoList ul  {margin-top:10px;font-size:16px; color:#000000;font-weight:bold;}
 
+.per_infor .InfoList ul li {padding-top:15px;}
+.per_infor .InfoList ul li span {margin-left:10px;color:#333333;font-weight:normal;}
+.per_infor .InfoList2 .btn {width:auto;}
+.per_infor .InfoList2 label {font-size:16px; color:#000000;font-weight:bold;margin-right:10px;}
+
+/*----管理员用户-----*/
+.Admin_Info {margin-top:15px;}
+.Admin_Info .tabCot{margin-top:10px;}
+ .add button ,.Admin_Info .search button {padding:0 5px;}
+ .filtrate {margin-left:10%;}
+. .search input {padding:3px 0;}
+. .buttons button,buttons input{margin-bottom:10px;}
+ .buttons input, .buttons select{padding:5px 0;margin-bottom:4px;font-size:12px;text-align:center;}
 /*----------底部-----------------------*/
 .footer{ width:100%; height:90px; background:#2553A0;}
 .footer p {text-align:center; color:#fff;line-height:22px;}
