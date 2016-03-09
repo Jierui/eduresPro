@@ -136,7 +136,7 @@ a:hover {text-decoration: underline;color:#696969;}
 .tabContainer .tabHead li a {color: #1D79C7;font-size:14px;font-weight:bold;}
 .currentBtn {border-top: 1px solid #333333;}
 
-/*-----------表格--------------*/
+/*-----------资源反馈消息栏--------------*/
 .scordeti ul li h3 {background: none repeat scroll 0 0 #EFEFEF;color: #666666;font-size: 14px;font-weight: bold;height: 40px;line-height: 40px;text-align: center;}
 .rig_lm02 .detail .det_inner {border: 1px solid #D5D5D5;height: 180px;margin-bottom:10px;margin-top:10px;}
 .tabindex {border-collapse:collapse;}
@@ -159,8 +159,37 @@ a:hover {text-decoration: underline;color:#696969;}
 .tabCot {_width:99.7%;}
 .tabindex  tr th ,
 .tabindex  tr td{text-align:center;vertical-align:middle;}
+.tabindex  tr th a:hover ,
+.tabindex  tr td a:hover{color:#0000FF;}
 .tabindex  tr th {background-color:#f8f8f8;}
 .tabindex .b_white td {background-color:#FFFFFF;}
+
+
+/*-----------短消息栏--------------*/
+.imforlist {width:50%;}
+.chat{ width: 610px; height: 422px; position: relative; border: 1px solid #000; }
+.show2{ border-bottom: 1px solid #000; border-right: 1px solid #000; width: 400px; height: 300px; display: block;overflow:auto; position:relative;}
+.show2 .name {text-align:center;color:#000000;font-size:16px;font-weight:bold;padding:6px;border-bottom:1px solid #CCC;}
+.neirong{ display: block;margin-top: 5px; }
+.neirong .portrait {width:30px;height:30px;padding:6px;}
+.nei{ width: 400px;display: block; }
+.online{ width: 200px;height: 422px; border-left: 1px solid #000; position:absolute; right:0px; top:0px; }
+.online .friendlist {padding:10px 5px;border-bottom:1px solid #CCC;font-weight:bold;font-size:14px;}
+.online ul {margin-left:10px;margin-top:5px;}
+.online ul li img {width:20px;height:20px;padding:3px 5px;}
+.one{color: blue;}
+.neir{ bottom: 22px; position: absolute; width: 402px; padding-left:1px;}
+.fs{ bottom: 0px; position: absolute; width: 402px; padding-left:1px;}
+.submit{ background-color: #25539e;border: medium none; color: #fff;float: right;line-height: 19px; margin-top: 2px;cursor: pointer;}
+.button{background-color: red; border: medium none;color: #fff; float: right;line-height: 19px; margin-top: 2px; margin-left:5px; cursor: pointer;}
+.option{position:relative;}
+.option ul{height:20px;line-height:20px; margin-top: 2px;padding-left: 9px;}
+.option li{float:left;list-style:none;margin-right: 10px;}
+#face1{display:none;z-index:9999;position: absolute;top: 326px;width:160px;}
+#face1 img{border: 1px solid #ccc;margin-left: 5px;cursor: pointer;margin-top: 5px;}    
+
+
+
 
 /*----------底部-----------------------*/
 .footer{ width:100%; height:90px; background:#2553A0;}

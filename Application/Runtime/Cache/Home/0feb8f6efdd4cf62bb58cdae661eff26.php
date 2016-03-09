@@ -15,6 +15,7 @@
 <script src="/eduresPro/Public/otherfiles/js/upimg.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/glDatePicker.min.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/datePicker.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/face.js"></script> <!-- 消息发送接收 -->
 </head>
 
 <body style="background:none;">
@@ -67,7 +68,8 @@
 	  </div>
 	  <div class="detail"> 
 	  	   <!--<img class="" src="/eduresPro/Public/images/kj_02.jpg" /> -->
-	  	  <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U578735513&cid=CHHN000000&l=zh-CHS&p=SMART&a=0&u=C&s=11&m=2&x=1&d=3&fc=B00C22&bgc=C6C6C6&bc=&ti=1&in=1&li=&ct=iframe" frameborder="0" scrolling="no" width="214" height="300" allowTransparency="true"></iframe>
+	  	  <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U578735513&cid=CHHN000000&l=zh-CHS&p=SMART&a=0&u=C&s=11&m=2&x=1&d=3&fc=B00C22&bgc=C6C6C6&bc=&ti=1&in=1&li=&ct=iframe" 
+	  	  frameborder="0" scrolling="no" width="214" height="300" allowTransparency="true"></iframe>
 	  </div>
     </div>
 </div>   <!--leftbar结束-->
@@ -212,8 +214,143 @@
          </div>   <!--tabCot结束-->
 		  
 		  
-         <div id="tabCot_product_2" class="tabCot"  style="display: none;"> 2222222222 </div>   
-          <script language="JavaScript" type="text/javascript" src="js/tab.js"></script> 
+         <div id="tabCot_product_2" class="tabCot"  style="display: none;">
+         <!---消息列表开始--->
+		 <div class="imforlist fl">
+		 	  <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
+			  		
+					<tr>
+					  <th width="8%" scope="col">头像</th>
+					  <th width="8%" scope="col">发送者</th>
+					  <th width="15%" scope="col">发送内容</th>
+					  <th width="10%" scope="col">发送时间</th>
+					  <th width="10%"  scope="col">操作</th>
+					</tr>
+					
+					<tr  class="b_white">
+					  <td><div align="center"><img src="/eduresPro/Uploads/images/userImg/img_11453007667.jpg"></div></td>
+					  <td class="datacol">宋老师</td>
+					  <td>琳琳，这个图片太大了</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">王老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">王老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">王老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">王老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">王老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td class="datacol"><a href="#">回复</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+					<tr>
+					  <td><div align="center"><img src="images/tx.jpg"></div></td>
+					  <td class="datacol">张老师</td>
+					  <td>之前发的文件有问题</td>
+					  <td>2016年1月19日</td>
+					  <td><a href="#"  class="yccol">查看</a>&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+			 </table>
+				  
+				   <div class="fanye clearfix">
+                   <p class="fytip">Showing 1 to 10 of 12 entries</p>
+                   <div class="yem">
+					  <ul>
+						 <li><a href="#">First</a></li>
+						 <li><a href="#">&lt;</a></li>
+						 <li class="sellify"><a href="#">1</a></li>
+						 <li><a href="#">2</a></li>
+						 <li><a href="#">&gt;</a></li>
+						 <li><a href="#">Last</a></li>
+					  </ul>
+                  </div>
+              </div>  <!--fanye结束-->
+			
+			</div>	  <!--inforlist结束--->
+				   <div class="chat fr clearfix" id="close">
+					<!-- 信息展示框 -->
+					<div class="show2">
+						   <p class="name" id="t_name" value="">请选择</p>
+						   <!--<div class="neirong">
+								<img src="/eduresPro/Uploads/images/userImg/img_11453007667.jpg" alt="头像"  class="portrait"/><span>琳琳，这个图片太大了</span>
+							</div> 
+							
+							<div class="neirong fr">
+								<span>好的，我修改一下</span><img src="images/tx2.png" alt="头像"  class="portrait"/>
+							</div> -->  
+					</div>
+					<!-- 在线用户框 -->
+					<div class="online">
+						<p class="friendlist">好友列表(1/<?php echo count($messageinfo) - 1;?>)</p>
+						<ul id="onlineid">
+							<!--<li><img src="images/tx.jpg" alt="头像" /><a href="#">宋老师</a></li>
+							<li><img src="images/tx.jpg" alt="头像" /><a href="#">王老师</a></li>
+							<li><img src="images/tx.jpg" alt="头像" /><a href="#">张老师</a></li>
+							<li><img src="images/tx.jpg" alt="头像" /><a href="#">李老师</a></li>-->
+							<?php if(is_array($messageinfo)): $i = 0; $__LIST__ = $messageinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i; if($data["username"] != session('userName' )): ?><li><img src="/eduresPro/<?php echo ((isset($data["imagepath"]) && ($data["imagepath"] !== ""))?($data["imagepath"]):'Public/images/tximg.jpg'); ?>" alt="头像" />
+							<a href="javascript:face_a(<?php echo session('userID');?>,'#face_<?php echo ($data["userid"]); ?>')" 
+							id="face_<?php echo ($data["userid"]); ?>"><?php echo ($data["username"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+						</ul>
+					</div>
+					<!-- 输入框 -->
+					<div class="option">
+						<ul>
+							<li><a href="javascript:void(0);" id="face" title="表情">^_^</a></li>
+							<li><a href="javascript:void(0);" id="face" title="插入图片"><img src="images/image.png" alt="插入图片"  /></a></li>
+							<li class="record"><a href="#">聊天记录</a></li>
+			 			</ul>
+					</div>
+					<div class="neir">
+						<textarea name="content" class="content" id="content" cols="45" rows="3"  style="width: 394px; height: 70px;"></textarea>
+					</div>
+					<div class="fs">
+						<input type="button" class="button" value="关 闭" />
+						<input type="submit" class="submit" value="发 送" />
+					</div>
+			 </div>	 <!--chat结束--->	
+				  <script language="JavaScript" type="text/javascript">
+				    deal_send(<?php echo session('userID');?>,'<?php echo ($imgpath); ?>');
+				    //messageloop(<?php echo session('userID');?>,'$imgpath');
+				    //setInterval(updatemsg(<?php echo session('userID');?>,'<?php echo ($imgpath); ?>'));
+				    setInterval("updatemsg(<?php echo session('userID');?>,'<?php echo ($imgpath); ?>')",4000);
+				    
+				  </script>
+             
+		 <!---消息列表结束--->
+         </div>   <!-- 结束交流 -->
+          <script language="JavaScript" type="text/javascript" src="/eduresPro/Public/js/tab.js"></script> 
 		  
         </div>   <!--zhutitab结束-->
      </div>  <!--inner03结束-->  

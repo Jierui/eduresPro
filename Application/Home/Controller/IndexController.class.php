@@ -39,10 +39,11 @@ class IndexController extends Controller {
     			$condition['userName'] = $name;
     			$condition['Password'] = md5($pwd);
     			$condition['_logic']= 'and';
-    			$result=$modle->where($condition)->select();
+    			$result=$modle->where($condition)->getField('userID');
     			//dump($result);
     			if($result){
     				session('userName',$name);
+    				session('userID',$result);
     				//$this->jump('登陆成功','welcome');
     				$this->success('登陆成功',U('Home/Index/message_feedback'));
     			}else{
@@ -80,7 +81,8 @@ class IndexController extends Controller {
     		$this->error($error);
     		exit;
     	}
-    	$data['userType']='auditor';
+    	//$data['userType']='auditor';
+    	$data['userType'] = '老师';
     	$data['Password']=md5($data['Password']);
     	unset($data['enpassword']);
     	//dump($data);
@@ -163,6 +165,8 @@ class IndexController extends Controller {
     	}else{
     		$info['alert'] = '下午好';
     	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
     	$this->assign('info',$info);
     	$this->assign('userinfo',$userinfo[0]);
     	$this->assign('imgpath',$imgpath);
@@ -228,9 +232,78 @@ class IndexController extends Controller {
     		echo json_encode($result);
     	}
     }
+    //点对点聊天
+    public function deal_send(){
+    	$message = M('messageinfo');
+    	$info = $message->create();
+    	if($info){
+    		$info['Time'] = date('Y-m-d H:i:s');
+    		$message->add($info);
+    		$result = array('status'=>1,'msg'=>$info['message']);
+    		echo json_encode($result);
+    	}else{
+    		$result = array('status'=>0,'msg'=>'没有接收到消息');
+    		echo json_encode($result);
+    	}
+    }
+    //更新聊天记录
+    public function deal_recieve(){
+    	$message = M('messageinfo');
+    	$info = $message->create();
+        $condition = '(`SourceID` = "'.$info['SourceID'].'" and `TargetID` = "'.$info['TargetID']
+        .'") or (`SourceID` = "'.$info['TargetID'].'" and `TargetID` = "'.$info['SourceID'].'")';
+        $select = $message->where($condition)->select();
+        $conditionID = '`userID`='.$info['SourceID'].' or `userID` = '.$info['TargetID'];
+        $imagepath=$message->table('t_userinfo')->where($conditionID)->field('userID,imagePath')->select();
+        $result['select'] = $select;
+        $result['image'] = $imagepath;
+        //更新未读消息
+        unset($condition);
+        $data['mstatus'] = 1;
+        $condition['SourceID'] = $info['TargetID'];
+        $condition['TargetID'] = $info['SourceID'];
+        $condition['_logic']='and';
+        $message->where($condition)->save($data);
+    	echo json_encode($result);
+    }
+    public function updatemsg(){
+    	$message = M('messageinfo');
+    	$info = $message->create();
+    	unset($condition);
+    	if(info){
+    		$condition['SourceID'] = $info['TargetID'];
+    		$condition['TargetID'] = $info['SourceID'];
+    		$condition['mstatus'] = 0;
+    		$condition['_logic'] = 'and';
+    		$messageinfo = $message->where($condition)->field('SourceID,Time,message')->select();
+    		$result = array('status'=>1,'msg'=>$messageinfo);
+    		$data['mstatus'] = 1;
+    		$message->where($condition)->save($data);
+    		echo json_encode($result);
+    	}else{
+    		$result = array('status'=>0,'msg'=>'服务器未能接收正确数据');
+    		echo json_encode($result);
+    	}
+    }
     //实验代码
     public function demo(){
-        echo basename('Uploads/images/1.jpg');
+        $message = M('messageinfo');
+    	//$info = $message->create('GET');
+    	$info = $_REQUEST;
+    	unset($condition);
+    	if(info){
+    		$condition['SourceID'] = $info['TargetID'];
+    		$condition['TargetID'] = $info['SourceID'];
+    		$condition['mstatus'] = 0;
+    		$condition['_logic'] = 'and';
+    		$messageinfo = $message->where($condition)->field('message,Time,SourceID')->select();
+    		dump($messageinfo);
+    		//$result = array('status'=>1,'msg'=>$info);
+    		//echo json_encode($result);
+    	}else{
+    		//$result = array('status'=>0,'msg'=>'服务器未能接收正确数据');
+    		//echo json_encode($result);
+    	}
     }
     
     
