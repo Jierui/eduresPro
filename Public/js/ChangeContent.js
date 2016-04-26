@@ -20,9 +20,8 @@ function change(a){
 						else
 							$("#intrL").css("margin-left","460px"); 	 	
 						
-				
 				*/
-				 			
+				
 				}
 				else{
 					 change1[i].className = "";

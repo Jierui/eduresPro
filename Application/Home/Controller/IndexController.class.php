@@ -223,6 +223,14 @@ class IndexController extends Controller {
     			$image->open($urlDir.$saveName);
     			$image->thumb(99, 95,Image::IMAGE_THUMB_CENTER)->save($urlDir.'userImg/'.$saveName);
     			$user->where($condition)->setField('imagePath',$urlDir.'userImg/'.$saveName);
+    			///////////////////////////////////////////////////
+    			//跟新头像
+    			$leamessage = M('leamessage');
+    			$ansmessage = M('ansmessage');
+    			unset($condition);
+    			$condition['userID'] = session('userID');
+    			$leamessage->where($condition)->setField('imagePath',$urlDir.'userImg/'.$saveName);
+    			$ansmessage->where($condition)->setField('imagePath',$urlDir.'userImg/'.$saveName);
     		}
     		$result = array('status'=>1,'msg'=> $urlDir.'userImg/'.$saveName);
     		echo json_encode($result);
@@ -323,26 +331,182 @@ class IndexController extends Controller {
     		$this->error("信息修改失败");
     	}
     }
+    public function message_board(){
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    	//////////////////////////////////////////////////////////
+    	$message = M('leamessage');
+    	$ansmessage = M('ansmessage');
+    	$page = $_GET['page'];
+    	$pagesize = 5;
+    	if(!$page){
+    		$page = 1;
+    	}
+    	$messageinfo = $message->select();
+    	$totalinfo = count($messageinfo);
+    	$totalPage = ceil($totalinfo/5);
+    	if($page < 1)
+    		$page = 1;
+    	if($page > $totalPage)
+    		$page = $totalPage;
+    	//$arraymessage;
+    	$count = 0;
+    	--$page;
+    	for($i=$page*5;$i<$totalinfo and $i<($page*5+5);$i++){
+    		//unset($where);
+    		$where['messageID'] = $messageinfo[$i]['messageid'];
+    		$ansmessageInfo = $ansmessage->where($where)->select();
+    		$arraymessage[$count] = array('leamessage'=>$messageinfo[$i],
+    				'ansmessage'=>$ansmessageInfo);
+    		$count++;
+    	}
+    	++$page;
+    	$this->assign('arraymessage',$arraymessage);   //显示内容
+    	$this->assign('totalPage',$totalPage);   //总页数
+    	$this->assign('page',$page);   //当前页数
+    	$this->assign('user',$user);
+    	$this->display('user:message_board');
+    	//dump($arraymessage);
+    }
+    public function submitMessageBoard()              //提交新留言
+    {
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$message = M('leamessage');
+    	$user = M('userinfo');
+    	$data = $message->create();
+    	$data['Time'] = date('Y-m-d H:i:s');
+    	$data['userID'] = session('userID');
+    	$conditon['userID'] = $data['userID'];
+    	$data['imagePath'] = $user->where($condition)->getField('imagePath'); //用户头像路劲
+    	//$data['userName'] = session('userName');
+    	$message->add($data);
+    	$this->success("留言成功",'message_board');	
+    }
+    public function ansMessageBoard(){                   //提交留言
+    	if(!session('userID')){
+    		$this->error('请登录',U('Home/Index/index'));
+    		return;
+    	}
+    	$leamessageID=$_POST['ID'];
+    	$userID=$_POST['userid'];
+    	if(!$userID){
+    		echo "hello wrold";
+    		return;
+    	}
+    	$content=$_POST['content'];
+    	$data['Time'] = date('Y-m-d H:i:s');
+    	$data['messageID']=$leamessageID;
+    	$data['userID'] = $userID;
+    	$data['Content'] = $content;
+    	$user = M('userinfo');
+    	$conditon['userID'] = $data['userID'];
+    	$data['imagePath'] = $user->where($conditon)->getField('imagePath');
+    	$ansmessage = M('ansmessage');
+    	try{
+    		$ansmessage->add($data);
+    		$result = array("status"=>1,"time"=>$data['Time'],
+    				"userName"=>session("userName"),
+    				"content"=>$content,
+    				"imagePath"=>$data['imagePath']
+    		);
+    		echo json_encode($result);
+    	}catch (\Exception $e){
+    		$result = array("status"=>0,"msg"=>$e->__toString());
+    		echo json_encode($result);
+    	}
+    }
+    
+    public function delMessage($mid){
+    	if(!session('userID')){
+    		$this->error('请登录',U('Home/Index/index'));
+    		return;
+    	}
+    	$condition['messageID'] = $mid;
+    	$leamessage = M('leamessage');
+    	$ansmessage = M('ansmessage');
+    	$ansmessage->where($condition)->delete();
+    	$leamessage->where($condition)->delete();
+    	$this->message_board();
+    	
+    }
+    public function Teacher_Resource(){
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    	$this->display('user:Teacher_Resource');
+    }
+    
+    public function video(){
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    	$this->assign('user:video');
+    }
     //实验代码
     public function demo(){
-//         $message = M('messageinfo');
-//     	//$info = $message->create('GET');
-//     	$info = $_REQUEST;
-//     	unset($condition);
-//     	if(info){
-//     		$condition['SourceID'] = $info['TargetID'];
-//     		$condition['TargetID'] = $info['SourceID'];
-//     		$condition['mstatus'] = 0;
-//     		$condition['_logic'] = 'and';
-//     		$messageinfo = $message->where($condition)->field('message,Time,SourceID')->select();
-//     		dump($messageinfo);
-//     		//$result = array('status'=>1,'msg'=>$info);
-//     		//echo json_encode($result);
-//     	}else{
-//     		//$result = array('status'=>0,'msg'=>'服务器未能接收正确数据');
-//     		//echo json_encode($result);
-//     	}
-
+    	$ansmessage = M('ansmessage');
+    	$where['messageID'] = 1;
+    	dump($ansmessage->where($where)->select());
     }
     
     

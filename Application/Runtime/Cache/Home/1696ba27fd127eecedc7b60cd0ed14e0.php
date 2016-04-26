@@ -1,0 +1,717 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="中南大学远程教育资源管理系统" />
+<title>中南大学远程教育资源管理系统</title>
+<link href="/eduresPro/Public/otherfiles/styles/glDatePicker.flatwhite.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/amazeui.min.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/css.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/Upload.css" />
+<script src="/eduresPro/Public/js/ChangeContent.js" type="text/javascript"></script>
+<script src="/eduresPro/Public/js/jquery2.1.4.js" type="text/javascript"></script> 
+<script src="/eduresPro/Public/otherfiles/js/glDatePicker.min.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/datePicker.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	projekktor('#player_a'); // instantiation
+});
+</script>
+
+
+</head>
+
+<body style="background:none;">
+
+<!---增加新的课程资源记录开始--->
+<div id="fade" class="black_overlay"></div>
+<div id="MyDiv" class="white_content">
+	<div class="close_box">
+		<span onclick="CloseDiv('MyDiv','fade')"><a href="#" class="close">关闭</a></span>
+	</div>
+	 <div id="demo" class="demo"></div>   
+</div>
+<!---增加新的课程资源记录结束--->
+
+
+<div class="header">
+   <div class="top">
+		<img class="logo" src="images/logo.jpg" />
+		<ul class="nav" id="intrL-T">
+		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
+		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
+		   <li   class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
+		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
+		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
+		</ul>
+		<a href="<?php echo U('Home/Index/exit_login');?>" class="exit">退出</a>
+   </div>
+</div>   <!--header结束-->
+	
+<!--<div class="container clearfix">
+    <div class="leftbar">
+		<div class="lm01 clearfix"> 
+			<img class="peptx" src="images/tximg.jpg" /><a href="#" class="changeImg">更换头像</a>
+	   		 <div class="pepdet">
+				<p>姓名：李小雅</p>
+				<p>层次：教授</p>
+				<p>专业：计算机科学与技术</p>
+	  		</div>
+	    </div>   -->
+ <div class="container clearfix">
+    <div class="leftbar">
+		<div class="lm01 clearfix"> 
+			<img class="peptx" src="/eduresPro/<?php echo ((isset($imgpath) && ($imgpath !== ""))?($imgpath):'Public/images/tximg.jpg'); ?>" /><a  href="javascript:select_img_file();" class="changeImg">更换头像</a>
+			<input type="file" name="files[]" id="img_upload" style="display:none"/>
+	   		 <div class="pepdet" style="clear:both;">
+				<p>姓名：<?php echo ($userinfo["username"]); ?></p>
+				<p>层次：<?php echo ($userinfo["level"]); ?></p>
+				<p>专业：<?php echo ($userinfo["major"]); ?></p>
+	  		</div>
+	    </div>
+		
+	<div class="lm02 clearfix">
+	    <div class="title">
+			<img class="icon" src="/eduresPro/Public/images/dataicon.jpg" />
+			<h2>日历</h2>
+	    </div>
+	    <div class="detail"> 
+	  		<!--<img class="" src="images/kj_01.jpg" /> -->
+	  	    <div id="imgdate"></div>
+	  		<!--<img class="" src="/eduresPro/Public/images/kj_01.jpg" /> -->  
+	  		<div  style="width:212px;height:204px;"  id="imgdate1"></div>
+	  		<script type="text/javascript">
+             message_date("#imgdate");
+            </script>
+	    </div>
+   </div>
+	<div class="lm03">
+	    <div class="title">
+	    	<img style="padding-right:5px;" class="icon" src="/eduresPro/Public/images/weaicon.jpg" />
+			<h2>天气</h2>
+	  </div>
+	  <div class="detail"> 
+	  	  <!--<img class="" src="images/kj_02.jpg" /> -->
+	  	  <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U578735513&cid=CHHN000000&l=zh-CHS&p=SMART&a=0&u=C&s=11&m=2&x=1&d=3&fc=B00C22&bgc=C6C6C6&bc=&ti=1&in=1&li=&ct=iframe" 
+	  	  frameborder="0" scrolling="no" width="214" height="300" allowTransparency="true"></iframe>
+	  </div>
+    </div>
+</div>   <!--leftbar结束-->
+
+<div class="mainbody">
+    <div class="currmenu">
+		  <ul class="rig_nav" id="intrL">
+				<li  class="hidden a1"><a href="#">资源反馈消息</a>|<a href="#">短消息</a></li>
+				<li  class="hidden a2"><a href="#">个人信息中心</a></li>
+				<li><a href="#">课程资源</a>|<a href="#">非课程资源</a></li>
+				<li class="hidden a3"><a href="#">公共信息模块</a></li>
+				<li class="hidden a4"><a href="#">发布留言</a></li>
+		  </ul>		  
+    </div>
+	
+    <!--<div class="adtip">
+        <div class="tip">
+        	<p class="goom">早上好，小雅！</p>
+        	<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
+       </div>-->
+        <div class="adtip">
+        <div class="tip">
+        	<!--<p class="goom">早上好，小雅！</p>-->
+        	<p class="goom"><?php echo ($info["alert"]); ?>，<?php echo ($userinfo["username"]); ?>！</p>
+        	<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
+       </div>
+   
+    <div class="rig_lm03 Teach_res">
+	 	<div class="am-panel am-panel-default">  <!---第一个折叠框开始--->
+		  
+			  <div class="am-panel-hd" data-am-collapse="{target: '#collapse-panel-2'}">
+				  <span>课程资源</span>
+				  <span class="am-fr" ><a href="#" class="fold"></a></span>
+			  </div>
+			  <div class="am-panel-bd am-collapse am-in am-cf" id="collapse-panel-2">
+					<div class="Admin_Info">
+						<div class="buttons">
+						   <div class="fl add">
+							  <button type="button" onclick="ShowDiv('MyDiv','fade')"> 新增</button>
+							  <button type="button"> 删除</button>
+						   </div>
+							  
+							<div class="fr search">
+								<input type="text">
+								<button type="button">搜索</button>
+							</div>
+	                 </div>
+		  
+           <div class="userList">
+				  <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
+					  <tr>
+						  <th><input type="checkbox" /></th>
+						  <th>ID</th>
+						  <th  scope="col"><div>课程名称</div></th>
+						  <th  scope="col" colspan="2" class="course_res"><div>课程资源</div>
+						  	   <ul class="media">
+							   		<li>媒体资源</li>
+									<li>非媒体资源</li>
+							   </ul>
+						  </th>
+						  <th scope="col"><div>创建时间</div></th>
+						  <th  scope="col"><div>状态</div></th>
+						  <th  scope="col"><div>操作</div></th>
+					</tr>
+					  
+					 <tr  class="b_white">
+						  <td><input type="checkbox" /></td>
+						  <td>1</td>
+						  <td><div align="center">操作系统：设计及实现</div></td>
+						  <td>
+						  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Public/images/video.mp4" type="video/mp4" />
+										<source src="/eduresPro/Public/images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
+									<p class="date">2016年3月12日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						   
+						   	  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Public/images/video.mp4" type="video/mp4" />
+										<source src="/eduresPro/Public/images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">操作系统设计.mov</a></p>
+									<p class="date">2016年3月13日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						  </td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+								
+								<div class="note3">
+									<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年2月29日</td>
+						  <td class="yccol">审核中</td>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+										  
+					 <tr  class="b_white">
+						  <td><input type="checkbox" /></td>
+						  <td>2</td>
+						  <td><div align="center">数据库开发与应用</div></td>
+						  <td>
+						  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Public/images/video.mp4" type="video/mp4" />
+										<source src="/eduresPro/Public/images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">数据库基础.mov</a></p>
+									<p class="date">2016年3月12日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						   
+						   	  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Public/images/video.mp4" type="video/mp4" />
+										<source src="/eduresPro/Public/images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">数据库高级教程.mov</a></p>
+									<p class="date">2016年3月13日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						  </td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#">数据库课程学习概要.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+								
+								<div class="note3">
+									<p class="fl"><a href="#">数据库实验题目.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年3月13日</td>
+						  <td>已审核</td>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+					
+										  
+					 <tr  class="b_white">
+						  <td><input type="checkbox" /></td>
+						  <td>3</td>
+						  <td><div align="center">操作系统：设计及实现</div></td>
+						  <td>
+						  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Public/images/video.mp4" type="video/mp4" />
+										<source src="/eduresPro/Public/images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
+									<p class="date">2016年3月12日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						   
+						   	  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="images/video.mp4" type="video/mp4" />
+										<source src="images/video.mp4" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">操作系统设计.mov</a></p>
+									<p class="date">2016年3月13日</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 </div>
+						   </div>   <!---video结束-->
+						  </td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+								
+								<div class="note3">
+									<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年2月29日</td>
+						  <td class="yccol">审核中</td>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+					</tr>
+
+					
+				 </table>
+					
+				 <div class="fanye">
+                     <p class="fytip">Showing 1 to 10 of 12 entries</p>
+					   <div class="yem">
+						  <ul>
+							 <li><a href="#">First</a></li>
+							 <li><a href="#">&lt;</a></li>
+							 <li class="sellify"><a href="#">1</a></li>
+							 <li><a href="#">2</a></li>
+							 <li><a href="#">&gt;</a></li>
+							 <li><a href="#">Last</a></li>
+						  </ul>
+					  </div>
+                 </div>  <!--fanye结束-->
+
+	          </div>  <!---Admin_Info结束-->
+		    </div>
+		  </div>   
+		</div>  <!---第一个折叠框结束---> 
+		
+		  <div class="am-panel am-panel-default clearfix">   <!---第二个折叠框开始--->
+		  
+			  <div class="am-panel-hd" data-am-collapse="{target: '#collapse-panel-4'}">
+				  <span>应提交资源</span>
+				  <span class="am-fr" ><a href="#" class="fold"></a></span>
+			  </div>
+			  
+			  <div class="am-panel-bd am-collapse am-in" id="collapse-panel-4">
+			  	<table class="need_submit">
+					<tr>
+						<th>ID</th>
+						<th>课程名称</th>
+						<th>是否需要课程概况</th>
+						<th>是否需要课程学习</th>
+						<th>是否需要媒体素材</th>
+						<th>是否需要实验</th>
+						<th>是否需要作业与考试</th>
+					</tr>
+					
+					<tr>
+						<td>1</td>
+						<td>操作系统：设计及实现</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td class="yccol">不需要</td>
+						<td>需要</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td>数据库开发与应用</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td class="yccol">不需要</td>
+						<td class="yccol">不需要</td>
+					</tr>
+					
+					<tr>
+						<td>3</td>
+						<td>操作系统：设计及实现</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td>需要</td>
+						<td class="yccol">不需要</td>
+						<td>需要</td>
+					</tr>
+				</table>
+			  </div>
+        </div>   <!---第二个折叠框结束--->
+		
+		
+		  <div class="am-panel am-panel-default foldlist">   <!---第三个折叠框开始--->
+		  
+			  <div class="am-panel-hd" data-am-collapse="{target: '#collapse-panel-3'}">
+				  <span>非课程资源</span>
+				  <span class="am-fr" ><a href="#" class="fold"></a></span>
+			  </div>
+			  <div class="am-panel-bd am-collapse am-in" id="collapse-panel-3">
+			 	  <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
+					  <tr>
+						  <th>ID</th>
+						  <th  scope="col"><div>课程名称</div></th>
+						  <th scope="col"><div>资源制作计划</div></th>
+						  <th  scope="col"><div>合作协议</div></th>
+						  <th  scope="col"><div>创建时间</div></th>
+
+					</tr>
+					  
+					 <tr  class="b_white">
+						  <td>1</td>
+						  <td><div align="center">操作系统：设计及实现</div></td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="操作系统原理资源制作计划">操作系统原理资源...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="/eduresPro/Public/images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						   <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="操作系统原理合作协议">操作系统原理合作...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="/eduresPro/Public/images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年2月29日</td>
+					</tr>
+					
+					 <tr  class="b_white">
+						  <td>2</td>
+						  <td><div align="center">数据库开发与应用</div></td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="数据库开发与应用资源制作计划">数据库开发与应用资源...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="/eduresPro/Public/images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						   <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="数据库开发与应用合作协议">数据库开发与应用合作...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="/eduresPro/Public/images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年2月29日</td>
+					</tr>
+					
+					 <tr  class="b_white">
+						  <td>3</td>
+						  <td><div align="center">操作系统：设计及实现</div></td>
+						  <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="操作系统原理资源制作计划">操作系统原理资源...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						   <td class="no_video">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#" title="操作系统原理合作协议">操作系统原理合作...</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+											<img src="images/set.png" class="seticon">
+										</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="#">1. 打开</a></li>
+									  <li><a href="#">2. 下载</a></li>
+									  <li><a href="#">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div>
+						  </td>
+						  <td>2016年2月29日</td>
+					</tr>
+				 </table>
+			 </div>
+        </div>   <!---第三个折叠框结束--->
+				
+		  <div class="am-panel am-panel-default foldlist2">   <!---第四个折叠框开始--->
+		  
+			  <div class="am-panel-hd" data-am-collapse="{target: '#collapse-panel-1'}">
+				  <span>最近留言</span>
+				  <span class="am-fr" ><a href="#" class="fold"></a></span>
+			  </div>
+			  
+			  <div class="am-panel-bd1 am-collapse am-in" id="collapse-panel-1">
+					<ul class="am-comments-list admin-content-comment">
+						  <li class="am-comment">
+							<div class="am-comment-main">
+								<div class="am-comment-meta am-comment-hd">
+									<a href="#" class="am-comment-author">张琳</a>
+									<span>&nbsp;评论于&nbsp;</span>
+									<time>2016-3-13 15:36</time>
+								</div>
+							 <div class="am-comment-bd">
+						         <p>遵循 “移动优先（Mobile First）”、“渐进增强（Progressive enhancement）”的理念，可先从移动设备开始开发网站，逐步在扩展的更大屏幕的设备上，专注于最重要的内容和交互，很好。</p>            
+								 <a href="#" class=" details">查看详情&gt;&gt;</a>
+							  </div>
+							</div>
+						  </li>
+		
+						  <li class="am-comment" style="clear:none;">
+							<div class="am-comment-main">
+							  <div class="am-comment-hd">
+								<div class="am-comment-meta">
+									<a href="#" class="am-comment-author">张琳</a>
+									<span>&nbsp;评论于&nbsp;</span> 
+									<time>2016-3-13 15:30</time>
+								</div>
+							  </div>
+							  <div class="am-comment-bd">
+							  	  <p>有效减少为兼容旧浏览器的臃肿代码；基于 CSS3 的交互效果，平滑、高效。AMUI专注于现代浏览器（支持HTML5），不再为过时的浏览器耗费资源，为更有价值的用户提高更好的体验。</p>
+								  <a href="#" class="details">查看详情&gt;&gt;</a>
+							  </div>
+							</div>
+						  </li>
+					</ul>
+					<div class="am-pagination am-fr admin-content-pagination"></div>
+			  </div>
+        </div>   <!---第四个折叠框结束--->
+				
+	    </div>
+      </div>	 
+    </div>
+   </div>  
+ </div>   <!---mainbody结束-->
+</div>   <!---container结束-->
+
+
+<div class="footer clearfix">
+	<p class="one">地址：长沙市岳麓区中南大学</p>
+    <p>电话：0731-84204761/0731-84204762/0731-84204763/0731-84204753</p>
+    <p>传真：0755-26730372   网址：www.csuRM.com </p>
+    <p class="two">版权所有：长沙市岳麓区中南大学，侵权必究</p>
+</div>
+<script type="text/javascript" src="/eduresPro/Public/js/video_jquery.js"></script>
+<script type="text/javascript" src="/eduresPro/Public/js/video.js"></script>
+
+<script type="text/javascript" src="/eduresPro/Public/js/amazeui.min.js"></script>
+<script type="text/javascript"  src="/eduresPro/Public/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	//弹出隐藏层
+	function ShowDiv(show_div,bg_div){
+	document.getElementById(show_div).style.display='block';
+	document.getElementById(bg_div).style.display='block' ;
+	var bgdiv = document.getElementById(bg_div);
+	bgdiv.style.width = document.body.scrollWidth;
+	// bgdiv.style.height = $(document).height();
+	$("#"+bg_div).height($(document).height());
+	};
+	//关闭弹出层
+	function CloseDiv(show_div,bg_div)
+	{
+	document.getElementById(show_div).style.display='none';
+	document.getElementById(bg_div).style.display='none';
+	};
+</script>
+
+
+<!--<script src="/eduresPro/Public/js/jquery-1.7.2.js" type="text/javascript"></script>-->
+<script src="/eduresPro/Public/js/zyFile.js" type="text/javascript"></script>
+<script  src="/eduresPro/Public/js/zyUpload.js" type="text/javascript"></script>
+<script  src="/eduresPro/Public/js/upload_demo.js" type="text/javascript"></script>
+
+</body>
+</html>

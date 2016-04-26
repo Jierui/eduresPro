@@ -8,7 +8,8 @@
 <link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/style.css" />
 <script src="/eduresPro/Public/js/ChangeContent.js" type="text/javascript"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
-<script src="/eduresPro/Public/Jquery/js/jquery-1.12.0.min.js"></script>
+<!--<script src="/eduresPro/Public/Jquery/js/jquery-1.12.0.min.js"></script>-->
+<script src="/eduresPro/Public/js/jquery2.1.4.js" type="text/javascript"></script>
 <script src="/eduresPro/Public/Jquery/js/vendor/jquery.ui.widget.js"></script>
 <script src="/eduresPro/Public/Jquery/js/jquery.iframe-transport.js"></script>
 <script src="/eduresPro/Public/Jquery/js/jquery.fileupload.js"></script>
@@ -24,11 +25,11 @@
    <div class="top">
 		<img class="logo" src="/eduresPro/Public/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
-		   <li class="seleli" onMouseOver="change(this)"><a href="#">消息提醒</a></li>
+		   <li class="seleli" onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >资源管理</a></li>
+		   <li onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >留言板</a></li>
+		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
 		<a href="<?php echo U('Home/Index/exit_login');?>" class="exit">退出</a>
    </div>

@@ -34,13 +34,13 @@ $(function(){
    <div class="top">
 		<img class="logo" src="/eduresPro/Public/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
-		   <li onMouseOver="change(this)"><a href="personal_center">消息提醒</a></li>
-		   <li  class="seleli"  onMouseOver="change(this)"><a href="#">个人中心</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >资源管理</a></li>
+		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
+		   <li  class="seleli"  onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
+		   <li onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >留言板</a></li>
+		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
-		<a href="#" class="exit">退出</a>
+		<a href="<?php echo U('Home/Index/exit_login');?>" class="exit">退出</a>
    </div>
 </div>   <!--header结束-->
 	
