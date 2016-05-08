@@ -100,7 +100,7 @@ $(document).ready(function() {
 		
 	<div class="lm02 clearfix">
 	    <div class="title">
-			<img class="icon" src="images/dataicon.jpg" />
+			<img class="icon" src="/eduresPro/Public/images/dataicon.jpg" />
 			<h2>日历</h2>
 	    </div>
 	    <div class="detail"> 
@@ -116,7 +116,7 @@ $(document).ready(function() {
 	
 	<div class="lm03">
 	    <div class="title">
-	    	<img style="padding-right:5px;" class="icon" src="images/weaicon.jpg" />
+	    	<img style="padding-right:5px;" class="icon" src="/eduresPro/Public/images/weaicon.jpg" />
 			<h2>天气</h2>
 	  </div>
 	 <div class="detail"> 
@@ -204,103 +204,64 @@ $(document).ready(function() {
 							  <th  scope="col"><div>状态</div></th>
 							  <th  scope="col"><div>操作</div></th>
 						</tr>
-						  
-						 <tr  class="b_white">
+						 <?php $countNum = 1;?>
+                         <?php if(is_array($showData)): $i = 0; $__LIST__ = $showData;if( count($__LIST__)==0 ) : echo "没有数据" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><tr  class="b_white">
 							  <td><input type="checkbox" /></td>
-							  <td>1</td>
-							  <td><a href="#">李小雅</a><p><a href="#">154612267</a></p></td>
-							  <td>计算机科学与技术</td>
-							  <td>讲师</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
+							  <td><?php echo $countNum++?></td>
+							  <?php $ui = $user->where("userID=".$arr[0]['userid'])->select(); ?>
+							  <td><a href="#"><?php echo $ui[0]['username'];?></a><p><a href="#"><?php echo $ui[0]['phone'];?></a></p></td>
+							  <td><?php echo $ui[0]['major'];?></td>
+							  <td><?php echo $ui[0]['level'];?></td>
+							  <td><div align="center"><?php echo $course->where("courseID=".$arr[0]['courseid'])->getField("courseName");?></div></td>
 							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
+								<?php if(is_array($arr)): foreach($arr as $key=>$v): if($v["type"] == 媒体素材): ?><div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="/eduresPro/Uploads/<?php echo ($v["path"]); ?>" type="video/mp4" />
+										<source src="/eduresPro/Uploads/<?php echo ($v["path"]); ?>" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#"><?php echo ($v["name"]); ?></a></p>
+									<p class="date"><?php echo ($v["time"]); ?></p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="video?target=<?php echo ($v["resourceid"]); ?>">1. 打开</a></li>
+									  <li><a href="resource_download?target=<?php echo ($v["resourceid"]); ?>" target="_blank">2. 下载</a></li>
+									  <li><a href="del_single_resource?resourceid=<?php echo ($v["resourceid"]); ?>">3. 删除</a></li>
+									</ul>
+             				   </div>
+						       </div>   <!---video结束--><?php endif; endforeach; endif; ?>
 							  </td>
 							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
+							  <?php if(is_array($arr)): foreach($arr as $key=>$v): if($v["type"] == 非媒体素材): ?><div class="note3 clearfix">
+									<p class="fl"><a href="#"><?php echo ($v["name"]); ?></a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="/eduresPro/Public/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="open_resource?resourceid=<?php echo ($v["resourceid"]); ?>" target="_blank">1. 打开</a></li>
+									  <li><a href="resource_download?target=<?php echo ($v["resourceid"]); ?>" target="_blank"">2. 下载</a></li>
+									  <li><a href="del_single_resource?resourceid=<?php echo ($v["resourceid"]); ?>">3. 删除</a></li>
+									</ul>
+             				 		</div>
+								</div><?php endif; endforeach; endif; ?>
 							  </td>
-							  <td>2016年2月29日</td>
-							  <td class="yccol">待审核</td>
+							  <td><?php $end=end($arr); echo $end['time'];?></td>
+							  <td class="yccol">
+							   <?php  $flg = 0; foreach($arr as $value){ if($value['status']!=1){ echo "待审核"; $flg = 1; break; } } if($flg == 0){ echo "已审核"; } ?>
+							  </td>
 							  <td class="czcol">
-							  	<a href="#">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a>
+							  	<a href="through_review?user=<?php echo ($arr[0]['userid']); ?>&course=<?php echo ($arr[0]['courseid']); ?>">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a>
 								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
-							  </td>
-						</tr>
+							</td>
+						</tr><?php endforeach; endif; else: echo "没有数据" ;endif; ?>
 						 <tr  class="b_white">
 							  <td><input type="checkbox" /></td>
 							  <td>2</td>
@@ -396,102 +357,6 @@ $(document).ready(function() {
 							  	<a href="#">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a>
 								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
 							</td>
-						</tr>
-						 <tr  class="b_white">
-							  <td><input type="checkbox" /></td>
-							  <td>3</td>
-							  <td><a href="#">何兰<p><a href="#">154612267</p></a></a></td>
-							  <td>计算机科学与技术</td>
-							  <td>教授</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
-							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							  </td>
-							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-							  </td>
-							  <td>2016年2月29日</td>
-							  <td>已审核</td>
-							  <td class="czcol">
-							  	<a href="#">删除</a>
-								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
-							</td>
 						</tr>					  
 					 </table>
 					 
@@ -500,12 +365,15 @@ $(document).ready(function() {
 						 <p class="fytip">Showing 1 to 10 of 12 entries</p>
 						   <div class="yem">
 							  <ul>
-								 <li><a href="#">First</a></li>
-								 <li><a href="#">&lt;</a></li>
-								 <li class="sellify"><a href="#">1</a></li>
-								 <li><a href="#">2</a></li>
-								 <li><a href="#">&gt;</a></li>
-								 <li><a href="#">Last</a></li>
+								 <li><a href="Teacher_Resource?page=1">First</a></li>
+							     <li><a href="Teacher_Resource?page=<?php echo ($page-1); ?>">&lt;</a></li>
+							     <?php for($value=1;$value<=$totalPage;$value++){ if($value == $page){?>
+							     <li class="sellify"><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							     <?php }else{?>
+							     <li><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							     <?php }}?>
+							     <li><a href="Teacher_Resource?page=<?php echo ($page+1); ?>">&gt;</a></li>
+							     <li><a href="Teacher_Resource?page=<?php echo ($totalPage); ?>">Last</a></li>
 							  </ul>
 						  </div>
 					 </div>  
@@ -757,11 +625,11 @@ $(document).ready(function() {
     <p>传真：0755-26730372   网址：www.csuRM.com </p>
     <p class="two">版权所有：长沙市岳麓区中南大学，侵权必究</p>
 </div>
-<script type="text/javascript" src="js/video_jquery.js"></script>
-<script type="text/javascript" src="js/video.js"></script>
+<script type="text/javascript" src="/eduresPro/Public/js/video_jquery.js"></script>
+<script type="text/javascript" src="/eduresPro/Public/js/video.js"></script>
 
-<script type="text/javascript" src="js/amazeui.min.js"></script>
-<script type="text/javascript"  src="js/jquery.min.js"></script>
+<script type="text/javascript" src="/eduresPro/Public/js/amazeui.min.js"></script>
+<script type="text/javascript"  src="/eduresPro/Public/js/jquery.min.js"></script>
 
 
 <script type="text/javascript">   <!--建议框-->
@@ -817,11 +685,11 @@ function score(a){
 };
 </script>
 
-<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
-<script src="js/zyFile.js" type="text/javascript"></script>
-<script  src="js/zyUpload_3.js" type="text/javascript"></script>
-<script  src="js/upload_demo.js" type="text/javascript"></script>
-<script language="JavaScript" type="text/javascript" src="js/tab.js"></script> 
+<script src="/eduresPro/Public/js/jquery-1.7.2.js" type="text/javascript"></script>
+<script src="/eduresPro/Public/js/zyFile.js" type="text/javascript"></script>
+<script  src="/eduresPro/Public/js/zyUpload_3.js" type="text/javascript"></script>
+<script  src="/eduresPro/Public/js/upload_demo.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript" src="/eduresPro/Public/js/tab.js"></script> 
 
 </body>
 </html>

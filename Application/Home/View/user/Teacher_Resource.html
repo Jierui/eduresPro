@@ -11,6 +11,10 @@
 <link type="text/css" rel="stylesheet" href="__PUBLIC__/css/Upload.css" />
 <script src="__PUBLIC__/js/ChangeContent.js" type="text/javascript"></script>
 <script src="__PUBLIC__/js/jquery2.1.4.js" type="text/javascript"></script> 
+<script src="__PUBLIC__/Jquery/js/vendor/jquery.ui.widget.js"></script>
+<script src="__PUBLIC__/Jquery/js/jquery.iframe-transport.js"></script>
+<script src="__PUBLIC__/Jquery/js/jquery.fileupload.js"></script>
+<script src="__PUBLIC__/otherfiles/js/upimg.js"></script>
 <script src="__PUBLIC__/otherfiles/js/glDatePicker.min.js"></script>
 <script src="__PUBLIC__/otherfiles/js/datePicker.js"></script> 
 <script type="text/javascript">
@@ -234,7 +238,7 @@ $(document).ready(function() {
                      <p class="fytip">Showing 1 to 10 of 12 entries</p>
 					   <div class="yem">
 						  <ul>
-							 <li><a href="Teacher_Resource?page=0">First</a></li>
+							 <li><a href="Teacher_Resource?page=1">First</a></li>
 							 <li><a href="Teacher_Resource?page={$page-1}">&lt;</a></li>
 							 <?php for($value=1;$value<=$totalPage;$value++){ if($value == $page){?>
 							 <li class="sellify"><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
@@ -242,7 +246,7 @@ $(document).ready(function() {
 							 <li><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
 							<?php }}?>
 							 <li><a href="Teacher_Resource?page={$page+1}">&gt;</a></li>
-							 <li><a href="Teacher_Resource?page={$totalPage-1}">Last</a></li>
+							 <li><a href="Teacher_Resource?page={$totalPage}">Last</a></li>
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->

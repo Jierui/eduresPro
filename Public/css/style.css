@@ -29,7 +29,6 @@ a:hover {text-decoration: underline;color:#696969;}
 .cur2{ display:block; float:left;}
 
 .green {color:#33CC66;}
-
 /*建议框*/
 .mydiv {
 background-color: #FFF;
@@ -295,7 +294,7 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .message_board  .del:hover {color:#ff0000}
 .answer {padding:1px 4px;margin-top:5px;margin-left:10px;}
 .note {font-size:12px;}
-
+.message_board label {color:#666666;padding:0px 2px;}
  /*****************************资源管理页面************************************** */
 
 /*----教师用户-----*/
@@ -303,7 +302,6 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .Teach_res .Admin_Info {margin-top:0px;}
 .Teach_res .fanye {margin-bottom:0;margin-top:30px;}
 .Teach_res  .tabindex a {color:#2595b7;}
-.Teach_res  .tabindex tr td {padding:5px 10px;}
 .Teach_res  .course_res {padding:0px;}
 .Teach_res  .course_res .media {border-top:1px solid #e0e0e3;}
 .Teach_res  .course_res .media li{width:50%;float:left;text-align:center;}
@@ -429,6 +427,25 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .eva_teacher .tabHead h3 {text-align:center;font-size:16px;}
 .eva_teacher .tabCot table {width:100%;}
 .eva_teacher .res_name {margin-bottom:2px;}
+
+/*-------资源制作用户页面-----------*/
+.res_making .userList .tabindex td p{padding:3px 0px;}
+.res_making .userList .tabindex td p span {font-size:12px;color:#666;}
+
+.package {width:400px;height:200px;font-size:9pt;}
+.package h4 {margin-bottom:10px;}
+.package .filename{width:200px;height:20px;}
+.package .groups{text-align:left;margin:5px 0px  5px 20px;}
+.package div input {color:#333;width:50%;}
+.package .selects {position:absolute;overflow:hidden;width:200px;height:34px;}
+.package .selects select {width:200px;height:23px;}
+.package .select_con {position:absolute;width:182px;height:26px;}
+.package .select_con input {width:182px;height:21px;}
+.package .publish {position:absolute;left:270px;}
+.package .publish button {padding:0px 3px;font-size:12px;margin-top:-1px;}
+.package .buttons {margin-left:0px;text-align:center;margin-top:15px;}
+
+
 /*----------底部-----------------------*/
 .footer{ width:100%; height:90px; background:#2553A0;margin-top:10px;}
 .footer p {text-align:center; color:#fff;line-height:22px;}

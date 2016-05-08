@@ -486,6 +486,46 @@ class IndexController extends Controller {
     	$this->assign('userinfo',$userinfo[0]);
     	$this->assign('imgpath',$imgpath);
     	if($userinfo[0]['usertype'] == "assessor"){
+    		$page = $_GET['page'];
+    		if(!$page){
+    			$page = 1;
+    		}else{
+    			if(is_int($page)){
+    				if($page < 1){
+    					$page = 1;
+    				}
+    			}else{
+    				$page = 1;
+    			}
+    		}//获取当前页数
+    		$resource = M('resource'); //教师提交资源表
+//     		unset($where);
+//     		$where['userID'] = session('userID');
+    		//$count = $resource->where($where)->group('courseID')->count();   //总记录数
+    		$data = $resource->order('Time desc')->select();
+    		foreach($data as $value){
+    			if(empty($arrayData[$value['userid'].$value['courseid']])){
+    				$arrayData[$value['userid'].$value['courseid']] = array($value);
+    			}else{
+    				array_push($arrayData[$value['userid'].$value['courseid']], $value);
+    			}
+    		}//arrayData为查询数据
+    		$line = 3;   //每一页显示的行数
+    		$count = count($arrayData); //总记录数
+    		$totalPage = ceil($count/$line);
+    		if($page > $totalPage){
+    			$page = $totalPage;
+    		}
+    		--$page;  //
+    		////////////////////////////////////////////////前台应该显示的数据
+    		$requestData = array_slice($arrayData,$page*$line,$line,true);
+    		$this->assign('totalPage',$totalPage);  //总页数
+    		$this->assign('page',$page+1);      //当前页数
+    		//$this->assign('line',$line);        //每页显示行数
+    		$this->assign('showData',$requestData);
+    		$this->assign('course',M('course'));
+    		$this->assign('user',$user);
+    		//dump($requestData);
     		$this->display('assessor:assessor_Resource');
     	}else{
     		$page = $_GET['page'];
@@ -753,6 +793,16 @@ class IndexController extends Controller {
     	}else{
     		$this->error("打开失败",Teacher_Resource);
     	}
+    }
+    
+    public function through_review(){
+    	$userid = $_GET['user'];
+    	$courseid = $_GET['course'];
+    	$resource = M('resource');
+    	$where['userID'] = $userid;
+    	$where['courseID'] = $courseid;
+    	$resource->where($where)->setField('Status',1);
+    	$this->Teacher_Resource();
     }
     //实验代码
     public function demo(){
