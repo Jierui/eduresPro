@@ -22,11 +22,11 @@
 
 <div class="header">
    <div class="top">
-		<img class="logo" src="images/logo.jpg" />
+		<img class="logo" src="__PUBLIC__/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
-		   <li  class="seleli"  onMouseOver="change(this)"><a href="Teater_Resource" >资源管理</a></li>
+		   <li  class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
@@ -110,16 +110,16 @@
 	 </div>	 
 	 
 	 <div class="per_infor play_video">
-	 	<p class="introduce"><b>视频名称：</b>操作系统原理.mp4</p>
+	 	<p class="introduce"><b>视频名称：</b>{$resourceInfo.name}</p>
 		<video id="player_a" class="projekktor" poster="__PUBLIC__/images/intro.png" title="这是视频的标题" width="640" height="385" controls>
-			<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-			<source src="__PUBLIC__/images/mov_bbb.ogg" type="video/ogg" />
+			<source src="__ROOT__/Uploads/{$resourceInfo.path}" type="video/mp4" />
+			<source src="__ROOT__/Uploads/{$resourceInfo.path}" type="video/ogg" />
 			Your browser does not support HTML5 video.
 		</video>
 		<div class="introduce">
-			<p><b>课程名称：</b>操作系统设计与实现</p>
-			<p><b>授课教师：</b>李小雅教授</p>
-			<p><b>创建时间：</b>2016年3月14日</p>
+			<p><b>课程名称：</b>{$courseName}</p>
+			<p><b>授课教师：</b>{$teacher[0]['username']}{$teacher[0]['level']}</p>
+			<p><b>创建时间：</b>{$resourceInfo.time}</p>
 		</div>
 	 </div>   
    </div>  

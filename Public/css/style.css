@@ -28,6 +28,59 @@ a:hover {text-decoration: underline;color:#696969;}
 .cur1{  color:#0081d4;}
 .cur2{ display:block; float:left;}
 
+.green {color:#33CC66;}
+
+/*建议框*/
+.mydiv {
+background-color: #FFF;
+border: 5px solid #1D79C7;
+text-align: center;
+line-height: 40px;
+font-size: 12px;
+font-weight: bold;
+z-index:99;
+width: 300px;
+height: 150px;
+left:50%;/*FF IE7*/
+top: 50%;/*FF IE7*/
+
+margin-left:-150px!important;/*FF IE7 */
+margin-top:-60px!important;/*FF IE7 */
+
+margin-top:0px;
+
+position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top: expression(eval(document.compatMode &&
+document.compatMode=='CSS1Compat') ?
+documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
+.mydiv h4 {margin:0;padding:0;height:30px;line-height:30px;font-size:16px;letter-spacing:4px;color:#FFF;background:#1D79C7;}
+.mydiv textarea {display:block;width:90%;height:40%;margin:0 auto;font-size:12px;margin-top:10px;}
+.mydiv button {margin-top:10px;padding-left:5px;padding-right:5px;}
+.mydiv .button1 {margin-right:10px;}
+.mydiv .button2 {margin-left:10px;}
+.bg {
+background-color: #ccc;
+width: 100%;
+height: 100%;
+left:0;
+top:0;/*FF IE7*/
+filter:alpha(opacity=10);/*IE*/
+opacity:0.8;/*FF*/
+z-index:1;
+position:fixed!important;/*FF IE7*/
+position:absolute;/*IE6*/
+
+_top: expression(eval(document.compatMode &&
+document.compatMode=='CSS1Compat') ?
+documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+
+}
 
 /*****************************登录页面****************************************/
 .form {width:507px;margin: 0 auto; align:center;background:url(../images/trans_bg.png);margin-top:20%;padding:10px 21px; background-size:cover;}
@@ -132,12 +185,12 @@ a:hover {text-decoration: underline;color:#696969;}
 .tabindex  tr td img {width:20px;height:20px;}
 
 /*--------切换tabmenu-------------*/
-.tabContainer {border: 1px solid #DDDDDD;height: 45px;line-height: 45px;margin-bottom: 2px;}
+.tabContainer {border: 1px solid #DDDDDD;height: 45px;line-height: 45px;margin-bottom: 2px;border-bottom: 2px solid #1D79C7;}
 .tabContainer .tabHead {float:left;}
 .shent {float: right;width: 165px;}
-.tabContainer .tabHead li {border-right: 1px solid #DDDDDD;float: left;padding: 0 45px;}
-.tabContainer .tabHead li a {color: #1D79C7;font-size:14px;font-weight:bold;}
-.currentBtn {border-top: 1px solid #333333;}
+.tabContainer .tabHead li {border-right: 1px solid #1D79C7;float: left;padding: 0 45px;}
+.tabContainer .tabHead li a {color: #1D79C7;font-size:14px;font-weight:bold;text-decoration:none;}
+.currentBtn {border-top: 1px solid #1D79C7;}
 
 /*-----------资源反馈消息栏--------------*/
 .scordeti ul li h3 {background: none repeat scroll 0 0 #EFEFEF;color: #666666;font-size: 14px;font-weight: bold;height: 40px;line-height: 40px;text-align: center;}
@@ -148,7 +201,7 @@ a:hover {text-decoration: underline;color:#696969;}
 .czcol a {color:#1D79C7;}
 .datacol {color:#1D79C7;}
 .yccol {color:#ff0000;}
-.fanye {border: 1px solid #DDDDDD;height: 58px;margin: 2px 0 76px;}
+.fanye {border: 1px solid #DDDDDD;height: 58px;margin: 2px 0 0px;}
 .fytip {color:#666666;padding-left:20px;float:left;line-height: 58px;}
 .yem {float:right;margin-top: 20px;}
 .yem ul li {float:left;}
@@ -201,6 +254,10 @@ a:hover {text-decoration: underline;color:#696969;}
 .per_infor  .changeInfo a:hover {color:#2595b7;}
 .per_infor .InfoList ul  {margin-top:10px;font-size:16px; color:#000000;font-weight:bold;}
 
+.per_infor .change_image {margin-left:80px;margin-bottom:20px;}
+.per_infor .change_image img {width:100px;height:100px;float:left;margin-right:10px;}
+.per_infor .change_image p {color:#999;}
+.per_infor .change_image input {margin-top:30px;}
 .per_infor .InfoList ul li {padding-top:15px;}
 .per_infor .InfoList ul li span {margin-left:10px;color:#333333;font-weight:normal;}
 .per_infor .InfoList2 .btn {width:auto;}
@@ -212,11 +269,11 @@ a:hover {text-decoration: underline;color:#696969;}
 .add button ,.Admin_Info .search button {padding:0 5px;}
 .filtrate {margin-left:10%;}
 .search input {padding:3px 0;}
-.buttons button,buttons input{margin-bottom:10px;}
-.buttons input, .buttons select{padding:5px 0;margin-bottom:4px;font-size:12px;text-align:center;}
+.buttons button,buttons input{margin-bottom:12px;}
+.buttons input, .buttons select{padding:5px 0;margin-bottom:6px;font-size:12px;text-align:center;}
   
  /*****************************留言板************************************** */
- .message .changeInfo {border-bottom:1px solid #C8C7C7;margin-bottom:10px;}
+.message .changeInfo {border-bottom:1px solid #C8C7C7;margin-bottom:10px;}
 .message .changeInfo a {width:80px;height:20px;text-align:center;background:#2595b7;font-size:16px;margin:5px 10px;color:#FFFFFF;}
 .message .changeInfo a:hover {background:#2553a0;color:#FFFFFF;text-decoration:none;}
 .message {width:80%;margin:0 auto;border:1px double #C8C7C7;margin-top:50px;padding-top:10px;}
@@ -297,7 +354,7 @@ a:hover {text-decoration: underline;color:#696969;}
 .projekktor .active{display: block;}
 
 .Teach_res  .need_submit {width:95%;margin: 0 auto;}
-.Teach_res  .need_submit  tr th{width:13%;margin: 0 auto;background:#2595b7;padding:5px 10px;text-align:center;font-size:14px;color:#FFF;}
+.Teach_res  .need_submit  tr th{margin: 0 auto;background:#2595b7;padding:5px 10px;text-align:center;font-size:14px;color:#FFF;}
 .Teach_res  .need_submit  tr td {text-align:center;font-size:12px;padding:5px 10px;}
 .Teach_res  .seticon {margin-top:-6px;}
 
@@ -305,6 +362,73 @@ a:hover {text-decoration: underline;color:#696969;}
 .play_video{width:700px;height:400px;margin: 0 auto;margin-top:3%;}
 .play_video .introduce {width:640px;margin-top:20px;text-align:center;font-size:14px;}
 .play_video  p {margin-bottom:10px;}
+
+/*----视频审核用户页面-----*/
+.video_res  .Admin_Info {width:98%;margin:0 auto;}
+.video_res  .buttons {padding-bottom:35px;padding-top:10px;padding-left:20px;padding-right:20px;}
+.video_res  .video_list {margin-top:10px;}
+.video_res  .video_list .videos{width:100%;height:30px; background:#1D79C7;line-height:30px;color:#FFF;font-size:14px;}
+.video_res  .video_list .videos input {margin-bottom:5px;margin-left:5px;}
+.video_res  .video_list .videos span {margin-left:40px;}
+.video_res  .video_list .videos .fr {color:#FFF;font-weight:bold;margin-right:20px;}
+.video_res  .video_list .list {margin-top:20px;}
+.video_res  .video_list .list a {text-decoration:none;}
+.video_res  .video_list .list  .detail_v{display:inline-block;;width:14%;height:auto;margin-bottom:15px;}
+.video_res  .video_list .list .detail_v .am-dropdown {margin-right:10%;margin-top:-13%;}
+.video_res  .video_list .list .detail_v  p {text-align:center;margin-top:5px;}
+.video_res  .video_list .list .am-dropdown-content {}
+.video_res  .video_list .list video {width:80%;height:auto;margin-left:10%;}
+.video_res  a:hover,
+.video_res  .am-dropdown-content a:hover {color:blue;}
+.video_res  .video_list .list .am-dropdown-content li {float:none;}
+.video_res  .tabCot{border:1px solid #CCC;padding-bottom:20px;}
+.video_res  .tabCot{padding-top:10px;}
+.video_res  .tabCot  table a {color:#2595b7}
+.video_res  .tabCot  table a:hover {color:blue;}
+.video_res  .tabCot table,.video_res  .tabCot  .fanye{width:98%;margin-right:auto;margin-left:auto;}
+.video_res  .need_submit tr,.video_res  .need_submit th {border:1px solid #CCC;}
+.video_res .need_submit tr th {width:auto;}
+#click {cursor:pointer;}
+#t {margin-left:-1px;}
+.buttons .evaluate {margin-right:20px;}
+
+/*-------资源审核用户页面-----------*/
+.asse_res #tabCot_product_1 .Admin_Info ,.asse_res #tabCot_product_3{position:relative;}
+.asse_res #tabCot_product_1 .fanye {bottom:1px;width:100%;}
+.asse_res .tabCot .am-panel-default{width:98%;margin: 0 auto;margin-bottom:10px;position:relative;}
+.asse_res .tabCot .am-panel-default .bottom_page {bottom:10px;right:1%;}
+.asse_res .tabCot .am-panel-default .buttons {padding-top:0;}
+.asse_res .tabCot .am-panel-default .buttons button{padding:0 5px;}
+.buttons .filtrate  select{width:120px;}
+.asse_res #tabCot_product_2  .need_submit tr {border-bottom:1px solid #CCCCCC;}
+.asse_res #uploadForm h3 {font-size:16px;}
+.score {margin-top:6px;}
+.score b {color:#2595b7;}
+#special_table {width:100%;}
+.upload_box .plan {margin-bottom:5px;}
+.upload_box .plan label {width:80px;font-size:12px;}
+.reset{-moz-user-select: none;background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #CFCFCF;border-radius: 3px;color: #565656;cursor: pointer;display: inline-block;float: left;font-size: 14px;margin-left: 10px;padding: 0 18px;position: relative;text-align: center;line-height: 32px;transition: border 0.2s;-moz-transition: border 0.2s;-webkit-transition: border 0.2s;-o-transition: border 0.2s;}
+.reset:hover{border: 1px solid #BBB;}
+.asse_res .buttons a {color:#2595b7;}
+
+/***应提交资源记录****/
+.record_need {width:auto;height:auto;text-align:left;top:40%;left:40%;} 
+.record_need h4 {margin: 0 auto;text-align:center;font-size:16px;margin-bottom:10px;}
+.record_need  div {margin-left:20px;}
+.record_need  .labels label {font-size:12px;width:60px;}
+.record_need  div input {padding:5px 10px;}
+.record_need  .needs {margin-top:10px;}
+.record_need  .needs label {font-size:11px;}
+.record_need  .needs select {margin-right:10px;}
+.record_need  .buttons {width:20%;margin: 10px auto 0px auto;}
+.record_need  .buttons button {padding:2px 8px;margin-right:5px;text-align:center;}
+
+
+/*---------评价教师统计页面--------------*/
+.eva_teacher .tabContainer .tabHead {float:none;background:#1D79C7;color:#FFF;}
+.eva_teacher .tabHead h3 {text-align:center;font-size:16px;}
+.eva_teacher .tabCot table {width:100%;}
+.eva_teacher .res_name {margin-bottom:2px;}
 /*----------底部-----------------------*/
 .footer{ width:100%; height:90px; background:#2553A0;margin-top:10px;}
 .footer p {text-align:center; color:#fff;line-height:22px;}

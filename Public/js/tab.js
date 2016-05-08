@@ -24,6 +24,7 @@ function tab(o, s, cb, ev){//tab«–ªª¿‡
 		return o;
 	}
 }
+
 tab.prototype = {
 	ACTIVE:function(){
 		var $ = function(o){return document.getElementById(o)};

@@ -5,10 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<!--<form action="__URL__/upload" enctype="multipart/form-data" method="post">
+<form action="__URL__/uploading" enctype="multipart/form-data" method="post">
 	<input type="file" name="photo" />
-	<input type="submit" value="提交" />-->
-	<img class="peptx" src="{$filepath}" />
+	
+	<select name="resourceType" value="1">
+					<option>媒体素材</option>
+					<option>非媒体素材</option>
+	</select>';
+	<input type="submit" value="提交" />
 </form>
 </body>
 </html>

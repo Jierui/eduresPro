@@ -1,0 +1,83 @@
+[ 2016-05-05T09:49:15+08:00 ] ::1 /eduresPro/index.php/Home/index/message_feedback()
+ERR: 非法操作:message_feedback()
+
+[ 2016-05-05T09:49:48+08:00 ] ::1 /eduresPro/index.php/Home/index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001555s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0127s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+
+[ 2016-05-05T09:49:48+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T09:49:49+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T09:50:08+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T09:50:09+08:00 ] ::1 /eduresPro/index.php/Home/index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000911s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0091s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-05-05T09:50:09+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:13:28+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:13:28+08:00 ] ::1 /eduresPro/index.php/Home/index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0103s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2016-05-05T10:13:28+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:14:45+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:14:45+08:00 ] ::1 /eduresPro/index.php/Home/index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0070s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2016-05-05T10:14:45+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:16:01+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-05-05T10:16:02+08:00 ] ::1 /eduresPro/index.php/Home/index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0091s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2016-05-05T10:16:02+08:00 ] ::1 /eduresPro/index.php/Home/index/images/video.mp4
+ERR: 非法操作:images
+

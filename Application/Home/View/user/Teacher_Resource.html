@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 <div class="header">
    <div class="top">
-		<img class="logo" src="images/logo.jpg" />
+		<img class="logo" src="__PUBLIC__/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
@@ -48,17 +48,6 @@ $(document).ready(function() {
 		<a href="{:U('Home/Index/exit_login')}" class="exit">退出</a>
    </div>
 </div>   <!--header结束-->
-	
-<!--<div class="container clearfix">
-    <div class="leftbar">
-		<div class="lm01 clearfix"> 
-			<img class="peptx" src="images/tximg.jpg" /><a href="#" class="changeImg">更换头像</a>
-	   		 <div class="pepdet">
-				<p>姓名：李小雅</p>
-				<p>层次：教授</p>
-				<p>专业：计算机科学与技术</p>
-	  		</div>
-	    </div>   -->
  <div class="container clearfix">
     <div class="leftbar">
 		<div class="lm01 clearfix"> 
@@ -134,19 +123,19 @@ $(document).ready(function() {
 						<div class="buttons">
 						   <div class="fl add">
 							  <button type="button" onclick="ShowDiv('MyDiv','fade')"> 新增</button>
-							  <button type="button"> 删除</button>
+							  <!--<button type="button"> 删除</button>-->
 						   </div>
 							  
-							<div class="fr search">
+							<!--<div class="fr search">
 								<input type="text">
 								<button type="button">搜索</button>
-							</div>
+							</div>-->
 	                 </div>
 		  
            <div class="userList">
 				  <table class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
 					  <tr>
-						  <th><input type="checkbox" /></th>
+						  <!--<th><input type="checkbox" /></th>-->
 						  <th>ID</th>
 						  <th  scope="col"><div>课程名称</div></th>
 						  <th  scope="col" colspan="2" class="course_res"><div>课程资源</div>
@@ -159,283 +148,101 @@ $(document).ready(function() {
 						  <th  scope="col"><div>状态</div></th>
 						  <th  scope="col"><div>操作</div></th>
 					</tr>
-					  
-					 <tr  class="b_white">
-						  <td><input type="checkbox" /></td>
-						  <td>1</td>
-						  <td><div align="center">操作系统：设计及实现</div></td>
+				<?php $countNum=1 ?>
+				<volist name="showData" id="arr" empty="没有任何数据">
+					  <tr  class="b_white">
+						  <!--<td><input type="checkbox" /></td>-->
+						  <td><?php echo $countNum++;?></td>
+						  <td><div align="center"><?php echo $course->where("courseID=".$arr[0]['courseid'])->getField("courseName");?></div></td>
 						  <td>
-						  	<div  class="video clearfix">
-								<div class="note1 fl">
-									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-										<source src="__PUBLIC__/images/video.mp4" type="video/ogg" />
-										Your browser does not support HTML5 video.
-									</video>
-								</div>
-								<div class="note2 fl">
-									<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-									<p class="date">2016年3月12日</p>
-								</div>
-								<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 </div>
-						   </div>   <!---video结束-->
-						   
+						   <foreach name="arr" item="v">
+						   <if condition="$v.type eq 媒体素材">
 						   	  	<div  class="video clearfix">
 								<div class="note1 fl">
 									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-										<source src="__PUBLIC__/images/video.mp4" type="video/ogg" />
+										<source src="__ROOT__/Uploads/{$v.path}" type="video/mp4" />
+										<source src="__ROOT__/Uploads/{$v.path}" type="video/ogg" />
 										Your browser does not support HTML5 video.
 									</video>
 								</div>
 								<div class="note2 fl">
-									<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-									<p class="date">2016年3月13日</p>
+									<p class="res_name"><a href="#">{$v.name}</a></p>
+									<p class="date">{$v.time}</p>
 								</div>
 								<div class="am-dropdown fr" data-am-dropdown>
                 					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
 										<img src="__PUBLIC__/images/set.png">
 									</a>
 									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
+									  <li><a href="video?target={$v.resourceid}">1. 打开</a></li>
+									  <li><a href="resource_download?target={$v.resourceid}" target="_blank">2. 下载</a></li>
+									  <li><a href="del_single_resource?resourceid={$v.resourceid}">3. 删除</a></li>
 									</ul>
              				 </div>
 						   </div>   <!---video结束-->
+						   </if>
+						   </foreach>
 						  </td>
 						  <td class="no_video">
+						  <foreach name="arr" item="v">
+						  <if condition="$v.type eq 非媒体素材">
 						  		<div class="note3 clearfix">
-									<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
+									<p class="fl"><a href="#">{$v.name}</a></p>
 									<div class="am-dropdown fr" data-am-dropdown>
                 					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
 										<img src="__PUBLIC__/images/set.png">
 									</a>
 									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
+									  <li><a href="open_resource?resourceid={$v.resourceid}" target="_blank">1. 打开</a></li>
+									  <li><a href="resource_download?target={$v.resourceid}" target="_blank"">2. 下载</a></li>
+									  <li><a href="del_single_resource?resourceid={$v.resourceid}">3. 删除</a></li>
 									</ul>
              				 		</div>
 								</div>
-								
-								<div class="note3">
-									<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-									<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 		</div>
-								</div>
+						 </if>
+						 </foreach>
 						  </td>
-						  <td>2016年2月29日</td>
-						  <td class="yccol">审核中</td>
-						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
+						  <td><?php $end=end($arr); echo $end['time'];?></td>
+						  <td class="yccol">
+						  <?php         $flg = 0;
+                                        foreach($arr as $value){
+                                            if($value['status']==0){
+                                                 echo "审核未通过";
+                                                 $flg = 1;
+                                                 break;
+                                            }else if($value['status']==3){
+                                                 echo "审核中";
+                                                 $flg = 1;
+                                                 break;
+                                            }else if($value['status']==2){
+                                                 echo "等待审核";
+                                                 $flg = 1;
+                                                 break;
+                                            }
+                                        }
+                          if($flg == 0){
+                              echo "审核通过";
+                           }
+                         ?>
+						  </td>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>">删除</a></td>
 					</tr>
-					
-										  
-					 <tr  class="b_white">
-						  <td><input type="checkbox" /></td>
-						  <td>2</td>
-						  <td><div align="center">数据库开发与应用</div></td>
-						  <td>
-						  	<div  class="video clearfix">
-								<div class="note1 fl">
-									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-										<source src="__PUBLIC__/images/video.mp4" type="video/ogg" />
-										Your browser does not support HTML5 video.
-									</video>
-								</div>
-								<div class="note2 fl">
-									<p class="res_name"><a href="#">数据库基础.mov</a></p>
-									<p class="date">2016年3月12日</p>
-								</div>
-								<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 </div>
-						   </div>   <!---video结束-->
-						   
-						   	  	<div  class="video clearfix">
-								<div class="note1 fl">
-									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-										<source src="__PUBLIC__/images/video.mp4" type="video/ogg" />
-										Your browser does not support HTML5 video.
-									</video>
-								</div>
-								<div class="note2 fl">
-									<p class="res_name"><a href="#">数据库高级教程.mov</a></p>
-									<p class="date">2016年3月13日</p>
-								</div>
-								<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 </div>
-						   </div>   <!---video结束-->
-						  </td>
-						  <td class="no_video">
-						  		<div class="note3 clearfix">
-									<p class="fl"><a href="#">数据库课程学习概要.doc</a></p>
-									<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 		</div>
-								</div>
-								
-								<div class="note3">
-									<p class="fl"><a href="#">数据库实验题目.doc</a></p>
-									<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 		</div>
-								</div>
-						  </td>
-						  <td>2016年3月13日</td>
-						  <td>已审核</td>
-						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
-					</tr>
-					
-										  
-					 <tr  class="b_white">
-						  <td><input type="checkbox" /></td>
-						  <td>3</td>
-						  <td><div align="center">操作系统：设计及实现</div></td>
-						  <td>
-						  	<div  class="video clearfix">
-								<div class="note1 fl">
-									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="__PUBLIC__/images/video.mp4" type="video/mp4" />
-										<source src="__PUBLIC__/images/video.mp4" type="video/ogg" />
-										Your browser does not support HTML5 video.
-									</video>
-								</div>
-								<div class="note2 fl">
-									<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-									<p class="date">2016年3月12日</p>
-								</div>
-								<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 </div>
-						   </div>   <!---video结束-->
-						   
-						   	  	<div  class="video clearfix">
-								<div class="note1 fl">
-									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-										<source src="images/video.mp4" type="video/mp4" />
-										<source src="images/video.mp4" type="video/ogg" />
-										Your browser does not support HTML5 video.
-									</video>
-								</div>
-								<div class="note2 fl">
-									<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-									<p class="date">2016年3月13日</p>
-								</div>
-								<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 </div>
-						   </div>   <!---video结束-->
-						  </td>
-						  <td class="no_video">
-						  		<div class="note3 clearfix">
-									<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-									<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 		</div>
-								</div>
-								
-								<div class="note3">
-									<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-									<div class="am-dropdown fr" data-am-dropdown>
-                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-										<img src="__PUBLIC__/images/set.png">
-									</a>
-									<ul class="am-dropdown-content">
-									  <li><a href="#">1. 打开</a></li>
-									  <li><a href="#">2. 下载</a></li>
-									  <li><a href="#">3. 删除</a></li>
-									</ul>
-             				 		</div>
-								</div>
-						  </td>
-						  <td>2016年2月29日</td>
-						  <td class="yccol">审核中</td>
-						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a></td>
-					</tr>
-
-					
+				</volist>
 				 </table>
 					
 				 <div class="fanye">
                      <p class="fytip">Showing 1 to 10 of 12 entries</p>
 					   <div class="yem">
 						  <ul>
-							 <li><a href="#">First</a></li>
-							 <li><a href="#">&lt;</a></li>
-							 <li class="sellify"><a href="#">1</a></li>
-							 <li><a href="#">2</a></li>
-							 <li><a href="#">&gt;</a></li>
-							 <li><a href="#">Last</a></li>
+							 <li><a href="Teacher_Resource?page=0">First</a></li>
+							 <li><a href="Teacher_Resource?page={$page-1}">&lt;</a></li>
+							 <?php for($value=1;$value<=$totalPage;$value++){ if($value == $page){?>
+							 <li class="sellify"><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							 <?php }else{?>
+							 <li><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							<?php }}?>
+							 <li><a href="Teacher_Resource?page={$page+1}">&gt;</a></li>
+							 <li><a href="Teacher_Resource?page={$totalPage-1}">Last</a></li>
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->

@@ -3,7 +3,7 @@
 尊重他人劳动成果;
 转载请保留素材家园链接 - www.sucaijiayuan.com
 */
-
+var courseName;
 (function($,undefined){
 	$.fn.zyUpload = function(options,param){
 		var otherArgs = Array.prototype.slice.call(arguments, 1);
@@ -62,9 +62,28 @@
 					html += '		<div class="upload_main">';
 					html += '			<div class="upload_choose">';
 					html += '				<div class="cource_res">';
-					html += '					<label>课程名称：</label><input type="text" />';
+					//html += '					<label>课程名称：</label><select><option>操作系统设计与实现</option><option>操作系统原理</option></select>';
+					html += '					<label>课程名称：</label><select name="courseName" id="selectname">';
+					$.ajax({
+						type:'post',
+						dataType:"json",
+						url:'getCourseName',
+						async:false,
+						success:function(data){
+							$.each(data,function(index,value){
+									html += '<option';
+									html += ' value="';
+									html += value.courseid;
+									html += '">';
+									html += value.coursename;
+									html += '</option>'
+							});
+						}
+						
+					});
+					html += '</select>';
 					html += '					<label style="margin-left:30px;">资源类型：</label>';
-					html += '					<select>';
+					html += '					<select name="resourceType" id="selecttype">';
 					html += '						<option>媒体素材</option>'; 
 					html += '						<option>非媒体素材</option>'; 
 					html += '					</select>';

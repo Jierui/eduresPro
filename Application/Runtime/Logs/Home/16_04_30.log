@@ -1,0 +1,164 @@
+[ 2016-04-30T09:37:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:37:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001026s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0122s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2016-04-30T09:37:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:38:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:38:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0105s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001030s ]
+
+[ 2016-04-30T09:38:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:42:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:42:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0105s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-04-30T09:42:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:42:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:42:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0099s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-04-30T09:42:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:42:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1048:Column 'courseID' cannot be null
+ [ SQL语句 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES (NULL,'2',NULL,'2','2016-04-30 09:42:19','./userResource/user2/57240d7b384c6.caj','db4b61a3d94b48903c7df95eb6dbc7b5','基于网格的远程教育资源管理_要海斌.caj')
+
+[ 2016-04-30T09:47:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:47:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0094s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2016-04-30T09:47:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T09:47:40+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1048:Column 'courseID' cannot be null
+ [ SQL语句 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES (NULL,'2',NULL,'2','2016-04-30 09:47:40','./userResource/user2/57240ebcd33fb.caj','ac62b9f9b1b0226aa3ff641a36ab4da8','远程教育试点高校网络学院人力资源管理模式研究_周榕.caj')
+
+[ 2016-04-30T09:47:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1406:Data too long for column 'md5' at row 1
+ [ SQL语句 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES ('1','2','媒体素材','2','2016-04-30 09:47:41','./userResource/user2/57240ebd20a66.caj','ac62b9f9b1b0226aa3ff641a36ab4da8','远程教育试点高校网络学院人力资源管理模式研究_周榕.caj')
+
+[ 2016-04-30T10:01:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:01:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0115s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2016-04-30T10:01:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:01:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:01:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0091s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2016-04-30T10:01:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:01:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1406:Data too long for column 'Type' at row 1
+ [ SQL语句 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES ('1','2','function (a){var b,c,d,e=this[0];{if(arguments.length)return d=n.isFunction(a),this.each(function(c){var e;1===this.nodeType&&(e=d?a.call(this,c,n(this).val()):a,null==e?e=\"\":\"number\"==typeof e?e+=\"\":n.isArray(e)&&(e=n.map(e,function(a){return null==a?\"\":a+\"\"})),b=n.valHooks[this.type]||n.valHooks[this.nodeName.toLowerCase()],b&&\"set\"in b&&void 0!==b.set(this,e,\"value\")||(this.value=e))});if(e)return b=n.valHooks[e.type]||n.valHooks[e.nodeName.toLowerCase()],b&&\"get\"in b&&void 0!==(c=b.get(e,\"value\"))?c:(c=e.value,\"string\"==typeof c?c.replace(bc,\"\"):null==c?\"\":c)}}','2','2016-04-30 10:01:31','./userResource/user2/572411fb750a4.caj','b960bdb5400885a6123b382077c2007a','论远程教育高校动态资源管理模式_朱肖川.caj')
+
+[ 2016-04-30T10:01:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1406:Data too long for column 'Type' at row 1
+ [ SQL语句 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES ('1','2','function (a){var b,c,d,e=this[0];{if(arguments.length)return d=n.isFunction(a),this.each(function(c){var e;1===this.nodeType&&(e=d?a.call(this,c,n(this).val()):a,null==e?e=\"\":\"number\"==typeof e?e+=\"\":n.isArray(e)&&(e=n.map(e,function(a){return null==a?\"\":a+\"\"})),b=n.valHooks[this.type]||n.valHooks[this.nodeName.toLowerCase()],b&&\"set\"in b&&void 0!==b.set(this,e,\"value\")||(this.value=e))});if(e)return b=n.valHooks[e.type]||n.valHooks[e.nodeName.toLowerCase()],b&&\"get\"in b&&void 0!==(c=b.get(e,\"value\"))?c:(c=e.value,\"string\"==typeof c?c.replace(bc,\"\"):null==c?\"\":c)}}','2','2016-04-30 10:01:31','./userResource/user2/572411fbb701c.caj','ac62b9f9b1b0226aa3ff641a36ab4da8','远程教育试点高校网络学院人力资源管理模式研究_周榕.caj')
+
+[ 2016-04-30T10:05:24+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:05:24+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0094s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-04-30T10:05:24+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:11:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001106s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0584s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
+
+[ 2016-04-30T10:11:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-04-30T10:11:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+

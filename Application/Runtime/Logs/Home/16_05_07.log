@@ -1,0 +1,925 @@
+[ 2016-05-07T10:13:00+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0085s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000705s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-05-07T10:13:16+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0046s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2016-05-07T10:13:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0049s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2016-05-07T10:13:23+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0102s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-05-07T10:31:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0100s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-05-07T10:48:30+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0105s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-05-07T10:50:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-05-07T10:50:35+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0057s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2016-05-07T10:53:52+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0117s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2016-05-07T10:53:56+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0052s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-05-07T10:57:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2016-05-07T10:59:47+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-05-07T10:59:48+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-05-07T11:00:49+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0103s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001296s ]
+
+[ 2016-05-07T11:00:54+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0117s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-05-07T11:00:56+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0087s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2016-05-07T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0107s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-05-07T11:03:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0053s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-05-07T11:03:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-05-07T11:03:49+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0246s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2016-05-07T11:08:27+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0089s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000771s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-05-07T11:19:35+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0521s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2016-05-07T11:20:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0112s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001233s ]
+
+[ 2016-05-07T11:27:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0122s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-05-07T11:27:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0055s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-05-07T11:29:06+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0092s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000861s ]
+
+[ 2016-05-07T11:29:25+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1048:Column 'courseID' cannot be null
+ [ SQL璇彞 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES (NULL,'1',NULL,'2','2016-05-07 11:29:25','userResource/user1/572d61158f1c4.doc','35a662f55bda89947e67eaffa57f3782','9-淇℃伅绉戝涓庡伐绋嬪闄㈠鍑烘瘯涓氳璁″畨鍏ㄦ壙鑻ヤ功.doc')
+
+[ 2016-05-07T11:33:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0134s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001080s ]
+
+[ 2016-05-07T11:33:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0100s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-05-07T11:33:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0107s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2016-05-07T11:33:37+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1048:Column 'courseID' cannot be null
+ [ SQL璇彞 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES (NULL,'1',NULL,'2','2016-05-07 11:33:37','userResource/user1/572d6211c0d1c.doc','dd527061f4d571000db3fff1456ea7d6','8-淇℃伅绉戝涓庡伐绋嬪闄㈡湰绉戠敓澶栧嚭鍋氭瘯涓氳璁＄敵璇疯〃.doc')
+
+[ 2016-05-07T11:33:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0066s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001099s ]
+
+[ 2016-05-07T11:34:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2016-05-07T11:34:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0051s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000854s ]
+
+[ 2016-05-07T11:36:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/addCourseResource
+ERR: 1048:Column 'courseID' cannot be null
+ [ SQL璇彞 ] : INSERT INTO `t_resource` (`courseID`,`userID`,`Type`,`Status`,`Time`,`Path`,`md5`,`Name`) VALUES (NULL,'1',NULL,'2','2016-05-07 11:36:11','userResource/user1/572d62ab5c8c5.doc','04ce1aed2fd52418bda3d1c393c6ca35','7-淇℃伅绉戝涓庡伐绋嬪闄㈠鍑烘瘯涓氳璁＄殑瑙勫畾.doc')
+
+[ 2016-05-07T11:40:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-05-07T11:40:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0113s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000822s ]
+
+[ 2016-05-07T11:46:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0061s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-05-07T11:50:57+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001121s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0129s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001380s ]
+
+[ 2016-05-07T11:52:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0122s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001189s ]
+
+[ 2016-05-07T11:52:44+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000999s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0259s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-05-07T11:52:47+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0129s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001503s ]
+
+[ 2016-05-07T11:53:49+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0135s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-05-07T11:54:01+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0457s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2016-05-07T11:54:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0110s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-05-07T12:06:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0047s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-05-07T12:07:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0793s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-05-07T12:07:52+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0055s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001185s ]
+
+[ 2016-05-07T12:12:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0108s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-05-07T19:58:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001478s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0106s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2016-05-07T20:03:33+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_video?target=5
+ERR: 闈炴硶鎿嶄綔:open_video
+
+[ 2016-05-07T20:03:42+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0071s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001760s ]
+
+[ 2016-05-07T20:27:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/Teater_Resource
+ERR: 闈炴硶鎿嶄綔:Teater_Resource
+
+[ 2016-05-07T20:27:40+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0114s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001267s ]
+
+[ 2016-05-07T20:27:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001034s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0131s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000932s ]
+
+[ 2016-05-07T20:27:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001563s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0143s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-05-07T20:27:50+08:00 ] ::1 /eduresPro/index.php/Home/Index/Teater_Resource
+ERR: 闈炴硶鎿嶄綔:Teater_Resource
+
+[ 2016-05-07T20:28:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001603s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0158s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2016-05-07T21:07:16+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001450s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0054s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2016-05-07T21:41:50+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0131s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2016-05-07T21:42:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001677s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0051s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2016-05-07T21:46:30+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001583s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0327s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001720s ]
+
+[ 2016-05-07T21:46:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0117s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2016-05-07T21:46:38+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0059s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-05-07T21:53:06+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001565s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0069s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001174s ]
+
+[ 2016-05-07T21:59:39+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2016-05-07T22:00:04+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0051s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2016-05-07T22:00:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000931s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2016-05-07T22:00:57+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0110s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-05-07T22:01:04+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0123s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2016-05-07T22:01:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0051s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2016-05-07T22:01:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0043s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000765s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000815s ]
+
+[ 2016-05-07T22:02:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0130s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001059s ]
+
+[ 2016-05-07T22:02:24+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0158s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001142s ]
+
+[ 2016-05-07T22:02:27+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0119s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2016-05-07T22:02:28+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0123s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2016-05-07T22:02:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0129s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2016-05-07T22:02:36+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0137s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2016-05-07T22:13:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0057s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2016-05-07T22:13:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0109s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-05-07T22:18:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0122s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2016-05-07T22:18:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0134s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2016-05-07T22:18:25+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0366s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000772s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2016-05-07T22:18:56+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0120s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2016-05-07T22:18:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0148s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-05-07T23:03:25+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001559s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0150s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2016-05-07T23:08:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0104s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001430s ]
+
+[ 2016-05-07T23:23:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001611s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0335s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001277s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2016-05-07T23:32:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0108s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-05-07T23:32:39+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0107s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-05-07T23:32:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0058s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2016-05-07T23:37:44+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: Parameter 0: 类型不匹配。
+
+
+[ 2016-05-07T23:39:02+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0066s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-05-07T23:39:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:45:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:47:04+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:48:02+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:49:07+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:54:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0064s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2016-05-07T23:54:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:54:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:55:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:58:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+
+[ 2016-05-07T23:59:59+08:00 ] ::1 /eduresPro/index.php/Home/Index/open_resource?resourceid=13
+ERR: <b>Source:</b> Microsoft Word<br/><b>Description:</b> 因为没有打开的文档，所以这一命令无效。
+

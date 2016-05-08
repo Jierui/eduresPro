@@ -148,7 +148,11 @@ var ZYFILE = {
 			var self = this;  // 在each中this指向没个v  所以先将this保留
 			
 			var formdata = new FormData();
-			formdata.append("fileList", file);	         		
+			formdata.append("fileList", file);	
+			formdata.append("courseName",$('#selectname').val());  //$("#selectname option:selected").val();
+			formdata.append("resourceType",$('#selecttype').val());
+			//console.log($('#selectname').val());
+			//console.log($('#selecttype').val());
 			var xhr = new XMLHttpRequest();
 			// 绑定上传事件
 			// 进度
@@ -174,7 +178,7 @@ var ZYFILE = {
 		    }, false);  
 			
 			xhr.open("POST",self.url, true);
-			xhr.setRequestHeader("X_FILENAME", file.name);
+			//xhr.setRequestHeader("X_FILENAME", file.name);
 			xhr.send(formdata);
 		},
 		// 返回需要上传的文件

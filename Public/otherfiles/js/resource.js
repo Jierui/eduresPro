@@ -1,0 +1,3 @@
+function del_resource(){
+	
+}
