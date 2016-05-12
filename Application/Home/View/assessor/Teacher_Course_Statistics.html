@@ -4,11 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="中南大学远程教育资源管理系统" />
 <title>中南大学远程教育资源管理系统</title>
-<link type="text/css" rel="stylesheet" href="css/amazeui.min.css" />
-<link type="text/css" rel="stylesheet" href="css/css.css" />
-<link type="text/css" rel="stylesheet" href="css/style.css" />
-<link type="text/css" rel="stylesheet" href="css/Upload.css" />
-<script src="js/ChangeContent.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/css.css" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style.css" />
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/Upload.css" />
+<script src="__PUBLIC__/js/ChangeContent.js" type="text/javascript"></script>
 
 
 </head>
@@ -16,46 +16,53 @@
 <body style="background:none;">
 <div class="header">
    <div class="top">
-		<img class="logo" src="images/logo.jpg" />
+		<img class="logo" src="__PUBLIC__/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
-		   <li onMouseOver="change(this)"><a href="#">消息提醒</a></li>
-		   <li onMouseOver="change(this)"><a href="#">个人中心</a></li>
-		   <li   class="seleli"  onMouseOver="change(this)"><a href="#" >资源管理</a></li>
+		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
+		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
+		   <li   class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >留言板</a></li>
+		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
-		<a href="#" class="exit">退出</a>
+		<a href="{:U('Home/Index/exit_login')}" class="exit">退出</a>
    </div>
 </div>   <!--header结束-->
 	
 <div class="container clearfix">
 <div class="leftbar clearfix">
 		<div class="lm01 clearfix"> 
-			<img class="peptx" src="images/tximg.jpg" /><a href="#" class="changeImg">更换头像</a>
-	   		 <div class="pepdet">
-				<p>姓名：李小雅</p>
-				<p>层次：教授</p>
-				<p>专业：计算机科学与技术</p>
+			<img class="peptx" src="__ROOT__/{$imgpath|default='Public/images/tximg.jpg'}" /><a  href="javascript:select_img_file();" class="changeImg">更换头像</a>
+			<input type="file" name="files[]" id="img_upload" style="display:none"/>
+	   		 <div class="pepdet" style="clear:both;">
+				<p>姓名：{$userinfo.username}</p>
+				<p>层次：{$userinfo.level}</p>
+				<p>专业：{$userinfo.major}</p>
 	  		</div>
-	    </div>   
+	    </div>
 		
 	<div class="lm02 clearfix">
 	    <div class="title">
-			<img class="icon" src="images/dataicon.jpg" />
+			<img class="icon" src="__PUBLIC__/images/dataicon.jpg" />
 			<h2>日历</h2>
 	    </div>
 	    <div class="detail"> 
-	  		<img class="" src="images/kj_01.jpg" /> 
+	  		<div id="imgdate"></div>
+	  		<!--<img class="" src="__PUBLIC__/images/kj_01.jpg" /> -->  
+	  		<div  style="width:212px;height:204px;"  id="imgdate1"></div>
+	  		<script type="text/javascript">
+             message_date("#imgdate");
+            </script>
 	    </div>
    </div>
 	
 	<div class="lm03">
 	    <div class="title">
-	    	<img style="padding-right:5px;" class="icon" src="images/weaicon.jpg" />
+	    	<img style="padding-right:5px;" class="icon" src="__PUBLIC__/images/weaicon.jpg" />
 			<h2>天气</h2>
 	  </div>
 	  <div class="detail"> 
-	  	   <img class="" src="images/kj_02.jpg" /> 
+	  	   <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=U578735513&cid=CHHN000000&l=zh-CHS&p=SMART&a=0&u=C&s=11&m=2&x=1&d=3&fc=B00C22&bgc=C6C6C6&bc=&ti=1&in=1&li=&ct=iframe" 
+	  	  frameborder="0" scrolling="no" width="214" height="300" allowTransparency="true"></iframe>
 	  </div>
     </div>
 </div>   <!--leftbar结束-->
@@ -71,7 +78,7 @@
     </div>
 	
 	<div class="tip">
-		<p class="goom">早上好，小雅！</p>
+		<p class="goom">{$info.alert}，{$userinfo.username}！</p>
 		<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
     </div>
    

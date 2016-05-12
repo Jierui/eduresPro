@@ -11,6 +11,10 @@
 <link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/Upload.css" />
 <script src="/eduresPro/Public/js/ChangeContent.js" type="text/javascript"></script>
 <script src="/eduresPro/Public/js/jquery2.1.4.js" type="text/javascript"></script> 
+<script src="/eduresPro/Public/Jquery/js/vendor/jquery.ui.widget.js"></script>
+<script src="/eduresPro/Public/Jquery/js/jquery.iframe-transport.js"></script>
+<script src="/eduresPro/Public/Jquery/js/jquery.fileupload.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/upimg.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/glDatePicker.min.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/datePicker.js"></script> 
 <script type="text/javascript">
@@ -149,7 +153,7 @@ $(document).ready(function() {
 						  <th  scope="col"><div>操作</div></th>
 					</tr>
 				<?php $countNum=1 ?>
-				<?php if(is_array($showData)): $i = 0; $__LIST__ = $showData;if( count($__LIST__)==0 ) : echo "没有任何数据" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><tr  class="b_white">
+				<?php if(is_array($showData)): $i = 0; $__LIST__ = $showData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><tr  class="b_white">
 						  <!--<td><input type="checkbox" /></td>-->
 						  <td><?php echo $countNum++;?></td>
 						  <td><div align="center"><?php echo $course->where("courseID=".$arr[0]['courseid'])->getField("courseName");?></div></td>
@@ -197,15 +201,16 @@ $(document).ready(function() {
 						  <td class="yccol">
 						  <?php  $flg = 0; foreach($arr as $value){ if($value['status']==0){ echo "审核未通过"; $flg = 1; break; }else if($value['status']==3){ echo "审核中"; $flg = 1; break; }else if($value['status']==2){ echo "等待审核"; $flg = 1; break; } } if($flg == 0){ echo "审核通过"; } ?>
 						  </td>
-						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>">删除</a></td>
-					</tr><?php endforeach; endif; else: echo "没有任何数据" ;endif; ?>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						  <a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>&user[]=<?php echo $arr[0]['userid'];?>">删除</a></td>
+					</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 				 </table>
 					
 				 <div class="fanye">
                      <p class="fytip">Showing 1 to 10 of 12 entries</p>
 					   <div class="yem">
 						  <ul>
-							 <li><a href="Teacher_Resource?page=0">First</a></li>
+							 <li><a href="Teacher_Resource?page=1">First</a></li>
 							 <li><a href="Teacher_Resource?page=<?php echo ($page-1); ?>">&lt;</a></li>
 							 <?php for($value=1;$value<=$totalPage;$value++){ if($value == $page){?>
 							 <li class="sellify"><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
@@ -213,7 +218,7 @@ $(document).ready(function() {
 							 <li><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
 							<?php }}?>
 							 <li><a href="Teacher_Resource?page=<?php echo ($page+1); ?>">&gt;</a></li>
-							 <li><a href="Teacher_Resource?page=<?php echo ($totalPage-1); ?>">Last</a></li>
+							 <li><a href="Teacher_Resource?page=<?php echo ($totalPage); ?>">Last</a></li>
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->

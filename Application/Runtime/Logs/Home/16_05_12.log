@@ -1,0 +1,171 @@
+[ 2016-05-12T00:01:49+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-05-12T00:02:03+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2 AND `userName` = '娄杰'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0793s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '算法导论'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0083s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1364:Field 'Overview' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `t_needsubmit` (`userID`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('2','0','0','0','0','2','2016-05-12 00:02:03','1')
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2016-05-12T00:03:48+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0110s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000791s ]
+
+[ 2016-05-12T00:03:59+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2 AND `userName` = '娄杰'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '操作系统'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0074s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('2','0','0','0','0','0','1','2016-05-12 00:03:59','1') [ RunTime:0.1512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-05-12T00:07:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0060s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2016-05-12T00:07:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001744s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0562s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2 AND `userName` = '娄杰'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '操作系统'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0082s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('2','1','1','1','0','1','1','2016-05-12 00:07:55','2') [ RunTime:0.0718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001006s ]
+
+[ 2016-05-12T00:11:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001512s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0131s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2016-05-12T00:11:14+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0828s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 0 AND `userName` = ''  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2016-05-12T00:11:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.1176s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 0 AND `userName` = ''  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001149s ]
+
+[ 2016-05-12T00:12:40+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0073s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2016-05-12T00:12:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 0 AND `userName` = ''  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-05-12T00:15:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0108s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2016-05-12T00:16:03+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1 AND `userName` = 'jierui'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '算法导论'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0092s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('1','1','1','1','0','1','2','2016-05-12 00:16:03','3') [ RunTime:0.0655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2016-05-12T22:45:59+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0102s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2016-05-12T22:48:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0201s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001166s ]
+

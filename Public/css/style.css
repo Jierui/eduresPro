@@ -100,7 +100,7 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .form2  .group  input ,.form2  .group select{height:32px; vertical-align:middle;}
 .form2  .group select {width:270px;display:inline;}
 #optionsRadios3 {width:30px; line-height:20px;margin-top:-5px;}
-
+.red {margin-left:8px;margin-right:3px;color:red;font-weight:bold;}
 
 
 /*****************************资源反馈页***************************************/
@@ -135,7 +135,7 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .lm02 h2, .lm03 h2 {float:left;font-size:14px;}
 
 /*---------mainbody------------------*/
-.mainbody {margin-left:241px;}
+.mainbody {margin-left:241px;margin-bottom:20px;}
 .currmenu {background: url("../images/rignavbg.jpg") repeat-x scroll left top;height: 37px;}
 .rig_nav li {float: left;line-height: 37px;border-right: 1px solid #DDDDDD;}
 .rig_nav li a {font-size: 14px;height: 35px;line-height: 35px;padding: 0 25px;}
@@ -260,8 +260,8 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .per_infor .InfoList ul li {padding-top:15px;}
 .per_infor .InfoList ul li span {margin-left:10px;color:#333333;font-weight:normal;}
 .per_infor .InfoList2 .btn {width:auto;}
-.per_infor .InfoList2 label {font-size:16px; color:#000000;font-weight:bold;margin-right:10px;}
-
+.administrator.per_infor .InfoList2 label {display:inline-block;width:100px;font-size:16px; color:#000000;font-weight:bold;margin-right:10px;}
+.administrator.per_infor .InfoList2 .group2 {margin-top:20px;margin-left:200px;}
 /*----管理员用户-----*/
 .Admin_Info {margin-top:15px;}
 .Admin_Info .tabCot{margin-top:10px;}
@@ -270,7 +270,7 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .search input {padding:3px 0;}
 .buttons button,buttons input{margin-bottom:12px;}
 .buttons input, .buttons select{padding:5px 0;margin-bottom:6px;font-size:12px;text-align:center;}
-  
+ 
  /*****************************留言板************************************** */
 .message .changeInfo {border-bottom:1px solid #C8C7C7;margin-bottom:10px;}
 .message .changeInfo a {width:80px;height:20px;text-align:center;background:#2595b7;font-size:16px;margin:5px 10px;color:#FFFFFF;}
@@ -409,6 +409,8 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .reset:hover{border: 1px solid #BBB;}
 .asse_res .buttons a {color:#2595b7;}
 
+
+
 /***应提交资源记录****/
 .record_need {width:auto;height:auto;text-align:left;top:40%;left:40%;} 
 .record_need h4 {margin: 0 auto;text-align:center;font-size:16px;margin-bottom:10px;}
@@ -421,6 +423,13 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .record_need  .buttons {width:20%;margin: 10px auto 0px auto;}
 .record_need  .buttons button {padding:2px 8px;margin-right:5px;text-align:center;}
 
+
+.selects {position:absolute;overflow:hidden;width:200px;height:34px;}
+.record_need div .select_con  input {padding:0px;}
+.selects select {width:200px;height:23px;}
+.select_con {position:absolute;width:182px;height:28px;}
+.select_con input {width:180px;height:22px;margin-top:-2px;}
+select.kc {width:150px;}
 
 /*---------评价教师统计页面--------------*/
 .eva_teacher .tabContainer .tabHead {float:none;background:#1D79C7;color:#FFF;}
@@ -439,15 +448,49 @@ document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*
 .package div input {color:#333;width:50%;}
 .package .selects {position:absolute;overflow:hidden;width:200px;height:34px;}
 .package .selects select {width:200px;height:23px;}
-.package .select_con {position:absolute;width:182px;height:26px;}
-.package .select_con input {width:182px;height:21px;}
+.package .select_con {position:absolute;width:182px;height:28px;}
+.package .select_con input {width:180px;height:22px;margin-top:-2px;}
 .package .publish {position:absolute;left:270px;}
 .package .publish button {padding:0px 3px;font-size:12px;margin-top:-1px;}
 .package .buttons {margin-left:0px;text-align:center;margin-top:15px;}
 
+/*------管理员个人中心页--------*/
+.administrator {margin-top:20px;}
+.administrator  #tabCot_product_1 .fanye {width:98%;margin:10px auto;}
+.administrator.per_infor {width:98%;margin:10px  auto;border:1px solid #CCC;padding-bottom:40px;height:auto;}
+.administrator.per_infor .change_portrait {height:100px;margin:20px 0px 10px 100px;font-size:16px;font-weight:bold;color:#000000;}
+.administrator.per_infor .change_portrait label {margin-top:40px;}
+.administrator.per_infor .change_image {margin-left:40px;}
+.administrator.per_infor .change_image p {margin-top:5px;font-size:11px;}
+.administrator.per_infor .change_image img {margin-right:15px;}
+.administrator.per_infor  form .group2 button {padding:3px 0px;}
+.administrator.per_infor .InfoList .change_portrait {margin-left:0px;}
+.cource_name {width:350px;}
+.cource_name .buttons {width:45%;}
+.administrator .admin-content {width:95%;overflow:auto;margin:0 auto;}
+.administrator .admin-content pre {font-size:12px;}
+.administrator .am-padding {padding:0px;}
+.am-text-normal {color:green;}
+
+/**工作流定制***/
+.selectbox{width:800px;height:220px;margin:0px auto;margin-top:50px;}
+.selectbox input {color:#2553a0;padding:3px;margin-top:5px;}
+.selectbox h3 {text-align:center;font-size:16px;color:#2595b7;margin:8px 0px;}
+.selectbox div{float:left;}
+.selectbox .select-bar{padding:0 20px;}
+.selectbox .select-bar select{width:200px;height:250px;border:1px #A0A0A4 solid;padding:4px;font-size:14px;font-family:"microsoft yahei";}
+.btn-bar{margin-top:135px;}
+.btn-bar2 {margin-top:105px;}
+.btn-bar p{margin-top:16px;}
+.btn-bar p .btn{width:50px;height:30px;cursor:pointer;font-family:simsun;font-size:14px;}
+.opreate {margin-top:85px;}
+#add input {font-weight:bolder;}
+.administrator hr {height:3px;background:#1D79C7;}
+/*****/
+
 
 /*----------底部-----------------------*/
-.footer{ width:100%; height:90px; background:#2553A0;margin-top:10px;}
+.footer{ width:100%; height:90px; background:#2553A0;}
 .footer p {text-align:center; color:#fff;line-height:22px;}
 .footer p.one{ line-height:24px; text-align:center; color:#fff; padding-top:20px;}
 .footer p.two{ line-height:24px; text-align:center; color:#fff; background:#071e3f;}

@@ -9,9 +9,9 @@ use Think\Image;
 class IndexController extends Controller {	
     public function index(){
       // $this->show('<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px } a,a:hover{color:blue;}</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>版本 V{$Think.version}</div><script type="text/javascript" src="http://ad.topthink.com/Public/static/client.js"></script><thinkad id="ad_55e75dfae343f5a1"></thinkad><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>','utf-8');
-      if(session('userID')){
+      if(session('userID') && session('userName')){
       	//$this->message_feedback();
-      	$this->success("您已经登陆",'index.php/Home/index/message_feedback');
+      	$this->success("您已经登陆",U('Home/Index/message_feedback'));
       	return;
       }
       $this->display('login');
@@ -188,6 +188,7 @@ class IndexController extends Controller {
     public function exit_login(){
     	if(session('userName')){
     		session('userName',null);
+    		session('userID',null);
     		$this->success('退出成功',U('Home/Index/index'));
     	}else{
     		$this->error('尚未登陆',U('Home/Index/index'));
@@ -621,16 +622,17 @@ class IndexController extends Controller {
     		$this->error("请登陆",index);
     	}
     	$courseid = $_GET['course_del'];
+    	$userid = $_GET['user'];
     	if(!$courseid)
     	{
     		return;
     	}
     	$rootPath = "Uploads/";
     	$resource = M('resource');
-    	$where['userID'] = session('userID');
     	try{
-    		foreach($courseid as $id){
+    		foreach($courseid as $key=>$id){
     			$where['courseID'] = $id;
+    			$where['userID'] = $userid[$key];
     			//删除服务器保存的资源
     			$resourcePath = $resource->where($where)->getField('path',true);
     			foreach($resourcePath as $path){
@@ -799,35 +801,199 @@ class IndexController extends Controller {
     	$userid = $_GET['user'];
     	$courseid = $_GET['course'];
     	$resource = M('resource');
-    	$where['userID'] = $userid;
-    	$where['courseID'] = $courseid;
-    	$resource->where($where)->setField('Status',1);
+    	foreach($userid as $key=>$id)
+    	{
+    		$where['userID'] = $id;
+    		$where['courseID'] = $courseid[$key];
+    		$resource->where($where)->setField('Status',1);
+    	}
     	$this->Teacher_Resource();
+    }
+    
+    public function Teacher_Resource_Statistics(){
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    		$page = $_GET['page'];
+    		if(!$page){
+    			$page = 1;
+    		}else{
+    			if(is_int($page)){
+    				if($page < 1){
+    					$page = 1;
+    				}
+    			}else{
+    				$page = 1;
+    			}
+    		}//获取当前页数
+    		$resource = M('resource'); //教师提交资源表
+    		//     		unset($where);
+    		//     		$where['userID'] = session('userID');
+    		//$count = $resource->where($where)->group('courseID')->count();   //总记录数
+    		$data = $resource->order('Time desc')->select();
+    		foreach($data as $value){
+    			if(empty($arrayData[$value['userid'].$value['courseid']])){
+    				$arrayData[$value['userid'].$value['courseid']] = array($value);
+    			}else{
+    				array_push($arrayData[$value['userid'].$value['courseid']], $value);
+    			}
+    		}//arrayData为查询数据
+    		$line = 5;   //每一页显示的行数
+    		$count = count($arrayData); //总记录数
+    		$totalPage = ceil($count/$line);
+    		if($page > $totalPage){
+    			$page = $totalPage;
+    		}
+    		--$page;  //
+    		////////////////////////////////////////////////前台应该显示的数据
+    		$requestData = array_slice($arrayData,$page*$line,$line,true);
+    		$this->assign('totalPage',$totalPage);  //总页数
+    		$this->assign('page',$page+1);      //当前页数
+    		//$this->assign('line',$line);        //每页显示行数
+    		$this->assign('showData',$requestData);
+    		$this->assign('course',M('course'));
+    		$this->assign('user',$user);
+    		$this->display('assessor:Teacher_Resource_Statistics');
+    }
+    public function Teacher_Course_Statistics(){
+    	
+    }
+    
+    public function add_need_resource(){
+    	if(!session('userID')){
+    		//$this->error('请登录',U('Home/Index/index'));
+    		return ;
+    	}
+    	$data=$_POST;
+    	$where['userID'] = $data['userID'];
+    	$where['userName'] = $data['userName'];
+    	$user = M('userinfo');
+    	$userinfo = $user->where($where)->select();
+    	$flg = 1;//操作成功
+    	if($userinfo)
+    	{
+    		unset($where);
+    		$where['courseName'] = $data['courseName'];
+    		$course = M('course');
+    		$courseInfo = $course->where($where)->select();
+    		try{
+    			if($courseInfo){
+    				unset($data['userName']);
+    				$data['courseID'] = $courseInfo[0]['courseid'];
+    				$data['Time'] = date('Y-m-d H:i:s');
+    				$needSubmit = M("needsubmit");
+    				$maxID = $needSubmit->max('needID');   //needid是否为空
+    				if($maxID){
+    					$data['needID'] = $maxID+1;
+    					$needSubmit->add($data);
+    				}else{
+    					$data['needID'] = 1;
+    					$needSubmit->add($data);
+    				}
+    				$result = array("status"=>$flg);
+    				echo json_encode($result);
+    			}else{
+    				$flg = 2; //课程不存在
+    				$info = "添加失败，该课程不存在";
+    				$result = array("status"=>$flg,"msg"=>$info);
+    				echo json_encode($result);
+    			}
+    		}catch (\Exception $e){
+    			$result = array("status"=>101,"msg"=>$e->__toString());
+    			echo json_encode($result);
+    		}
+    	}else{
+    		$flg = 0; //教师用户不存在
+    		$info = "教师姓名和ID不匹配";
+    		$result = array("status"=>$flg,"msg"=>$info);
+    		echo json_encode($result);
+    	}
+    }
+    
+    
+    public function show_need_resource(){
+    	if(!session('userID')){
+    		return ;
+    	}
+    	$page = $_POST['Page'];
+    	if(!$page){
+    		$page = 1;
+    	}
+    	if($page<1){
+    		$page =1;
+    	}
+    	$line = 5;
+    	$needsubmit = M('needsubmit');
+    	$entry =  $needsubmit->count();
+    	$totalPage = ceil($entry/$line);
+    	if($page > $totalPage){
+    		$page = $totalPage;
+    	}
+    	--$page;
+    	$dataArray = $needsubmit->order('time desc')->limit($page*$line,$line)->select();
+    	$user = M('userinfo');
+    	$course = M('course');
+    	$count = 1;
+    	foreach($dataArray as $key=>$value){
+    		$where1['userID'] = $value['userid'];
+    		$userinfo = $user->where($where1)->select();
+    		$dataArray[$key]['count'] = $count;
+    		$dataArray[$key]['userName'] = $userinfo[0]['username'];
+    		$dataArray[$key]['phone'] = $userinfo[0]['phone'];
+    		$dataArray[$key]['major'] = $userinfo[0]['major'];
+    		$dataArray[$key]['level'] = $userinfo[0]['level'];
+    		$where2['courseID'] = $value['courseid'];
+    		$dataArray[$key]['courseName'] = $course->where($where2)->getField('courseName');
+    		$count++;
+    	}
+    	++$page;
+    	//dump($dataArray);
+    	$result = array('data'=>$dataArray,'totalPage'=>$totalPage,'page'=>$page);
+    	echo json_encode($result);
+    }
+    
+    public function del_need_resource(){     //删除应提交资源
+    	if(!session('userID')){
+    		return ;
+    	}
+    	$needID = $_POST['needID'];
+    	$needsubmit = M('needsubmit');
+    	$count = 0;
+    	foreach($needID as $key=>$value){
+    		$where['needID'] = $value;
+    		$count+=$needsubmit->where($where)->delete();
+    	}
+    	echo json_encode($count);	
+    }
+    
+    
+    public function needResourceSearch(){
+    	$data = $_POST['data'];
     }
     //实验代码
     public function demo(){
-//     	$resource = M('resource'); //教师提交资源表
-//     	$where['userID']=  session('userID');
-//     	//$subSql = $resource->where($where)->select(false);
-//     	//$resource->table($subSql.' a')->
-//     	$data = $resource->where($where)->order('Time desc')->select();
-//     	foreach($data as $value){
-//     		if(empty($arrayData[$value['courseid']])){
-//     			$arrayData[$value['courseid']] = array($value);
-//     		}else{
-//     			array_push($arrayData[$value['courseid']], $value);
-//     		}
-//     	}
-//     	dump($arrayData);
-//     	dump(count($arrayData));
-//         $data = array('h'=>1,'j'=>2,'f'=>2,3,4,5);
-//         dump($data);
-//         dump(array_slice($data, 0,9,true));
-//         dump(array_slice($data, 4,3));
-          $key = "1";
-          $course = M('course');
-          $result = $course->where("courseID=".$key)->getField('courseName');
-          dump($result);
+    	$needSubmit = M("needsubmit");
+    	$maxID = $needSubmit->max('needID');
+    	dump($maxID);
     }
     
     

@@ -64,9 +64,7 @@
 					html += '				<div class="cource_res plan">';
 					html += '					<div><label>授课教师：</label><input type="text" /><label class="must">*</label></div>';
 					html += '					<div><label>教师ID：</label><input type="text" /><label class="must">*</label></div>';
-					html += '					<div><label>课程名称：</label><input type="text" /><label class="must">*</label></div>';
-					html += '				</div>';
-
+					html += '					<div><label>课程名称：</label><select class="kc"><option>操作系统设计与实现</option><option>数据库开发与应用</option></select></div>';
 	            	html += '				<div class="convent_choice">';
 	            	html += '					<div class="andArea">';
 	            	html += '						<div class="filePicker">点击选择文件</div>';
@@ -78,8 +76,8 @@
 		            html += '			<div class="status_bar">';
 		            html += '				<div id="status_info" class="info">选中0张文件，共0B。</div>';
 		            html += '				<div class="btns">';
+		            html += '					<div class="webuploader_pick">继续选择</div>';
 		            html += '					<div class="upload_btn">开始上传</div>';
-		            html += '					<div class="reset">取消</div>';
 		            html += '				</div>';
 		            html += '			</div>';
 					html += '			<div id="preview" class="upload_preview"></div>';

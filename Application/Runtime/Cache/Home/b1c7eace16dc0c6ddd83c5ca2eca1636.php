@@ -17,6 +17,7 @@
 <script src="/eduresPro/Public/otherfiles/js/upimg.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/glDatePicker.min.js"></script>
 <script src="/eduresPro/Public/otherfiles/js/datePicker.js"></script> 
+<script src="/eduresPro/Public/otherfiles/js/resource.js"></script> 
 <script type="text/javascript">
 $(document).ready(function() {
 	projekktor('#player_a'); // instantiation
@@ -41,21 +42,59 @@ $(document).ready(function() {
 <!---增加资源的审核建议结束--->
 
 <!---增加应提交课程资源记录开始--->
-<div id="popDiv2" class="mydiv record_need " style="display:none;"> 
+<div id="popDiv2" class="mydiv record_need" style="display:none;"> 
 	<h4>新建应提交资源记录</h4>
-	<div class="labels"><label>授课教师:</label><input type="text" /></div>
-	<div class="labels"><label>教师ID:</label><input type="text" /></div>
-	<div class="labels"><label>课程名称:</label><input type="text" /></div>
-	<div class="needs">
-		<label>课程概况：</label><select><option>需要</option><option>不需要</option></select>
-		<label>课程学习：</label><select><option>需要</option><option>不需要</option></select>	
-		<label>媒体素材：</label><select><option>需要</option><option>不需要</option></select>	
-		<label>实验：</label><select><option>需要</option><option>不需要</option></select>	
-		<label>作业：</label><select><option>需要</option><option>不需要</option></select>	
-		<label>考试：</label><select><option>需要</option><option>不需要</option></select>	
+	<!--<form id="need_submit_form">-->
+	<div class="labels"><label>授课教师:</label><input type="text" name="userName" id="re_userName"/></div>
+	<div class="labels"><label>教师ID:</label><input type="text" name="userID" id="re_userID" /></div>
+	<div class="groups" style="position:relative;">
+		<label>课程名称：</label>
+		<span class="selects">
+		<select name="dws" id="dws" onChange="javascript:document.getElementById('dw').value=document.getElementById('dws').options[document.getElementById('dws').selectedIndex].value;">
+			<!--<option value="" style="color:#c2c2c2;">---请选择---</option>-->
+			<script type="text/javascript">
+			$.ajax({
+				type:'post',
+				dataType:"json",
+				url:'getCourseName',
+				async:false,
+				success:function(data){
+					html = '<option value="" style="color:#c2c2c2;">---请选择---</option>';
+					$.each(data,function(index,value){
+							html += '<option';
+							html += ' value="';
+							html += value.coursename;
+							html += '">';
+							html += value.coursename;
+							html += '</option>'
+					});
+					$("#dws").append($(html));
+				}
+				
+			});
+			</script>
+			<!--<option value='操作系统原理与设计'>操作系统原理与设计</option>
+			<option value='数据库'>数据库</option>
+			<option value='Jquuery权威指南'>Jquuery权威指南</option>
+			<option value='javascript编程全解'>javascript编程全解</option>-->
+		</select>
+		</span>
+		<span class="select_con">
+			<input type="text" name="dw" id="dw" value="">
+		</span>
 	</div>
+
+	<div class="needs">
+		<label>课程概况：</label><select name="OverView" id="re_OverView"><option value="1">需要</option><option value="0">不需要</option></select>
+		<!--<label>课程学习：</label><select><option>需要</option><option>不需要</option></select>	-->
+		<label>媒体素材：</label><select name="Material" id="re_Material"><option value="1">需要</option><option value="0">不需要</option></select>	
+		<label>实验：</label><select name="Experiment" id="re_Experiment"><option value="1">需要</option><option value="0">不需要</option></select>	
+		<label>作业：</label><select name="Task" id="re_Task"><option value="1">需要</option><option value="0">不需要</option></select>	
+		<label>考试：</label><select name="Exam" id="re_Exam"><option value="1">需要</option><option value="0">不需要</option></select>	
+	</div>
+	<!--</form>-->
 	<div class="buttons">
-		<button  class="button1" type="submit" onClick="closeDiv2()">确定</button>
+		<button  class="button1" type="button" onClick="suer_add()">确定</button>
 		<button class="button2" type="reset" onClick="closeDiv2()">取消</button>
 	</div>
 </div>
@@ -78,7 +117,7 @@ $(document).ready(function() {
 		<ul class="nav" id="intrL-T">
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
-		   <li   class="seleli"  onMouseOver="change(this)"><a href="#" >资源管理</a></li>
+		   <li   class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
@@ -147,7 +186,7 @@ $(document).ready(function() {
             <div class="tabContainer">
 				 <ul class="tabHead" id="tabCot_product-li-currentBtn-">
 					 <li class="currentBtn"><a href="javascript:void(0)" title="课程视频资源">课程资源</a></li>
-					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2">应提交资源</a></li>
+					 <li><a href="javascript:void(0)" title="应提交资源" rel="2" onclick="show_need_resource(1)">应提交资源</a></li>
 					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2">资源制作计划</a></li>
 					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2">合作协议</a></li>
 				 </ul>
@@ -158,13 +197,13 @@ $(document).ready(function() {
 					<div class="buttons">
 					   <div class="fl add">
 						  <a href="evaluate_teacher.html"><button type="button" class="evaluate">教师评价</button></a>
-						  <button type="button">审核通过</button>
-						  <button type="button">删除</button>
+						  <button type="button" onclick="through_review()">审核通过</button>
+						  <button type="button" onclick="del_resource()">删除</button>
 					   </div>
 						  
 					  <div class="filtrate fl"	>
 							<label>筛选：</label>
-						  <select data-am-selected="{btnSize: 'sm'}">
+						  <select data-am-selected="{btnSize: 'sm'}" >
 							 <option value="option1">全部资源</option>
 							 <option value="option1">已审核资源</option>
 							 <option value="option2">待审核资源</option>
@@ -173,12 +212,12 @@ $(document).ready(function() {
 					  </div>
 							
 						<div class="fr search">
-							<input type="text">
-							<button type="button">搜索</button>
+							<!--<input type="text">
+							<button type="button">搜索</button>-->
 							<div class="am-dropdown fr" data-am-dropdown>
 								<button class="am-dropdown-toggle" data-am-dropdown-toggle>统计</button>
 								<ul class="am-dropdown-content">
-								  <li><a href="Teacher_Resource_Statistics.html">1. 教师提交资源信息统计</a></li>
+								  <li><a href="Teacher_Resource_Statistics">1. 教师提交资源信息统计</a></li>
 								  <li><a href="Teacher_Course_Statistics.html">2. 课程情况统计</a></li>
 								</ul>
 							</div>
@@ -205,8 +244,8 @@ $(document).ready(function() {
 							  <th  scope="col"><div>操作</div></th>
 						</tr>
 						 <?php $countNum = 1;?>
-                         <?php if(is_array($showData)): $i = 0; $__LIST__ = $showData;if( count($__LIST__)==0 ) : echo "没有数据" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><tr  class="b_white">
-							  <td><input type="checkbox" /></td>
+                         <?php if(is_array($showData)): $i = 0; $__LIST__ = $showData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$arr): $mod = ($i % 2 );++$i;?><tr  class="b_white">
+							  <td><input type="checkbox" class="checkbox" value="<?php echo ($arr[0]['userid']); ?>|<?php echo ($arr[0]['courseid']); ?>"/></td>
 							  <td><?php echo $countNum++?></td>
 							  <?php $ui = $user->where("userID=".$arr[0]['userid'])->select(); ?>
 							  <td><a href="#"><?php echo $ui[0]['username'];?></a><p><a href="#"><?php echo $ui[0]['phone'];?></a></p></td>
@@ -258,106 +297,11 @@ $(document).ready(function() {
 							   <?php  $flg = 0; foreach($arr as $value){ if($value['status']!=1){ echo "待审核"; $flg = 1; break; } } if($flg == 0){ echo "已审核"; } ?>
 							  </td>
 							  <td class="czcol">
-							  	<a href="through_review?user=<?php echo ($arr[0]['userid']); ?>&course=<?php echo ($arr[0]['courseid']); ?>">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a>
+							  	<a href="through_review?user[]=<?php echo ($arr[0]['userid']); ?>&course[]=<?php echo ($arr[0]['courseid']); ?>">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							  	<a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>&user[]=<?php echo $arr[0]['userid'];?>">删除</a>
 								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
 							</td>
-						</tr><?php endforeach; endif; else: echo "没有数据" ;endif; ?>
-						 <tr  class="b_white">
-							  <td><input type="checkbox" /></td>
-							  <td>2</td>
-							  <td><a href="#">张秋杰</a><p><a href="#">154612267</a></p></td>
-							  <td>计算机技术</td>
-							  <td>副教授</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
-							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							  </td>
-							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-							  </td>
-							  <td>2016年2月29日</td>
-							  <td class="yccol">待审核</td>
-							  <td class="czcol">
-							  	<a href="#">审核通过</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">删除</a>
-								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
-							</td>
-						</tr>					  
+						</tr><?php endforeach; endif; else: echo "" ;endif; ?>			  
 					 </table>
 					 
 					</div>	
@@ -396,7 +340,7 @@ $(document).ready(function() {
 			  	<div class="buttons">
 				   <div class="fl add">
 					  <button type="button" onClick="javascript:showDiv2()"> 新增</button>
-					  <button type="button"> 删除</button>
+					  <button type="button" onclick="delet_need_resource()"> 删除</button>
 				   </div>
 					  
 					<div class="fr search">
@@ -404,66 +348,13 @@ $(document).ready(function() {
 						<button type="button">搜索</button>
 					</div>
 	             </div>
-			  	<table class="need_submit">
-					<tr>
-						<th><input type="checkbox"></th>
-						<th>ID</th>
-						<th>授课教师</th>
-						<th>专业</th>
-						<th>层次</th>
-						<th>课程名称</th>
-						<th>课程概况</th>
-						<th>课程学习</th>
-						<th>媒体素材</th>
-						<th>实验</th>
-						<th>作业</th>
-						<th>考试</th>
-						<th>创建时间</th>
-					</tr>
-					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>1</td>
-						<td><a href="#"><p>李小雅</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>讲师</td>
-						<td>操作系统：设计及实现</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td>2016年4月12日</td>
-					</tr>
-					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>2</td>
-						<td><a href="#"><p>张秋杰</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>副教授</td>
-						<td>数据库开发与应用</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td class="yccol">不需要</td>
-						<td>需要</td>
-						<td>2016年4月12日</td>
-					</tr>
+			  	<table class="need_submit" id="need_submit_resource">
 				</table>
 				
 				<div class="fanye clearfix bottom_page">
 					   <p class="fytip">Showing 1 to 3 of 12 entries</p>
 					   <div class="yem">
-						  <ul>
-							 <li><a href="#">First</a></li>
-							 <li><a href="#">&lt;</a></li>
-							 <li class="sellify"><a href="#">1</a></li>
-							 <li><a href="#">2</a></li>
-							 <li><a href="#">&gt;</a></li>
-							 <li><a href="#">Last</a></li>
+						  <ul id="yem_need1">
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->
@@ -653,6 +544,10 @@ document.getElementById('bg22').style.display='block';
 function closeDiv2(){
 document.getElementById('popDiv2').style.display='none';
 document.getElementById('bg22').style.display='none';
+}
+function suer_add(){
+	add_need_resource();
+	closeDiv2();
 }
 </script>
 

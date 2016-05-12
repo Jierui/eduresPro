@@ -153,7 +153,7 @@ $(document).ready(function() {
 						  <th  scope="col"><div>操作</div></th>
 					</tr>
 				<?php $countNum=1 ?>
-				<volist name="showData" id="arr" empty="没有任何数据">
+				<volist name="showData" id="arr" >
 					  <tr  class="b_white">
 						  <!--<td><input type="checkbox" /></td>-->
 						  <td><?php echo $countNum++;?></td>
@@ -229,7 +229,8 @@ $(document).ready(function() {
                            }
                          ?>
 						  </td>
-						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>">删除</a></td>
+						  <td class="czcol"><a href="#" onclick="ShowDiv('MyDiv','fade')">上传资源</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						  <a href="delCourseResource?course_del[]=<?php echo $arr[0]['courseid'];?>&user[]=<?php echo $arr[0]['userid'];?>">删除</a></td>
 					</tr>
 				</volist>
 				 </table>

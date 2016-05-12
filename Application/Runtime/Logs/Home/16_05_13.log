@@ -1,0 +1,1039 @@
+[ 2016-05-13T00:36:40+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0044s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-05-13T00:36:42+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2016-05-13T00:39:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0052s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-05-13T00:39:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001945s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0106s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-05-13T00:42:43+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000958s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0041s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2016-05-13T00:42:48+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0633s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000787s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2016-05-13T00:43:33+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2016-05-13T00:43:35+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0084s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-05-13T00:43:35+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-05-13T00:46:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0096s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2016-05-13T00:47:33+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1 AND `userName` = 'jierui'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '操作系统'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0077s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('1','1','0','0','1','1','1','2016-05-13 00:47:33','4') [ RunTime:0.1301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-05-13T00:48:50+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0056s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-05-13T00:48:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0492s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.1099s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0325s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000770s ]
+
+[ 2016-05-13T00:49:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2 AND `userName` = '娄杰'  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '算法导论'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0092s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('2','1','0','1','1','1','2','2016-05-13 00:49:05','5') [ RunTime:0.0783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-05-13T00:49:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0730s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0008s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2016-05-13T00:49:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/add_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2 AND `userName` = '娄杰'  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `t_course` WHERE `courseName` = '操作系统'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0073s ]
+SQL: SELECT MAX(needID) AS tp_max FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `t_needsubmit` (`userID`,`Overview`,`Material`,`Experiment`,`Task`,`Exam`,`courseID`,`Time`,`needID`) VALUES ('2','1','0','1','1','0','1','2016-05-13 00:49:13','6') [ RunTime:0.1111s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-05-13T00:49:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2016-05-13T00:49:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0117s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 5,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-05-13T00:49:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0007s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-05-13T01:03:12+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2016-05-13T01:03:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001296s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0113s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000784s ]
+
+[ 2016-05-13T01:04:54+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0062s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000866s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000934s ]
+
+[ 2016-05-13T01:05:01+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000968s ]
+
+[ 2016-05-13T01:05:07+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0106s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000958s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2016-05-13T01:05:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0103s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-05-13T01:05:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0073s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2016-05-13T01:05:09+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0061s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2016-05-13T01:05:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0101s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2016-05-13T01:05:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0057s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2016-05-13T01:05:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0061s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2016-05-13T01:05:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0056s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0101s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0061s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0046s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0063s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0064s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000779s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0057s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2016-05-13T01:05:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0062s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000751s ]
+
+[ 2016-05-13T01:05:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0111s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-05-13T01:05:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0055s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2016-05-13T01:05:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0063s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-05-13T01:05:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001140s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0059s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-05-13T01:05:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0059s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2016-05-13T01:07:29+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0055s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-05-13T01:07:39+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0365s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000695s ]
+
+[ 2016-05-13T01:07:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-05-13T01:07:46+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0485s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000747s ]
+
+[ 2016-05-13T01:07:54+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0386s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-05-13T01:08:01+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.1700s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0545s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0005s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-05-13T01:08:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0124s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-05-13T01:09:31+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0049s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-05-13T01:09:38+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000706s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-05-13T01:09:41+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0123s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000806s ]
+
+[ 2016-05-13T01:10:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0110s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2016-05-13T01:10:35+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001586s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-05-13T01:10:37+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0108s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-05-13T01:11:13+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0057s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-05-13T01:11:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000916s ]
+
+[ 2016-05-13T01:12:28+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0300s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2016-05-13T01:12:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0101s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2016-05-13T01:12:48+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2016-05-13T01:13:57+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0065s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001189s ]
+
+[ 2016-05-13T01:14:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0104s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-05-13T01:14:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0117s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2016-05-13T01:14:46+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0098s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-05-13T01:16:53+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0048s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-05-13T01:16:56+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0613s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-05-13T01:17:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+NOTIC: [8] Undefined index: needID E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 978 行.
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0105s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 981 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-05-13T01:18:04+08:00 ] ::1 /eduresPro/index.php/Home/Index/getCourseName
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0134s ]
+SQL: SELECT DISTINCT  `courseID`,`courseName` FROM `t_course`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2016-05-13T01:18:06+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0314s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-05-13T01:18:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/del_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0106s ]
+SQL: DELETE FROM `t_needsubmit` WHERE `needID` = 5 [ RunTime:0.1072s ]
+SQL: DELETE FROM `t_needsubmit` WHERE `needID` = 2 [ RunTime:0.1666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-05-13T01:18:15+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_need_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `t_needsubmit` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `t_needsubmit` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_needsubmit` ORDER BY time desc LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
