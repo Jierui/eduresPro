@@ -875,7 +875,29 @@ class IndexController extends Controller {
     		$this->display('assessor:Teacher_Resource_Statistics');
     }
     public function Teacher_Course_Statistics(){
-    	
+    	if(!session('userName')){
+    		$this->error('请登录',U('Home/Index/index'));
+    	}
+    	$user = M(userinfo);
+    	$condition['userName'] = session('userName');
+    	//数据库获取的都是小写字母。
+    	$userinfo = $user->where($condition)->field('userName,Level,Major')->select();
+    	$imgpath=$user->where($condition)->getField('imagePath');
+    	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+    		$user->where($condition)->setField('imagePath',null);
+    		unset($imgpath);
+    	}
+    	if(date('a',time()) === 'ap'){
+    		$info['alert'] = '上午好';
+    	}else{
+    		$info['alert'] = '下午好';
+    	}
+    	$messageinfo = $user->field('userID,imagePath,userName')->select();
+    	$this->assign('messageinfo',$messageinfo);
+    	$this->assign('info',$info);
+    	$this->assign('userinfo',$userinfo[0]);
+    	$this->assign('imgpath',$imgpath);
+    	$this->display('assessor:Teacher_Course_Statistics');
     }
     
     public function add_need_resource(){
@@ -989,11 +1011,160 @@ class IndexController extends Controller {
     public function needResourceSearch(){
     	$data = $_POST['data'];
     }
+    
+    public function showCourseStatistics(){
+    	if(!session('userID')){
+    		return ;
+    	}
+    	$page = $_POST['Page'];
+    	if(!$page){
+    		$page = 1;
+    	}
+    	if($page<1){
+    		$page =1;
+    	}
+    	$line = 5;
+    	$search = $_POST['search'];
+    	$courseSta = M('teacherandcourse');
+    	$course = M('course');
+    	$user = M('userinfo');
+    	if($search){
+    		try{
+    			$searchData = $_POST['searchData'];
+    			$user = M('userinfo');
+    			$course = M('course');
+    			$where['userName'] = array("like","%".$searchData."%");
+    			$where['Level'] = array("like","%".$searchData."%");
+    			$where['Major'] = array("like","%".$searchData."%");
+    			$where['_logic'] = 'OR';
+    			$userID = $user->distinct(true)->where($where)->field('userID')->select();
+    			foreach($userID as $value){
+    				if(empty($userArray)){
+    					$userArray = array($value['userid']);
+    				}else{
+    					array_push($userArray, $value['userid']);
+    				}
+    			}
+    			unset($where);
+    			$where['courseName'] = array("like","%".$searchData."%");
+    			$courseID = $course->distinct(true)->where($where)->field('courseID')->select();
+    			foreach($courseID as $value){
+    				if(empty($courseArray)){
+    					$courseArray = array($value['courseid']);
+    				}else{
+    					array_push($courseArray, $value['courseid']);
+    				}
+    			}
+    			if($userID && $courseID){
+    				unset($where);
+    				$where['courseID'] = array("IN",$courseArray);
+    				$where['userID'] = array("IN",$userArray);
+    				$where['_logic'] = 'OR';
+    				$count = $courseSta->where($where)->count();
+    				$totalPage = ceil($count/$line);
+    				if($page > $totalPage){
+    					$page = $totalPage;
+    				}
+    				--$page;
+    				$dataArray = $courseSta->order('Time desc')->where($where)->limit($page*$line,$line)->select();
+    			}else if($userID){
+    				unset($where);
+    				$where['userID'] = array("IN",$userArray);
+    				$count = $courseSta->where($where)->count();
+    				$totalPage = ceil($count/$line);
+    				if($page > $totalPage){
+    					$page = $totalPage;
+    				}
+    				--$page;
+    				$dataArray = $courseSta->order('Time desc')->where($where)->limit($page*$line,$line)->select();
+    			}else if($courseID){
+    				unset($where);
+    				$where['courseID'] = array("IN",$courseArray);
+    				$count = $courseSta->where($where)->count();
+    				$totalPage = ceil($count/$line);
+    				if($page > $totalPage){
+    					$page = $totalPage;
+    				}
+    				--$page;
+    				$dataArray = $courseSta->order('Time desc')->where($where)->limit($page*$line,$line)->select();
+    			}
+    			$countNum = 1;
+    			foreach($dataArray as $key=>$value){
+    				$dataArray[$key]['countNum'] = $countNum;
+    				$where1['userID'] =  $value['userid'];
+    				$userinfo = $user->where($where1)->select();
+    				$dataArray[$key]['userName'] = $userinfo[0]['username'];
+    				$dataArray[$key]['phone'] = $userinfo[0]['phone'];
+    				$dataArray[$key]['major'] = $userinfo[0]['major'];
+    				$dataArray[$key]['level'] = $userinfo[0]['level'];
+    				$where2['courseID'] = $value['courseid'];
+    				$dataArray[$key]['courseName'] = $course->where($where2)->getField('courseName');
+    				$countNum++;
+    			}
+    			++$page;
+    			$result = array('data'=>$dataArray,'totalPage'=>$totalPage,'page'=>$page);
+    			echo json_encode($result);
+    		}catch (\Exception $e){
+    			echo json_encode(array("msg"=>$e->__toString()));
+    		}
+    		
+    	}else{
+    		$count = $courseSta->count();
+    		$totalPage = ceil($count/$line);
+    		if($page > $totalPage){
+    			$page = $totalPage;
+    		}
+    		--$page;
+    		$dataArray = $courseSta->order('Time desc')->limit($page*$line,$line)->select();
+    		$countNum = 1;
+    		foreach($dataArray as $key=>$value){
+    			$dataArray[$key]['countNum'] = $countNum;
+    			$where1['userID'] =  $value['userid'];
+    			$userinfo = $user->where($where1)->select();
+    			$dataArray[$key]['userName'] = $userinfo[0]['username'];
+    			$dataArray[$key]['phone'] = $userinfo[0]['phone'];
+    			$dataArray[$key]['major'] = $userinfo[0]['major'];
+    			$dataArray[$key]['level'] = $userinfo[0]['level'];
+    			$where2['courseID'] = $value['courseid'];
+    			$dataArray[$key]['courseName'] = $course->where($where2)->getField('courseName');
+    			$countNum++;
+    		}
+    		++$page;
+    		$result = array('data'=>$dataArray,'totalPage'=>$totalPage,'page'=>$page);
+    		echo json_encode($result);
+    	}
+    }
+    public function del_courseUser(){
+    	if(!session('userID')){
+    		return ;
+    	}
+    	$data = $_POST['data'];
+    	$needsubmit = M('teacherandcourse');
+    	$count = 0;
+    	foreach($data as $key=>$value){
+    		$strArray = explode('|', $value);
+    		$where['userID'] = $strArray[0];
+    		$where['courseID'] = $strArray[1];
+    		$count+=$needsubmit->where($where)->delete();
+    	}
+    	echo json_encode($count);
+    }
     //实验代码
     public function demo(){
-    	$needSubmit = M("needsubmit");
-    	$maxID = $needSubmit->max('needID');
-    	dump($maxID);
+//     	$needSubmit = M("needsubmit");
+//     	$maxID = $needSubmit->max('needID');
+//     	dump($maxID);
+//         $user = M('userinfo');
+//         $searchData = "物联网";
+//     	$where['userName'] = array("like","%".$searchData."%");
+//     	$where['Level'] = array("like","%".$searchData."%");
+//     	$where['Major'] = array("like","%".$searchData."%");
+//     	$where['_logic'] = 'OR';
+//     	$userID = $user->distinct(true)->where($where)->select();
+//     	dump($userID);
+        $str = "hello|hell|jlajf";
+        $strs = explode('|', $str);
+        dump($strs);
     }
     
     

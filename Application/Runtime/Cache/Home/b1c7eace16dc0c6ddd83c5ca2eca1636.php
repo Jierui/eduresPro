@@ -106,7 +106,7 @@ $(document).ready(function() {
 	<div class="close_box">
 		<span onClick="CloseDiv('MyDiv','fade')"><a href="#" class="close">关闭</a></span>
 	</div>
-	 <div id="demo" class="demo"></div>   
+	 <div id="demo3" class="demo"></div>   
 </div>
 <!---增加新的应提交课程资源记录结束--->
 
@@ -192,7 +192,7 @@ $(document).ready(function() {
 				 </ul>
 			</div>
 			
-			<div id="tabCot_product_1" class="tabCot">  
+			<div id="tabCot_product_1" class="tabCot">
 				<div class="clearfix Admin_Info">
 					<div class="buttons">
 					   <div class="fl add">
@@ -583,7 +583,7 @@ function score(a){
 <script src="/eduresPro/Public/js/jquery-1.7.2.js" type="text/javascript"></script>
 <script src="/eduresPro/Public/js/zyFile.js" type="text/javascript"></script>
 <script  src="/eduresPro/Public/js/zyUpload_3.js" type="text/javascript"></script>
-<script  src="/eduresPro/Public/js/upload_demo.js" type="text/javascript"></script>
+<script  src="/eduresPro/Public/js/upload_demo_3.js" type="text/javascript"></script>
 <script language="JavaScript" type="text/javascript" src="/eduresPro/Public/js/tab.js"></script> 
 
 </body>

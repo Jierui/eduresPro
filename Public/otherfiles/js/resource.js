@@ -206,6 +206,7 @@ function show_need_resource(page){   //显示需提交资源
 				html+='<td>';  //创建时间
 				html+=data.time; //创建时间
 				html+='</td>';
+				html+='</tr>';
 			});
 			 html1='';
 			 html1+='<li><a href="javascript:show_need_resource(1)">First</a></li>';
