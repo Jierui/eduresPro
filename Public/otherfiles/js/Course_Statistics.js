@@ -66,7 +66,7 @@ function show_courseStatistics(page){
 		  html+='</td>';
 		  html+='</tr>';
 		});
-		html1='';
+		 html1='';
 		 html1+='<li><a href="javascript:show_courseStatistics(1)">First</a></li>';
 		 html1+=' <li><a href="javascript:show_courseStatistics(';
 		 html1+=Arraydata.page-1;

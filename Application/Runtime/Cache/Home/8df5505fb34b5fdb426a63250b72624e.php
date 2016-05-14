@@ -1,23 +1,23 @@
-﻿<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="中南大学远程教育资源管理系统" />
 <title>中南大学远程教育资源管理系统</title>
-<link href="__PUBLIC__/otherfiles/styles/glDatePicker.flatwhite.css" rel="stylesheet" type="text/css">
-<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css" />
-<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/css.css" />
-<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style.css" />
-<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/Upload.css" />
-<script src="__PUBLIC__/js/ChangeContent.js" type="text/javascript"></script>
-<script src="__PUBLIC__/js/jquery2.1.4.js" type="text/javascript"></script> 
-<script src="__PUBLIC__/Jquery/js/vendor/jquery.ui.widget.js"></script>
-<script src="__PUBLIC__/Jquery/js/jquery.iframe-transport.js"></script>
-<script src="__PUBLIC__/Jquery/js/jquery.fileupload.js"></script>
-<script src="__PUBLIC__/otherfiles/js/upimg.js"></script>
-<script src="__PUBLIC__/otherfiles/js/glDatePicker.min.js"></script>
-<script src="__PUBLIC__/otherfiles/js/datePicker.js"></script> 
-<script src="__PUBLIC__/otherfiles/js/evaluate_teacher.js"></script> 
+<link href="/eduresPro/Public/otherfiles/styles/glDatePicker.flatwhite.css" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/amazeui.min.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/css.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/eduresPro/Public/css/Upload.css" />
+<script src="/eduresPro/Public/js/ChangeContent.js" type="text/javascript"></script>
+<script src="/eduresPro/Public/js/jquery2.1.4.js" type="text/javascript"></script> 
+<script src="/eduresPro/Public/Jquery/js/vendor/jquery.ui.widget.js"></script>
+<script src="/eduresPro/Public/Jquery/js/jquery.iframe-transport.js"></script>
+<script src="/eduresPro/Public/Jquery/js/jquery.fileupload.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/upimg.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/glDatePicker.min.js"></script>
+<script src="/eduresPro/Public/otherfiles/js/datePicker.js"></script> 
+<script src="/eduresPro/Public/otherfiles/js/evaluate_teacher.js"></script> 
 
 
 </head>
@@ -25,7 +25,7 @@
 <body style="background:none;">
 <div class="header">
    <div class="top">
-		<img class="logo" src="__PUBLIC__/images/logo.jpg" />
+		<img class="logo" src="/eduresPro/Public/images/logo.jpg" />
 		<ul class="nav" id="intrL-T">
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
@@ -33,31 +33,31 @@
 		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
-		<a href="{:U('Home/Index/exit_login')}" class="exit">退出</a>
+		<a href="<?php echo U('Home/Index/exit_login');?>" class="exit">退出</a>
    </div>
 </div>   <!--header结束-->
 	
 <div class="container clearfix">
 <div class="leftbar clearfix">
 		<div class="lm01 clearfix"> 
-			<img class="peptx" src="__ROOT__/{$imgpath|default='Public/images/tximg.jpg'}" /><a  href="javascript:select_img_file();" class="changeImg">更换头像</a>
+			<img class="peptx" src="/eduresPro/<?php echo ((isset($imgpath) && ($imgpath !== ""))?($imgpath):'Public/images/tximg.jpg'); ?>" /><a  href="javascript:select_img_file();" class="changeImg">更换头像</a>
 			<input type="file" name="files[]" id="img_upload" style="display:none"/>
 	   		 <div class="pepdet" style="clear:both;">
-				<p>姓名：{$userinfo.username}</p>
-				<p>层次：{$userinfo.level}</p>
-				<p>专业：{$userinfo.major}</p>
+				<p>姓名：<?php echo ($userinfo["username"]); ?></p>
+				<p>层次：<?php echo ($userinfo["level"]); ?></p>
+				<p>专业：<?php echo ($userinfo["major"]); ?></p>
 	  		</div>
 	    </div>
 		
 	<div class="lm02 clearfix">
 	    <div class="title">
-			<img class="icon" src="__PUBLIC__/images/dataicon.jpg" />
+			<img class="icon" src="/eduresPro/Public/images/dataicon.jpg" />
 			<h2>日历</h2>
 	    </div>
 	    <div class="detail"> 
 	  		<!--<img class="" src="images/kj_01.jpg" /> -->
 	  	    <div id="imgdate"></div>
-	  		<!--<img class="" src="__PUBLIC__/images/kj_01.jpg" /> -->  
+	  		<!--<img class="" src="/eduresPro/Public/images/kj_01.jpg" /> -->  
 	  		<div  style="width:212px;height:204px;"  id="imgdate1"></div>
 	  		<script type="text/javascript">
              message_date("#imgdate");
@@ -67,7 +67,7 @@
 	
 	<div class="lm03">
 	    <div class="title">
-	    	<img style="padding-right:5px;" class="icon" src="__PUBLIC__/images/weaicon.jpg" />
+	    	<img style="padding-right:5px;" class="icon" src="/eduresPro/Public/images/weaicon.jpg" />
 			<h2>天气</h2>
 	  </div>
 	  <div class="detail"> 
@@ -89,14 +89,14 @@
     </div>
 	
     <div class="tip">
-		<p class="goom">{$info.alert}，{$userinfo.username}！</p>
+		<p class="goom"><?php echo ($info["alert"]); ?>，<?php echo ($userinfo["username"]); ?>！</p>
 		<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
     </div>
    
     <div class="rig_lm03 video_res Teach_res  asse_res eva_teacher">
 		<div id="tabCot_product" class="zhutitab">
              <div class="title">
-			<img src="__PUBLIC__/images/listicon.jpg" class="icon" style="padding-top:13px;">
+			<img src="/eduresPro/Public/images/listicon.jpg" class="icon" style="padding-top:13px;">
         	<h2>教师评分统计情况</h2>
         </div>
 			<div id="tabCot_product_1" class="tabCot">  

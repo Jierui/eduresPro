@@ -62,9 +62,27 @@
 					html += '		<div class="upload_main">';
 					html += '			<div class="upload_choose">';
 					html += '				<div class="cource_res plan">';
-					html += '					<div><label>授课教师：</label><input type="text" /><label class="must">*</label></div>';
-					html += '					<div><label>教师ID：</label><input type="text" /><label class="must">*</label></div>';
-					html += '					<div><label>课程名称：</label><select class="kc"><option>操作系统设计与实现</option><option>数据库开发与应用</option></select></div>';
+					html += '					<div><label>授课教师：</label><input type="text" id="teacherName" /><label class="must">*</label></div>';
+					html += '					<div><label>教师ID：</label><input type="text" id="teacherID" /><label class="must">*</label></div>';
+					html += '					<div><label>课程名称：</label><select class="kc" id="courseName">';
+					$.ajax({
+						type:'post',
+						dataType:"json",
+						url:'getCourseName',
+						async:false,
+						success:function(data){
+							$.each(data,function(index,value){
+									html += '<option';
+									html += ' value="';
+									html += value.courseid;
+									html += '">';
+									html += value.coursename;
+									html += '</option>'
+							});
+						}
+						
+					});
+					html+='</select></div>';
 	            	html += '				<div class="convent_choice">';
 	            	html += '					<div class="andArea">';
 	            	html += '						<div class="filePicker">点击选择文件</div>';
@@ -339,10 +357,10 @@
 						}
 						eleProgress.css("width",percent);
 					},
-					onSuccess: function(file, response) {
-						$("#uploadProgress_" + file.index).hide();
-						$("#uploadSuccess_" + file.index).show();
-						$("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
+					onSuccess: function(file, responseInfo) {
+							$("#uploadProgress_" + file.index).hide();
+							$("#uploadSuccess_" + file.index).show();
+							//$("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
 						// 根据配置参数确定隐不隐藏上传成功的文件
 						if(para.finishDel){
 							// 移除效果

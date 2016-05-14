@@ -1,3 +1,4 @@
+var flg = 0;
 function through_review(){     //多项操作审核
 	flg = 0;
 	var s = "?";
@@ -261,6 +262,221 @@ function delet_need_resource(){
 	}
 }
 
-function needResoureceSearch(data){     //搜索应提交资源
+function showPlanAndProtocol(page,type,sear){
+	var sear = arguments[2] ? arguments[2] : false;//设置参数b的默认值为false
+	var text;
+//	console.log(type);
+//	console.log(page);
+//	console.log(sear);
+	if(type == 1){
+		text = $("#inputtext1").val();
+	}else if(type == 2){
+		text = $("#inputtext2").val();
+	}
+	if(sear && (text != "")){
+		postData={
+				Page:page,
+				search:1,
+				searchData:text,
+				Type:type
+		}
+	}else{
+		postData={
+				Page:page,
+				Type:type
+		}
+	}
+	var tabletitle = '<tr>\
+		<th><input type="checkbox"></th>\
+		<th>ID</th>\
+		<th>授课教师</th>\
+		<th>专业</th>\
+		<th>层次</th>\
+		<th>课程名称</th>';
+	    if(type == 1){
+	    	tabletitle+='<th>资源制作计划</th>';
+	    }else{
+	    	tabletitle+='<th>合作协议</th>';
+	    }
+	    tabletitle+='<th>创建时间</th></tr>';
+	$.ajax({
+		type:"post",
+		url:"showPlanAndProtocol",
+		dataType:"json",
+		async:false,
+		data:postData,
+		error:function(){
+			alert('网络错误');
+		},
+		success:function(Arraydata){
+			if(Arraydata.msg){
+				console.log(Arraydata.msg);
+			}
+			var table;
+			var ul;
+			if(type == 1){
+				table = $("#plantable");
+				ul = $("#planul");
+			}else if(type == 2){
+				table = $("#protocoltable");
+				ul =$("#protocolul");
+			}
+			if(Arraydata.data){
+				html = tabletitle;
+				$.each(Arraydata.data,function(index,data){
+				    html+='<tr>';
+				    html+='<td><input type="checkbox" class="protocolbox" value="';
+				    if(type == 1){
+				    	html+=data.planid;
+				    }else{
+				    	html+=data.protocolid;
+				    }
+				    html+='" /></td>';
+				    html+='<td>';
+					  html+=data.countNum;     //数字
+					  html+='</td>';
+					  html+='<td><a href="#"><p>';
+					  html+=data.userName; //用户
+					  html+='</p><p>';
+					  html+=data.phone;   //手机号
+					  html+='</p></a></td>';
+					  html+='<td>';
+					  html+=data.major;   //专业
+					  html+='</td>';
+				      html+='<td>';
+					  html+=data.level;    //层次
+					  html+='</td>';
+					  html+='<td>';
+					  html+=data.courseName;
+					  html+='</td>';
+					  html+='<td><a href="planAndProtocol?Type=';
+					  html+=type;
+					  html+='&ID=';
+					  if(type == 1){
+						html+=data.planid;  
+					  }else{
+						 html+=data.protocolid; 
+					  }
+					  html+='">';
+					  html+=data.name;
+					  html+='</a></td>';
+					  html+='<td>';  //创建时间
+					  html+=data.time; //创建时间
+					  html+='</td>';
+					  html+='</tr>';
+				});
+				///////分页
+				 html1='';
+				 html1+='<li><a href="javascript:showPlanAndProtocol(1,';
+				 html1+=type;
+				 html1+=',';
+				 html1+=sear;
+				 html1+=')">First</a></li>';
+				 html1+=' <li><a href="javascript:showPlanAndProtocol(';
+				 html1+=Arraydata.page-1;
+				 html1+=',';
+				 html1+=type;
+				 html1+=',';
+				 html1+=sear;
+				 html1+=')">&lt;</a></li>';
+				 for(i=1;i<=Arraydata.totalPage;i++){
+					 if(i==Arraydata.page){
+						 html1+=' <li class="sellify"><a href="javascript:showPlanAndProtocol(';
+						 html1+=i;
+						 html1+=',';
+						 html1+=type;
+						 html1+=',';
+						 html1+=sear;
+						 html1+=')">';
+						 html1+=i;
+						 html1+='</a></li>';
+					 }else{
+						 html1+=' <li><a href="javascript:showPlanAndProtocol(';
+						 html1+=i;
+						 html1+=',';
+						 html1+=type;
+						 html1+=',';
+						 html1+=sear;
+						 html1+=')">';
+						 html1+=i;
+						 html1+='</a></li>';
+					 }
+				 }
+				 html1+=' <li><a href="javascript:showPlanAndProtocol(';
+				 html1+=Arraydata.page+1;
+				 html1+=',';
+				 html1+=type;
+				 html1+=',';
+				 html1+=sear;
+				 html1+=')">&gt;</a></li>';
+				 html1+=' <li><a href="javascript:showPlanAndProtocol(';
+				 html1+=Arraydata.totalPage;
+				 html1+=',';
+				 html1+=type;
+				 html1+=',';
+				 html1+=sear;
+				 html1+=')">Last</a></li>';
+				table.empty();
+				table.append($(html));
+				ul.empty();
+				ul.append($(html1));
+			}else{
+				table.empty();
+				table.append($(tabletitle));
+			}
+		}
+	});
 	
 }
+
+function del_protocolAndPlan(type){
+	var array = new Array();
+	$(".protocolbox").each(function(index,box){
+		b = $(box);
+		if(b.attr("checked"))
+		{
+			array.push(b.val());
+		}
+	});
+	if(array.length != 0){
+		$.post("del_protocolAndPlan",{ID:array,Type:type},function(count){
+			if(count>0){
+				showPlanAndProtocol(1,type,false);
+			}
+		},"json");
+	}else{
+		alert("至少选中一项进行删除操作");
+	}
+}
+function show_resource(page,sear){     //搜索应提交资源
+	//收索还应提供检索的值
+	if(sear){  // 暂时不做搜索功能
+		
+	}else{
+		postData={
+				Flg:flg,
+				Page:page
+		}
+	}
+	$.ajax({
+		type:"post",
+		url:"showPlanAndProtocol",
+		dataType:"json",
+		async:false,
+		data:postData,
+		error:function(){
+			alert('网络错误');
+		},
+		success:function(Arraydata){
+			
+		}
+	});
+}
+
+
+
+
+
+
+
+

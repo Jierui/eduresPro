@@ -187,8 +187,8 @@ $(document).ready(function() {
 				 <ul class="tabHead" id="tabCot_product-li-currentBtn-">
 					 <li class="currentBtn"><a href="javascript:void(0)" title="课程视频资源">课程资源</a></li>
 					 <li><a href="javascript:void(0)" title="应提交资源" rel="2" onclick="show_need_resource(1)">应提交资源</a></li>
-					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2">资源制作计划</a></li>
-					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2">合作协议</a></li>
+					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2" onclick="showPlanAndProtocol(1,1,false);">资源制作计划</a></li>
+					 <li ><a href="javascript:void(0)" title="应提交资源" rel="2" onclick="showPlanAndProtocol(1,2,false);">合作协议</a></li>
 				 </ul>
 			</div>
 			
@@ -373,60 +373,24 @@ $(document).ready(function() {
 			  <div class="am-panel-bd am-collapse am-in" id="collapse-panel-1">
 			  	<div class="buttons">
 				   <div class="fl add">
-					  <button type="button" onClick="ShowDiv('MyDiv','fade')"> 新增</button>
-					  <button type="button"> 删除</button>
+					  <button type="button" onClick="ShowDiv('MyDiv','fade',1)"> 新增</button>
+					  <button type="button" onclick="del_protocolAndPlan(1)"> 删除</button>
 				   </div>
 					  
 					<div class="fr search">
-						<input type="text">
-						<button type="button">搜索</button>
+						<input type="text" id="inputtext1" >
+						<button type="button" onclick="showPlanAndProtocol(1,1,true)">搜索</button>
 					</div>
 	             </div>
-			  	<table class="need_submit">
-					<tr>
-						<th><input type="checkbox"></th>
-						<th>ID</th>
-						<th>授课教师</th>
-						<th>专业</th>
-						<th>层次</th>
-						<th>课程名称</th>
-						<th>资源制作计划</th>
-						<th>创建时间</th>
-					</tr>
+			  	<table class="need_submit" id="plantable">
 					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>1</td>
-						<td><a href="#"><p>李小雅</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>讲师</td>
-						<td>操作系统原理与设计</td>
-						<td><a href="#">操作系统原理与设计资源制作计划.doc</a></td>
-						<td>2016年4月12日</td>
-					</tr>
-					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>2</td>
-						<td><a href="#"><p>张秋杰</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>副教授</td>
-						<td>操作系统原理与设计</td>
-						<td><a href="#">操作系统原理与设计资源制作计划.doc</a></td>
-						<td>2016年4月12日</td>
-					</tr>
 				</table>
 				
 				<div class="fanye clearfix bottom_page">
 					   <p class="fytip">Showing 1 to 3 of 12 entries</p>
 					   <div class="yem">
-						  <ul>
-							 <li><a href="#">First</a></li>
-							 <li><a href="#">&lt;</a></li>
-							 <li class="sellify"><a href="#">1</a></li>
-							 <li><a href="#">2</a></li>
-							 <li><a href="#">&gt;</a></li>
-							 <li><a href="#">Last</a></li>
+						  <ul id="planul">
+						
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->
@@ -445,60 +409,24 @@ $(document).ready(function() {
 			  <div class="am-panel-bd am-collapse am-in" id="collapse-panel-2">
 			  	<div class="buttons">
 				   <div class="fl add">
-					  <button type="button" onClick="ShowDiv('MyDiv','fade')"> 新增</button>
-					  <button type="button"> 删除</button>
+					  <button type="button" onClick="ShowDiv('MyDiv','fade',2)"> 新增</button>
+					  <button type="button" onclick="del_protocolAndPlan(2)"> 删除</button>
 				   </div>
 					  
 					<div class="fr search">
-						<input type="text">
-						<button type="button">搜索</button>
+						<input type="text" id="inputtext2" >
+						<button type="button" onclick="showPlanAndProtocol(1,2,true)">搜索</button>
 					</div>
 	             </div>
-			  	<table class="need_submit">
-					<tr>
-						<th><input type="checkbox"></th>
-						<th>ID</th>
-						<th>授课教师</th>
-						<th>专业</th>
-						<th>层次</th>
-						<th>课程名称</th>
-						<th>合作协议</th>
-						<th>创建时间</th>
-					</tr>
+			  	<table class="need_submit" id="protocoltable">
 					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>1</td>
-						<td><a href="#"><p>李小雅</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>讲师</td>
-						<td>操作系统原理与设计</td>
-						<td><a href="#">操作系统原理与设计合作协议.doc</a></td>
-						<td>2016年4月12日</td>
-					</tr>
-					
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>2</td>
-						<td><a href="#"><p>张秋杰</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>副教授</td>
-						<td>操作系统原理与设计</td>
-						<td><a href="#">操作系统原理与设计合作协议.doc</a></td>
-						<td>2016年4月12日</td>
-					</tr>
 				</table>
 				
 				<div class="fanye clearfix bottom_page">
 					   <p class="fytip">Showing 1 to 3 of 12 entries</p>
 					   <div class="yem">
-						  <ul>
-							 <li><a href="#">First</a></li>
-							 <li><a href="#">&lt;</a></li>
-							 <li class="sellify"><a href="#">1</a></li>
-							 <li><a href="#">2</a></li>
-							 <li><a href="#">&gt;</a></li>
-							 <li><a href="#">Last</a></li>
+						  <ul id="protocolul">
+							
 						  </ul>
 					  </div>
                  </div>  <!--fanye结束-->
@@ -553,13 +481,14 @@ function suer_add(){
 
 <script type="text/javascript">   <!--新建资源框-->
 	//弹出隐藏层
-	function ShowDiv(show_div,bg_div){
+	function ShowDiv(show_div,bg_div,flg){
 	document.getElementById(show_div).style.display='block';
 	document.getElementById(bg_div).style.display='block' ;
 	var bgdiv = document.getElementById(bg_div);
 	bgdiv.style.width = document.body.scrollWidth;
 	// bgdiv.style.height = $(document).height();
 	$("#"+bg_div).height($(document).height());
+	setflg(flg);
 	};
 	//关闭弹出层
 	function CloseDiv(show_div,bg_div)

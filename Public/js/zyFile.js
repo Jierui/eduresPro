@@ -3,8 +3,10 @@
 尊重他人劳动成果;
 转载请保留素材家园链接 - www.sucaijiayuan.com
 */
-
-
+var flg = 1;
+function setflg(f){
+	flg = f;
+}
 var ZYFILE = {
 		fileInput : null,             // 选择文件按钮dom对象
 		uploadInput : null,           // 上传文件按钮dom对象
@@ -151,8 +153,10 @@ var ZYFILE = {
 			formdata.append("fileList", file);	
 			formdata.append("courseName",$('#selectname').val());  //$("#selectname option:selected").val();
 			formdata.append("resourceType",$('#selecttype').val());
-			//console.log($('#selectname').val());
-			//console.log($('#selecttype').val());
+			formdata.append("teacherName",$('#teacherName').val());
+			formdata.append("teacherID",$('#teacherID').val());
+			formdata.append("courseName1",$('#courseName').val());
+			formdata.append("flg",flg);
 			var xhr = new XMLHttpRequest();
 			// 绑定上传事件
 			// 进度
