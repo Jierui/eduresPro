@@ -17,7 +17,6 @@
 
 </script>
 </head>
-
 <body style="background:none;">
 
 <div class="header">
@@ -27,7 +26,7 @@
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
 		   <li  class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
+		   <li onMouseOver="change(this)"><a href="Announcement" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
 		<a href="{:U('Home/Index/exit_login')}" class="exit">退出</a>
@@ -97,10 +96,10 @@
     </div>
 	
     <div class="adtip">
-        <div class="tip">
-        	<p class="goom">早上好，小雅！</p>
-        	<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
-       </div>
+    <div class="tip">
+		<p class="goom">{$info.alert}，{$userinfo.username}！</p>
+		<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
+    </div>
    
     <div class="rig_lm03">
         <div class="title">

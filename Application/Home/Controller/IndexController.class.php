@@ -529,6 +529,45 @@ class IndexController extends Controller {
     		//dump($requestData);
     		$this->display('assessor:assessor_Resource');
     	}else if($userinfo[0]['usertype'] == "maker"){
+    		$page = $_GET['page'];
+    		if(!$page){
+    			$page = 1;
+    		}else{
+    			if(is_int($page)){
+    				if($page < 1){
+    					$page = 1;
+    				}
+    			}else{
+    				$page = 1;
+    			}
+    		}//获取当前页数
+    		$resource = M('resource'); //教师提交资源表
+//     		unset($where);
+//     		$where['userID'] = session('userID');
+    		//$count = $resource->where($where)->group('courseID')->count();   //总记录数
+    		$data = $resource->order('Time desc')->select();
+    		foreach($data as $value){
+    			if(empty($arrayData[$value['userid'].$value['courseid']])){
+    				$arrayData[$value['userid'].$value['courseid']] = array($value);
+    			}else{
+    				array_push($arrayData[$value['userid'].$value['courseid']], $value);
+    			}
+    		}//arrayData为查询数据
+    		$line = 3;   //每一页显示的行数
+    		$count = count($arrayData); //总记录数
+    		$totalPage = ceil($count/$line);
+    		if($page > $totalPage){
+    			$page = $totalPage;
+    		}
+    		--$page;  //
+    		////////////////////////////////////////////////前台应该显示的数据
+    		$requestData = array_slice($arrayData,$page*$line,$line,true);
+    		$this->assign('totalPage',$totalPage);  //总页数
+    		$this->assign('page',$page+1);      //当前页数
+    		//$this->assign('line',$line);        //每页显示行数
+    		$this->assign('showData',$requestData);
+    		$this->assign('course',M('course'));
+    		$this->assign('user',$user);
     		$this->display('assessor:resources_making');
     	}else{
     		$page = $_GET['page'];
@@ -1677,31 +1716,178 @@ public function show_evaluate_teacher(){
    				$page = $totalPage;
    			}
    			--$page;
-   			$requestData = array_slice($request,$page*$line,$line,true);
+   			$requestData = array_slice($request,$page*$line,$line,false);
    			++$page;
    		}
    	}
-   	dump($requestData);
-   	$result = array("status"=>$st,"data"=>$requestData,"page"=>$page,"totalPage"=>$totalPage);
+   	$user = M('userinfo');
+   	$course = M('course');
+   	foreach($requestData as $v){
+   		$where['userID'] = $v[0]['userid'];
+   		$userinfo = $user->where($where)->select();
+   		unset($where);
+   		$where['courseID'] = $v[0]['courseid'];
+   		$courseName = $course->where($where)->getField('courseName');
+   		if(empty($info)){
+   			$info=array(array('usermame'=>$userinfo[0]['username'],'phone'=>$userinfo[0]['phone'],
+   					'major'=>$userinfo[0]['major'],'coursename'=>$courseName,'level'=>$userinfo[0]['level']));
+   		}else{
+   			array_push($info, array('usermame'=>$userinfo[0]['username'],'phone'=>$userinfo[0]['phone'],
+   					'major'=>$userinfo[0]['major'],'coursename'=>$courseName,'level'=>$userinfo[0]['level']));
+   		}
+   	}
+   	$result = array("status"=>$st,"data"=>$requestData,"page"=>$page,"totalPage"=>$totalPage,'info'=>$info);
+//    	dump($info);
+//    	dump($requestData);
    	echo json_encode($result);
    	
    }
+   
+   
+   public function resources_package_Statistics(){
+   	if(!session('userName')){
+   		$this->error('请登录',U('Home/Index/index'));
+   	}
+   	$user = M(userinfo);
+   	$condition['userName'] = session('userName');
+   	//数据库获取的都是小写字母。
+   	$userinfo = $user->where($condition)->field('userName,Level,Major,userType')->select();
+   	$imgpath=$user->where($condition)->getField('imagePath');
+   	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+   		$user->where($condition)->setField('imagePath',null);
+   		unset($imgpath);
+   	}
+   	if(date('a',time()) === 'ap'){
+   		$info['alert'] = '上午好';
+   	}else{
+   		$info['alert'] = '下午好';
+   	}
+   	$messageinfo = $user->field('userID,imagePath,userName')->select();
+   	$this->assign('messageinfo',$messageinfo);
+   	$this->assign('info',$info);
+   	$this->assign('userinfo',$userinfo[0]);
+   	$this->assign('imgpath',$imgpath);
+   	$this->display('assessor:resources_package_Statistics');
+   }
+   
+   
+   public function Announcement(){
+   	if(!session('userName')){
+   		$this->error('请登录',U('Home/Index/index'));
+   	}
+   	$user = M(userinfo);
+   	$condition['userName'] = session('userName');
+   	//数据库获取的都是小写字母。
+   	$userinfo = $user->where($condition)->field('userName,Level,Major,userType')->select();
+   	$imgpath=$user->where($condition)->getField('imagePath');
+   	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+   		$user->where($condition)->setField('imagePath',null);
+   		unset($imgpath);
+   	}
+   	if(date('a',time()) === 'ap'){
+   		$info['alert'] = '上午好';
+   	}else{
+   		$info['alert'] = '下午好';
+   	}
+   	$messageinfo = $user->field('userID,imagePath,userName')->select();
+   	$this->assign('messageinfo',$messageinfo);
+   	$this->assign('info',$info);
+   	$this->assign('userinfo',$userinfo[0]);
+   	$this->assign('imgpath',$imgpath);
+   	//////////////////////////////////////////////
+   	if($userinfo[0]['usertype'] == "assessor"){
+   		$this->display('assessor:Announcement_Nonteacher');
+   	}else if($userinfo[0]['usertype'] == "maker"){
+   		$this->display('assessor:Announcement_Nonteacher');
+   	}else{
+   		$this->display('assessor:Announcement_Teacher');
+   	}
+   	
+   }
+   
+   
+   public function publicres(){
+   	if(!session('userID')){
+   		return;
+   	}
+   	$userID = $_REQUEST['userID'];
+   	$courseID = $_REQUEST['courseID'];
+   	$dir = 'publicres/';
+   	if(!file_exists(C('rootPath').$dir)){
+   		mkdir(C('rootPath').$dir);
+   	}
+   	$resource = M('resource');
+   	$publicres = M('publicres');
+   	$where['userID'] = $userID;
+   	$where['courseID'] = $courseID;
+   	$state = $publicres->where($where)->select();
+   	$rootPath = C('rootPath');
+   	if($state){   //已经发布
+   		$result = array('state'=>0);
+   		echo json_encode($result);
+   		
+   	}else{
+   		$dest = $dir."user_".$userID."/";
+   		if(!file_exists($rootPath.$dest)){
+   			mkdir($rootPath.$dest);
+   		}
+   		$resinfo = $resource->where($where)->select();
+   		$data['Time'] = date('Y-m-d H:i:s');
+   		foreach ($resinfo as $value){
+   			$pathname = basename($rootPath.$value['path']);
+   			if(copy($rootPath.$value['path'], $rootPath.$dest.$pathname)){
+   				$data['userID'] = $userID;
+   				$data['courseID'] = $courseID;
+   				$data['Path'] = $dest.$pathname;
+   				$data['Name'] = $value['name'];
+   				$data['Type'] = $value['type'];
+   				$maxID = $publicres->max('publicID');
+   				if($maxID){
+   					$data['publicID'] = $maxID+1;
+   				}else{
+   					$data['publicID'] = 1;
+   				}
+   				$publicres->add($data);
+   			}
+   		}
+   		$result = array('state'=>1);
+   		echo json_encode($result);
+   	}
+   	
+   }
+   
+   
+   public function Announcement_Editor(){
+   	if(!session('userName')){
+   		$this->error('请登录',U('Home/Index/index'));
+   	}
+   	$user = M(userinfo);
+   	$condition['userName'] = session('userName');
+   	//数据库获取的都是小写字母。
+   	$userinfo = $user->where($condition)->field('userName,Level,Major,userType')->select();
+   	$imgpath=$user->where($condition)->getField('imagePath');
+   	if($imgpath&&!is_file($imgpath)){  //数据库中有目录但是该文件不存在
+   		$user->where($condition)->setField('imagePath',null);
+   		unset($imgpath);
+   	}
+   	if(date('a',time()) === 'ap'){
+   		$info['alert'] = '上午好';
+   	}else{
+   		$info['alert'] = '下午好';
+   	}
+   	$messageinfo = $user->field('userID,imagePath,userName')->select();
+   	$this->assign('messageinfo',$messageinfo);
+   	$this->assign('info',$info);
+   	$this->assign('userinfo',$userinfo[0]);
+   	$this->assign('imgpath',$imgpath);
+   	$this->display('assessor:Announcement_Editor');
+   }
     //实验代码
     public function demo(){
-//     	$needSubmit = M("needsubmit");
-//     	$maxID = $needSubmit->max('needID');
-//     	dump($maxID);
-//         $user = M('userinfo');
-//         $searchData = "物联网";
-//     	$where['userName'] = array("like","%".$searchData."%");
-//     	$where['Level'] = array("like","%".$searchData."%");
-//     	$where['Major'] = array("like","%".$searchData."%");
-//     	$where['_logic'] = 'OR';
-//     	$userID = $user->distinct(true)->where($where)->select();
-//     	dump($userID);
-        $str = "hello|hell|jlajf";
-        $strs = explode('|', $str);
-        dump($strs);
+    	$name = $_REQUEST['name'];
+    	$pwd = $_REQUEST['pwd'];
+    	$result=array('name'=>$name,'pwd'=>$pwd);
+    	echo json_encode($result);
     }
     
     

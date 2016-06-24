@@ -1,0 +1,263 @@
+[ 2016-06-05T09:22:52+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0007s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001063s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2016-06-05T09:22:59+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0273s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:10+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T09:24:11+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-05T10:14:38+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001735s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2016-06-05T10:37:47+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0222s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0325s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0006s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001999s ]
+
+[ 2016-06-05T10:38:05+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001680s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001165s ]
+
+[ 2016-06-05T10:38:51+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001332s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0006s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2016-06-05T10:38:53+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0541s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
+
+[ 2016-06-05T10:46:27+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001816s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0376s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0005s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001087s ]
+
+[ 2016-06-05T10:46:32+08:00 ] ::1 /eduresPro/index.php/Home/Index/publicres
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001333s ]
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0515s ]
+SQL: SHOW COLUMNS FROM `t_publicres` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `t_publicres` WHERE `userID` = 1 AND `courseID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_resource` WHERE `userID` = 1 AND `courseID` = 1  [ RunTime:0.0006s ]
+SQL: SELECT MAX(publicID) AS tp_max FROM `t_publicres` LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1364:Field 'Type' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `t_publicres` (`Time`,`userID`,`courseID`,`Path`,`Name`,`publicID`) VALUES ('2016-06-05 10:46:32','1','1','publicres/user_7/5741c61e55415.jpg','Pri_StuSel_Drawimg.aspx.jpg','1')
+ERR: 1364:Field 'Type' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `t_publicres` (`Time`,`userID`,`courseID`,`Path`,`Name`,`publicID`) VALUES ('2016-06-05 10:46:32','1','1','publicres/user_7/5741c61e55415.jpg','Pri_StuSel_Drawimg.aspx.jpg','1')
+
+[ 2016-06-05T10:49:33+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001548s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0548s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0368s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0007s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2016-06-05T10:49:36+08:00 ] ::1 /eduresPro/index.php/Home/Index/publicres
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001463s ]
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0577s ]
+SQL: SHOW COLUMNS FROM `t_publicres` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `t_publicres` WHERE `userID` = 1 AND `courseID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_resource` WHERE `userID` = 1 AND `courseID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT MAX(publicID) AS tp_max FROM `t_publicres` LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `t_publicres` (`Time`,`userID`,`courseID`,`Path`,`Name`,`Type`,`publicID`) VALUES ('2016-06-05 10:49:36','1','1','publicres/user_1/5741c61e55415.jpg','Pri_StuSel_Drawimg.aspx.jpg','非媒体素材','1') [ RunTime:0.0705s ]
+SQL: SELECT MAX(publicID) AS tp_max FROM `t_publicres` LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `t_publicres` (`Time`,`userID`,`courseID`,`Path`,`Name`,`Type`,`publicID`) VALUES ('2016-06-05 10:49:36','1','1','publicres/user_1/5741c61e6b74b.txt','笔记.txt','非媒体素材','2') [ RunTime:0.0226s ]
+SQL: SELECT MAX(publicID) AS tp_max FROM `t_publicres` LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `t_publicres` (`Time`,`userID`,`courseID`,`Path`,`Name`,`Type`,`publicID`) VALUES ('2016-06-05 10:49:36','1','1','publicres/user_1/57443a61de021.mp4','video.mp4','媒体素材','3') [ RunTime:0.0320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000897s ]
+

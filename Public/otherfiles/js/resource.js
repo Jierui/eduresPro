@@ -4,7 +4,8 @@ function through_review(){     //多项操作审核
 	var s = "?";
 	$(".checkbox").each(function(index,box){
 		b = $(box);
-		if(b.attr("checked"))
+		//if(b.attr("checked"))
+		if(b.prop("checked"))
 		{
 			flg = 1;
 			str = b.val();
@@ -34,7 +35,8 @@ function del_resource(){
 	var s = "?";
 	$(".checkbox").each(function(index,box){
 		b = $(box);
-		if(b.attr("checked"))
+		//if(b.attr("checked"))
+		if(b.prop("checked"))
 		{
 			flg = 1;
 			str = b.val();
@@ -458,19 +460,161 @@ function show_resource(page,sear){     //搜索应提交资源
 				Page:page
 		}
 	}
+	table = $('#tableresource');
 	$.ajax({
 		type:"post",
-		url:"showPlanAndProtocol",
+		url:"show_resource",
 		dataType:"json",
-		async:false,
+		async:true,
 		data:postData,
 		error:function(){
 			alert('网络错误');
 		},
 		success:function(Arraydata){
+			tabletitle='<tr> \
+				  <th><input type="checkbox" /></th> \
+				  <th>ID</th> \
+				  <th>授课教师</th> \
+				  <th>专业</th> \
+				  <th>层次</th> \
+				  <th  scope="col"><div>课程名称</div></th> \
+				  <th  scope="col" colspan="2" class="course_res"><div>教师提交课程资源</div> \
+					   <ul class="media"> \
+							<li>媒体资源</li> \
+							<li>非媒体资源</li> \
+					   </ul> \
+				  </th> \
+				  <th>录制资源</th> \
+				  <th scope="col"><div>创建时间</div></th> \
+				  <th  scope="col"><div>状态</div></th> \
+				  <th  scope="col"><div>操作</div></th> \
+			</tr>';
+			if(Arraydata.status){
+				html=tabletitle;
+				$.each(Arraydata.data,function(index,data){
+					  html+=' <tr  class="b_white">';
+					  html+='<td><input type="checkbox" class="resource1" value="';
+					  html+=data[0].userid;
+					  html+='|';
+					  html+=data[0].courseid;
+					  html+='" /><td>';
+					  html+='<td>';
+					  html+=(index+1);
+					  html+='</td>';
+					  html+='<td><a href="#">';
+					  html+=Arraydata.info[index].username;
+					  html+='</a><p><a href="#">';
+					  html+=Arraydata.info[index].phone;
+					  html+='</a></p></td>';
+					  html+='<td>';
+					  html+=Arraydata.info[index].major;
+					  html+='</td>';
+					  html+='<td>';
+					  html+=Arraydata.info[index].level;
+					  html+='</td>';
+					  html+='<td><div align="center">';
+					  html+=Arraydata.info[index].coursename;
+					  html+='</div></td>';
+					  html+='td';
+					  $.each(data,function(index1,data1){
+						  if(data1.type == "媒体素材"){
+							  html+='<div  class="video clearfix"> \
+							         <div class="note1 fl">\
+								     <video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>';
+							  html+='<source src="/eduresPro/Uploads/';
+							  html+=data1.path;
+							  html+='" type="video/mp4" />';
+							  html+='<source src="/eduresPro/Uploads/';
+							  html+=data1.path;
+							  html+='" type="video/ogg" />';
+							  html+='	Your browser does not support HTML5 video. \
+								       </video>\
+							           </div>\
+							           <div class="note2 fl">\
+								       <p class="res_name"><a href="#">';
+							  html+=data1.name;
+							  html+='</a></p>';
+							  html+='<p class="date">';
+							  html+=data1.time;
+							  html+='</p></div><div class="am-dropdown fr" data-am-dropdown> \
+									<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle> \
+								   <img src="/eduPro/Public/images/set.png"> \
+							       </a><ul class="am-dropdown-content"><li><a href="open_resource?resourceid=';
+							  html+=data1.resourceid;
+							  html+='" target="_blank">1. 打开</a></li>';
+							  html+='<li><a href="resource_download?target=';
+							  html+=data1.resourceid;
+							  html+='" target="_blank">2.下载</a></li>';
+							  html+=' <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>';
+//							  html+='<li><a href="through_review?user[]=';
+//							  html+=data1.userid;
+//							  html+='&';
+//							  html+='course[]=';
+//							  html+=data1.courseid;
+//							  html+='">4.审核通过</a></li>';
+							  html+='		</ul> \
+						             </div> \
+					                 </div>   <!---video结束-->';
+							  html+='</td>';
+						  }
+					  });
+					  
+					  $.each(data,function(index1,data1){
+						  if(data1.type == "非媒体素材"){
+							  html+='<td class="no_video"> \
+									<div class="note3 clearfix"> \
+								    <p class="fl"><a href="#">';
+							  html+=data1.name;
+							  html+='</a></p>';
+							  html+='<div class="am-dropdown fr" data-am-dropdown> \
+								<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle> \
+									<img src="__PUBLIC__/images/set.png"> \
+								</a><ul class="am-dropdown-content">';
+							  html+='<li><a href="video?target=';
+							  html+=data1.resourceid;
+							  html+='" target="_blank">1. 打开</a></li>';
+							  html+='<li><a href="resource_download?target=';
+							  html+=data1.resourceid;
+							  html+='" target="_blank">2.下载</a></li>';
+							  html+=' <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>';
+							  html+='</ul> \
+								     </div> \
+							         </div>';
+							  html+='</td>';
+						  }
+					  });
+					  html+='<td>无</td>\
+					  <td>2016年2月29日</td>\
+					  <td class="yccol">待审核</td>\
+					  <td class="czcol">\
+					  	<p><a href="#">审核通过</a></p>\
+						<p><a href="#"  onClick="javascript:showDiv2()">打包并发布</a></p>\
+						<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>\
+					  </td>\
+				</tr>';
+				});
+				table.empty();
+				table.append($(html));
+			}else{
+				
+			}
 			
 		}
 	});
+}
+
+function publicres(userid,courseid){
+	console.log(userid);
+	console.log(courseid);
+	$.post("publicres",{userID:userid,courseID:courseid},function(data){
+		if(data.state == 0){
+			alert("您已经发布");
+		}else if(data.state == 1){
+			alert("发布成功");
+		}else{
+			alert("发布失败");
+		}
+	},"json");
 }
 
 

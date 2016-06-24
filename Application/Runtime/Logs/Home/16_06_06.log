@@ -1,0 +1,531 @@
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:19+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001444s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:22+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:23+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0003s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:55+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:57+08:00 ] ::1 /eduresPro/index.php/Home/Index/show_resource
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001286s ]
+NOTIC: [8] Undefined index: search E:\PHP\httpd-2.4.18-win64-VC14\Apache24\htdocs\eduresPro\Application\Home\Controller\IndexController.class.php 第 1645 行.
+SQL: SHOW COLUMNS FROM `t_resource` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `t_resource` ORDER BY Time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `t_userinfo` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `t_course` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 1  [ RunTime:0.0004s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `t_userinfo` WHERE `userID` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `courseName` FROM `t_course` WHERE `courseID` = 2 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:03:58+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:34+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:40+08:00 ] ::1 /eduresPro/index.php/Home/Index/Announcement_Editor.html
+ERR: 非法操作:Announcement_Editor
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:05:45+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/css/css.css
+ERR: 非法操作:css
+
+[ 2016-06-06T11:08:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/css/Editor.css
+ERR: 非法操作:css
+
+[ 2016-06-06T11:08:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/css/style.css
+ERR: 非法操作:css
+
+[ 2016-06-06T11:08:17+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/Editor.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:08:18+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/ChangeContent.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:08:20+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/jquery-1.7.2.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyUpload_4.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/upload_demo.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/js/zyFile.js
+ERR: 非法操作:js
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+
+[ 2016-06-06T11:23:08+08:00 ] ::1 /eduresPro/index.php/Home/Index/images/video.mp4
+ERR: 非法操作:images
+

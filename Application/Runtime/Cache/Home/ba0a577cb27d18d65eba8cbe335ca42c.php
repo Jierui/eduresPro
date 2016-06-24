@@ -97,10 +97,10 @@
     </div>
 	
     <div class="adtip">
-        <div class="tip">
-        	<p class="goom">早上好，小雅！</p>
-        	<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
-       </div>
+    <div class="tip">
+		<p class="goom"><?php echo ($info["alert"]); ?>，<?php echo ($userinfo["username"]); ?>！</p>
+		<p>您目前有<span>4</span>条资源反馈消息，<span>6</span>条短消息</p>
+    </div>
    
     <div class="rig_lm03">
         <div class="title">

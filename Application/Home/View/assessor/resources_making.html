@@ -82,7 +82,7 @@ $(document).ready(function() {
 		   <li onMouseOver="change(this)"><a href="message_feedback">消息提醒</a></li>
 		   <li onMouseOver="change(this)"><a href="personal_center">个人中心</a></li>
 		   <li   class="seleli"  onMouseOver="change(this)"><a href="Teacher_Resource" >资源管理</a></li>
-		   <li onMouseOver="change(this)"><a href="#" >公告管理</a></li>
+		   <li onMouseOver="change(this)"><a href="Announcement" >公告管理</a></li>
 		   <li onMouseOver="change(this)"><a href="message_board" >留言板</a></li>
 		</ul>
 		<a href="{:U('Home/Index/exit_login')}" class="exit">退出</a>
@@ -107,9 +107,7 @@ $(document).ready(function() {
 			<h2>日历</h2>
 	    </div>
 	    <div class="detail"> 
-	  		<!--<img class="" src="images/kj_01.jpg" /> -->
 	  	    <div id="imgdate"></div>
-	  		<!--<img class="" src="__PUBLIC__/images/kj_01.jpg" /> -->  
 	  		<div  style="width:212px;height:204px;"  id="imgdate1"></div>
 	  		<script type="text/javascript">
              message_date("#imgdate");
@@ -158,8 +156,8 @@ $(document).ready(function() {
 				<div class="clearfix Admin_Info">
 					<div class="buttons">
 					   <div class="fl add">
-						  <button type="button">审核通过</button>
-						  <button type="button">删除</button>
+						  <button type="button" onclick="through_review()">审核通过</button>
+						  <button type="button" onclick="del_resource()">删除</button>
 					   </div>
 						  
 					  <div class="filtrate fl"	>
@@ -173,21 +171,21 @@ $(document).ready(function() {
 					  </div>
 							
 						<div class="fr search">
-							<input type="text">
-							<button type="button">搜索</button>
+							<!--<input type="text">
+							<button type="button">搜索</button>-->
 							<div class="am-dropdown fr" data-am-dropdown>
 								<button class="am-dropdown-toggle" data-am-dropdown-toggle>统计</button>
 								<ul class="am-dropdown-content">
 								  <li><a href="Teacher_Resource_Statistics">1. 教师提交资源信息统计</a></li>
 								  <li><a href="Teacher_Course_Statistics">2. 课程情况统计</a></li>
-								  <li><a href="resources_package_Statistics.html">3. 课程资源打包及发布情况统计</a></li>
+								  <li><a href="resources_package_Statistics">3. 课程资源打包及发布情况统计</a></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					
 					<div class="userList">
-					  <table id="special_table" class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0">
+					  <table id="special_table" class="tabindex" width="100%" border="0" cellpadding="0" cellspacing="0" id="tableresource">
 						  <tr>
 							  <th><input type="checkbox" /></th>
 							  <th>ID</th>
@@ -206,300 +204,89 @@ $(document).ready(function() {
 							  <th  scope="col"><div>状态</div></th>
 							  <th  scope="col"><div>操作</div></th>
 						</tr>
-						  
-						 <tr  class="b_white">
-							  <td><input type="checkbox" /></td>
-							  <td>1</td>
-							  <td><a href="#">李小雅</a><p><a href="#">154612267</a></p></td>
-							  <td>计算机科学与技术</td>
-							  <td>讲师</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
+				<?php $countNum = 1;?>
+                         <volist name="showData" id="arr" >
+                         	<tr  class="b_white">
+							  <td><input type="checkbox" class="checkbox" value="{$arr[0]['userid']}|{$arr[0]['courseid']}"/></td>
+							  <td><?php echo $countNum++?></td>
+							  <?php $ui = $user->where("userID=".$arr[0]['userid'])->select(); ?>
+							  <td><a href="#"><?php echo $ui[0]['username'];?></a><p><a href="#"><?php echo $ui[0]['phone'];?></a></p></td>
+							  <td><?php echo $ui[0]['major'];?></td>
+							  <td><?php echo $ui[0]['level'];?></td>
+							  <td><div align="center"><?php echo $course->where("courseID=".$arr[0]['courseid'])->getField("courseName");?></div></td>
 							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
+								<foreach name="arr" item="v">
+						        <if condition="$v.type eq 媒体素材">
+						   	  	<div  class="video clearfix">
+								<div class="note1 fl">
+									<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
+										<source src="__ROOT__/Uploads/{$v.path}" type="video/mp4" />
+										<source src="__ROOT__/Uploads/{$v.path}" type="video/ogg" />
+										Your browser does not support HTML5 video.
+									</video>
+								</div>
+								<div class="note2 fl">
+									<p class="res_name"><a href="#">{$v.name}</a></p>
+									<p class="date">{$v.time}</p>
+								</div>
+								<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="__PUBLIC__/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="video?target={$v.resourceid}">1. 打开</a></li>
+									  <li><a href="resource_download?target={$v.resourceid}" target="_blank">2. 下载</a></li>
+									  <li><a href="del_single_resource?resourceid={$v.resourceid}">3. 删除</a></li>
+									</ul>
+             				   </div>
+						       </div>   <!---video结束-->
+						       </if>
+						       </foreach>
 							  </td>
 							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
+							  <foreach name="arr" item="v">
+						       <if condition="$v.type eq 非媒体素材">
+						  		<div class="note3 clearfix">
+									<p class="fl"><a href="#">{$v.name}</a></p>
+									<div class="am-dropdown fr" data-am-dropdown>
+                					<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
+										<img src="__PUBLIC__/images/set.png">
+									</a>
+									<ul class="am-dropdown-content">
+									  <li><a href="open_resource?resourceid={$v.resourceid}" target="_blank">1. 打开</a></li>
+									  <li><a href="resource_download?target={$v.resourceid}" target="_blank"">2. 下载</a></li>
+									  <!--<li><a href="del_single_resource?resourceid={$v.resourceid}">3. 删除</a></li>-->
+									</ul>
+             				 		</div>
+								</div>
+						     </if>
+						     </foreach>
 							  </td>
 							  <td>无</td>
-							  <td>2016年2月29日</td>
-							  <td class="yccol">待审核</td>
+							  <td><?php $end=end($arr); echo $end['time'];?></td>
+							  <td class="yccol">
+							   <?php    $flg = 0;
+                                        foreach($arr as $value){
+                                            if($value['status']!=1){
+                                                 echo "待审核";
+                                                 $flg = 1;
+                                                 break;
+                                            }
+                                        }
+                                      if($flg == 0){
+                                        echo "已审核";
+                                       }
+                              ?>
+							  </td>
 							  <td class="czcol">
-							  	<p><a href="#">审核通过</a></p>
-								<p><a href="#"  onClick="javascript:showDiv2()">打包并发布</a></p>
-								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
-							  </td>
-						</tr>
-						 <tr  class="b_white">
-							  <td><input type="checkbox" /></td>
-							  <td>2</td>
-							  <td><a href="#">张秋杰</a><p><a href="#">154612267</a></p></td>
-							  <td>计算机技术</td>
-							  <td>副教授</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
-							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							  </td>
-							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-							  </td>
-							  <td><a href="videos.html">查看</a></td>
-							  <td>2016年2月29日</td>
-							  <td class="yccol">待审核</td>
-							  <td class="czcol">
-							  	<p><a href="#">审核通过</a></p>
-								<p><a href="#">打包并发布</a></p>
+							  	<p><a href="through_review?user[]={$arr[0]['userid']}&course[]={$arr[0]['courseid']}">审核通过</a></p>
+							  	<!--<p><a href="#"  onClick="javascript:showDiv2()">打包并发布</a></p>-->
+							  	<p><a href="#" onclick="publicres({$arr[0]['userid']},{$arr[0]['courseid']})">发布</a></p>
 								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
 							</td>
-						</tr>
-						 <tr  class="b_white">
-							  <td><input type="checkbox" /></td>
-							  <td>3</td>
-							  <td><a href="#">何兰<p><a href="#">154612267</p></a></a></td>
-							  <td>计算机科学与技术</td>
-							  <td>教授</td>
-							  <td><div align="center">操作系统：设计及实现</div></td>
-							  <td>
-								<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统原理视频.mov</a></p>
-										<p class="date">2016年3月12日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							   
-									<div  class="video clearfix">
-									<div class="note1 fl">
-										<video id="player_a" class="projekktor" title="我的视频" width="40" height="40" controls>
-											<source src="images/video.mp4" type="video/mp4" />
-											<source src="images/video.mp4" type="video/ogg" />
-											Your browser does not support HTML5 video.
-										</video>
-									</div>
-									<div class="note2 fl">
-										<p class="res_name"><a href="#">操作系统设计.mov</a></p>
-										<p class="date">2016年3月13日</p>
-									</div>
-									<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-								 </div>
-							   </div>   <!---video结束-->
-							  </td>
-							  <td class="no_video">
-									<div class="note3 clearfix">
-										<p class="fl"><a href="#">操作系统原理课外作业.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-									
-									<div class="note3">
-										<p class="fl"><a href="#">操作系统考试题目.doc</a></p>
-										<div class="am-dropdown fr" data-am-dropdown>
-										<a class="am-btn-xs am-dropdown-toggle" data-am-dropdown-toggle>
-											<img src="images/set.png">
-										</a>
-										<ul class="am-dropdown-content">
-										  <li><a href="#">1. 打开</a></li>
-										  <li><a href="#">2. 下载</a></li>
-										  <li><a href="#" onClick="javascript:showDiv1()">3. 审核建议</a></li>
-										  <li><a href="#">4. 审核通过</a></li>
-										</ul>
-										</div>
-									</div>
-							  </td>
-							  <td><a href="videos.html">查看</a></td>
-							  <td>2016年2月29日</td>
-							  <td>已审核</td>
-							  <td class="czcol">
-								<p><a href="#">打包并发布</a></p>
-								<p class="score"><b onClick="score(this)" id="click">打&nbsp;分：</b><span id="t">暂未打分</span></p>
-							</td>
-						</tr>					  
+						</tr>			
+                         </volist>			  
+						  				  
 					 </table>
 					 
 					</div>	
@@ -507,12 +294,15 @@ $(document).ready(function() {
 						 <p class="fytip">Showing 1 to 10 of 12 entries</p>
 						   <div class="yem">
 							  <ul>
-								 <li><a href="#">First</a></li>
-								 <li><a href="#">&lt;</a></li>
-								 <li class="sellify"><a href="#">1</a></li>
-								 <li><a href="#">2</a></li>
-								 <li><a href="#">&gt;</a></li>
-								 <li><a href="#">Last</a></li>
+				                 <li><a href="Teacher_Resource?page=1">First</a></li>
+							     <li><a href="Teacher_Resource?page={$page-1}">&lt;</a></li>
+							     <?php for($value=1;$value<=$totalPage;$value++){ if($value == $page){?>
+							     <li class="sellify"><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							     <?php }else{?>
+							     <li><a href="Teacher_Resource?page=<?php echo $value?>"><?php echo $value?></a></li>
+							     <?php }}?>
+							     <li><a href="Teacher_Resource?page={$page+1}">&gt;</a></li>
+							     <li><a href="Teacher_Resource?page={$totalPage}">Last</a></li>
 							  </ul>
 						  </div>
 					 </div>  
@@ -527,50 +317,11 @@ $(document).ready(function() {
 		   <div class="am-panel am-panel-default clearfix">   <!---第一个折叠框开始--->			  
 			  <div class="am-panel-bd am-collapse am-in" id="collapse-panel-3">
 			  	<table class="need_submit" id="need_submit_resource">
-					<tr>
-						<th>ID</th>
-						<th>授课教师</th>
-						<th>专业</th>
-						<th>层次</th>
-						<th>课程名称</th>
-						<th>课程概况</th>
-						<th>课程学习</th>
-						<th>媒体素材</th>
-						<th>实验</th>
-						<th>作业</th>
-						<th>考试</th>
-						<th>创建时间</th>
-					</tr>
-					
-					<tr>
-						<td>1</td>
-						<td><a href="#"><p>李小雅</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>讲师</td>
-						<td>操作系统：设计及实现</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td>2016年4月12日</td>
-					</tr>
-					
-					<tr>
-						<td>2</td>
-						<td><a href="#"><p>张秋杰</p><p>154612267</p></a></td>
-						<td>计算机科学与技术</td>
-						<td>副教授</td>
-						<td>数据库开发与应用</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td>需要</td>
-						<td class="yccol">不需要</td>
-						<td class="yccol">不需要</td>
-						<td>需要</td>
-						<td>2016年4月12日</td>
-					</tr>
+					<script>
+					$(document).ready(function(){
+						show_need_resource(1);
+					});
+					</script>
 				</table>
 				
 				<div class="fanye clearfix bottom_page">
@@ -605,10 +356,10 @@ $(document).ready(function() {
 					  <button type="button"> 删除</button>
 				   </div>
 					  
-					<div class="fr search">
+					<!--<div class="fr search">
 						<input type="text">
 						<button type="button">搜索</button>
-					</div>
+					</div>-->
 	             </div>
 			  	<table class="need_submit">
 					<tr>
@@ -785,6 +536,12 @@ function score(a){
         text.innerHTML=document.getElementById("n").value;
     });
 };
+</script>
+
+<script>
+$(document).ready(function(){
+	show_resource(1,false);
+});
 </script>
 
 
